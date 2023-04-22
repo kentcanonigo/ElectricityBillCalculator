@@ -37,6 +37,7 @@
             label3 = new Label();
             textBox1 = new TextBox();
             label2 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -97,6 +98,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label2);
@@ -132,6 +134,16 @@
             label2.Text = "Appliance Info";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
+            // button1
+            // 
+            button1.Location = new Point(61, 170);
+            button1.Name = "button1";
+            button1.Size = new Size(124, 116);
+            button1.TabIndex = 6;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -162,5 +174,6 @@
         private Label label2;
         private Label label3;
         private TextBox textBox1;
+        private Button button1;
     }
 }
