@@ -71,6 +71,7 @@
             newButton.TabIndex = 2;
             newButton.Text = "New...";
             newButton.UseVisualStyleBackColor = false;
+            newButton.Click += newButton_Click;
             // 
             // deleteButton
             // 
