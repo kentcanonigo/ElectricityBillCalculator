@@ -16,5 +16,10 @@ namespace ElectricityBillCalculator
         {
             MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
+        }
     }
 }
