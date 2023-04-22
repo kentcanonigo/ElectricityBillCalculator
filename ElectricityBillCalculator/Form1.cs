@@ -1,3 +1,6 @@
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 namespace ElectricityBillCalculator
 {
     public partial class Form1 : Form
@@ -10,7 +13,8 @@ namespace ElectricityBillCalculator
 
         private void Init()
         {
-
+            applianceList.Items.Add(new Appliance("Test Appliance", 50, 24)); //Create a test appliance to start
+            applianceList.Items.Add(new Appliance("Test Appliance 2", 25, 16)); //Create a test appliance to start
         }
 
         public class Appliance
@@ -21,6 +25,12 @@ namespace ElectricityBillCalculator
                 this.Wattage = wattage;
                 this.HrsPerDay = hrsPerDay;
             }
+
+            public override string ToString() //Required to display proper appliance name in list
+            {
+                return Name;
+            }
+
             public string Name;
             public Int32 Wattage;
             public Int32 HrsPerDay;
@@ -124,6 +134,14 @@ namespace ElectricityBillCalculator
         {
             const char Delete = (char)8;
             e.Handled = !Char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
+        }
+
+        private void applianceList_SelectedValueChanged(object sender, EventArgs e) //Event handling for appliance list. (Update properties)
+        {
+            Appliance currentAppliance = applianceList.SelectedItem as Appliance;
+            appNameTextbox.Text = currentAppliance.Name;
+            wattageTextbox.Text = currentAppliance.Wattage.ToString();
+            hrsPerDayTextbox.Text = currentAppliance.HrsPerDay.ToString();
         }
     }
 }

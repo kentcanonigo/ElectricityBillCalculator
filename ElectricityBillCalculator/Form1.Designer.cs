@@ -69,11 +69,13 @@
             applianceList.Name = "applianceList";
             applianceList.Size = new Size(221, 424);
             applianceList.TabIndex = 1;
+            applianceList.SelectedValueChanged += applianceList_SelectedValueChanged;
             // 
             // newButton
             // 
             newButton.BackColor = Color.LemonChiffon;
-            newButton.FlatStyle = FlatStyle.Flat;
+            newButton.Cursor = Cursors.Hand;
+            newButton.FlatStyle = FlatStyle.System;
             newButton.Location = new Point(12, 495);
             newButton.Name = "newButton";
             newButton.Size = new Size(103, 31);
@@ -85,7 +87,8 @@
             // deleteButton
             // 
             deleteButton.BackColor = Color.Coral;
-            deleteButton.FlatStyle = FlatStyle.Flat;
+            deleteButton.Cursor = Cursors.Hand;
+            deleteButton.FlatStyle = FlatStyle.System;
             deleteButton.Location = new Point(121, 495);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(112, 31);
@@ -95,8 +98,9 @@
             // 
             // editButton
             // 
-            editButton.BackColor = Color.LightCyan;
-            editButton.FlatStyle = FlatStyle.Flat;
+            editButton.BackColor = SystemColors.ButtonFace;
+            editButton.Cursor = Cursors.Hand;
+            editButton.FlatStyle = FlatStyle.System;
             editButton.Location = new Point(3, 133);
             editButton.Name = "editButton";
             editButton.Size = new Size(64, 31);
@@ -125,6 +129,7 @@
             // 
             // hrsPerDayTextbox
             // 
+            hrsPerDayTextbox.Enabled = false;
             hrsPerDayTextbox.Location = new Point(123, 96);
             hrsPerDayTextbox.MaxLength = 2;
             hrsPerDayTextbox.Name = "hrsPerDayTextbox";
@@ -134,6 +139,7 @@
             // 
             // wattageTextbox
             // 
+            wattageTextbox.Enabled = false;
             wattageTextbox.Location = new Point(63, 67);
             wattageTextbox.MaxLength = 5;
             wattageTextbox.Name = "wattageTextbox";
@@ -175,8 +181,10 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Honeydew;
-            button1.FlatStyle = FlatStyle.Flat;
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.Cursor = Cursors.Hand;
+            button1.Enabled = false;
+            button1.FlatStyle = FlatStyle.System;
             button1.Location = new Point(73, 133);
             button1.Name = "button1";
             button1.Size = new Size(44, 31);
@@ -213,6 +221,7 @@
             // 
             // appNameTextbox
             // 
+            appNameTextbox.Enabled = false;
             appNameTextbox.Location = new Point(51, 38);
             appNameTextbox.MaxLength = 20;
             appNameTextbox.Name = "appNameTextbox";
@@ -233,7 +242,8 @@
             // aboutButton
             // 
             aboutButton.BackColor = Color.PeachPuff;
-            aboutButton.FlatStyle = FlatStyle.Flat;
+            aboutButton.Cursor = Cursors.Hand;
+            aboutButton.FlatStyle = FlatStyle.System;
             aboutButton.Location = new Point(383, 495);
             aboutButton.Name = "aboutButton";
             aboutButton.Size = new Size(111, 31);
