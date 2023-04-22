@@ -1,4 +1,4 @@
-﻿namespace ElectricityBillCalculator
+namespace ElectricityBillCalculator
 {
     partial class Form1
     {
