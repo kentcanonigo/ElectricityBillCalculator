@@ -34,10 +34,11 @@
             deleteButton = new Button();
             editButton = new Button();
             panel1 = new Panel();
+            button1 = new Button();
             label3 = new Label();
             textBox1 = new TextBox();
             label2 = new Label();
-            button1 = new Button();
+            button2 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -98,6 +99,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(textBox1);
@@ -106,6 +108,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(255, 424);
             panel1.TabIndex = 5;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(61, 170);
+            button1.Name = "button1";
+            button1.Size = new Size(124, 116);
+            button1.TabIndex = 6;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label3
             // 
@@ -134,15 +146,15 @@
             label2.Text = "Appliance Info";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
-            // button1
+            // button2
             // 
-            button1.Location = new Point(61, 170);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 116);
-            button1.TabIndex = 6;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button2.Location = new Point(76, 341);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 7;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 
@@ -175,5 +187,6 @@
         private Label label3;
         private TextBox textBox1;
         private Button button1;
+        private Button button2;
     }
 }
