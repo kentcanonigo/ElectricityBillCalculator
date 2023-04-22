@@ -138,10 +138,64 @@ namespace ElectricityBillCalculator
 
         private void applianceList_SelectedValueChanged(object sender, EventArgs e) //Event handling for appliance list. (Update properties)
         {
-            Appliance currentAppliance = applianceList.SelectedItem as Appliance;
+            Appliance currentAppliance = (Appliance)applianceList.SelectedItem;
+            if (currentAppliance == null) //Return if there is no current appliance
+            {
+                return;
+            }
+            editButton.Enabled = true;
             appNameTextbox.Text = currentAppliance.Name;
             wattageTextbox.Text = currentAppliance.Wattage.ToString();
             hrsPerDayTextbox.Text = currentAppliance.HrsPerDay.ToString();
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (applianceList.Items.Count <= 0)
+            {
+                return;
+            }
+            saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = true;
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            Appliance currentAppliance = (Appliance)applianceList.SelectedItem;
+            if (currentAppliance == null)
+            {
+                return;
+            }
+            currentAppliance.Name = appNameTextbox.Text;
+            currentAppliance.Wattage = Int32.Parse(wattageTextbox.Text);
+            currentAppliance.HrsPerDay = Int32.Parse(hrsPerDayTextbox.Text);
+            saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = false;
+            applianceList.DrawMode = DrawMode.OwnerDrawFixed;
+            applianceList.DrawMode = DrawMode.Normal;
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            while (applianceList.SelectedItems.Count > 0)
+            {
+                applianceList.Items.RemoveAt(applianceList.SelectedIndex);
+            }
+            ResetButtons();
+        }
+
+        private void applianceList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (applianceList.Items.Count <= 0)
+            {
+                ResetButtons();
+            }
+        }
+
+        private void ResetButtons()
+        {
+            appNameTextbox.Text = string.Empty;
+            wattageTextbox.Text = string.Empty;
+            hrsPerDayTextbox.Text = string.Empty;
+            editButton.Enabled = saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = false;
         }
     }
 }
