@@ -34,12 +34,17 @@
             deleteButton = new Button();
             editButton = new Button();
             panel1 = new Panel();
+            yearlyBillTextbox = new TextBox();
+            label8 = new Label();
+            label7 = new Label();
+            monthlyBillTextbox = new TextBox();
+            label6 = new Label();
             hrsPerDayTextbox = new TextBox();
             wattageTextbox = new TextBox();
             kwhRateTextbox = new TextBox();
             customRateCheckbox = new CheckBox();
             label5 = new Label();
-            button1 = new Button();
+            saveButton = new Button();
             label4 = new Label();
             label1 = new Label();
             label3 = new Label();
@@ -63,12 +68,14 @@
             // 
             // applianceList
             // 
+            applianceList.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             applianceList.FormattingEnabled = true;
-            applianceList.ItemHeight = 15;
+            applianceList.ItemHeight = 21;
             applianceList.Location = new Point(12, 65);
             applianceList.Name = "applianceList";
             applianceList.Size = new Size(221, 424);
             applianceList.TabIndex = 1;
+            applianceList.SelectedIndexChanged += applianceList_SelectedIndexChanged;
             applianceList.SelectedValueChanged += applianceList_SelectedValueChanged;
             // 
             // newButton
@@ -95,11 +102,13 @@
             deleteButton.TabIndex = 3;
             deleteButton.Text = "Delete";
             deleteButton.UseVisualStyleBackColor = false;
+            deleteButton.Click += deleteButton_Click;
             // 
             // editButton
             // 
             editButton.BackColor = SystemColors.ButtonFace;
             editButton.Cursor = Cursors.Hand;
+            editButton.Enabled = false;
             editButton.FlatStyle = FlatStyle.System;
             editButton.Location = new Point(3, 133);
             editButton.Name = "editButton";
@@ -107,15 +116,21 @@
             editButton.TabIndex = 4;
             editButton.Text = "Edit";
             editButton.UseVisualStyleBackColor = false;
+            editButton.Click += editButton_Click;
             // 
             // panel1
             // 
+            panel1.Controls.Add(yearlyBillTextbox);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(monthlyBillTextbox);
+            panel1.Controls.Add(label6);
             panel1.Controls.Add(hrsPerDayTextbox);
             panel1.Controls.Add(wattageTextbox);
             panel1.Controls.Add(kwhRateTextbox);
             panel1.Controls.Add(customRateCheckbox);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(saveButton);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(editButton);
             panel1.Controls.Add(label1);
@@ -126,6 +141,54 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(255, 424);
             panel1.TabIndex = 5;
+            // 
+            // yearlyBillTextbox
+            // 
+            yearlyBillTextbox.Enabled = false;
+            yearlyBillTextbox.Location = new Point(64, 380);
+            yearlyBillTextbox.MaxLength = 2;
+            yearlyBillTextbox.Name = "yearlyBillTextbox";
+            yearlyBillTextbox.Size = new Size(129, 23);
+            yearlyBillTextbox.TabIndex = 18;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(84, 356);
+            label8.Name = "label8";
+            label8.Size = new Size(80, 21);
+            label8.TabIndex = 17;
+            label8.Text = "Yearly bill:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(37, 288);
+            label7.Name = "label7";
+            label7.Size = new Size(191, 21);
+            label7.TabIndex = 16;
+            label7.Text = "Your average monthly bill:";
+            // 
+            // monthlyBillTextbox
+            // 
+            monthlyBillTextbox.Enabled = false;
+            monthlyBillTextbox.Location = new Point(64, 312);
+            monthlyBillTextbox.MaxLength = 2;
+            monthlyBillTextbox.Name = "monthlyBillTextbox";
+            monthlyBillTextbox.Size = new Size(129, 23);
+            monthlyBillTextbox.TabIndex = 15;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(84, 257);
+            label6.Name = "label6";
+            label6.Size = new Size(84, 21);
+            label6.TabIndex = 14;
+            label6.Text = "Summary";
             // 
             // hrsPerDayTextbox
             // 
@@ -151,7 +214,7 @@
             // kwhRateTextbox
             // 
             kwhRateTextbox.Enabled = false;
-            kwhRateTextbox.Location = new Point(69, 225);
+            kwhRateTextbox.Location = new Point(69, 185);
             kwhRateTextbox.MaxLength = 6;
             kwhRateTextbox.Name = "kwhRateTextbox";
             kwhRateTextbox.Size = new Size(183, 23);
@@ -162,7 +225,7 @@
             // customRateCheckbox
             // 
             customRateCheckbox.AutoSize = true;
-            customRateCheckbox.Location = new Point(69, 254);
+            customRateCheckbox.Location = new Point(69, 214);
             customRateCheckbox.Name = "customRateCheckbox";
             customRateCheckbox.Size = new Size(68, 19);
             customRateCheckbox.TabIndex = 10;
@@ -173,24 +236,25 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(3, 228);
+            label5.Location = new Point(3, 188);
             label5.Name = "label5";
             label5.Size = new Size(60, 15);
             label5.TabIndex = 9;
             label5.Text = "kWh Rate:";
             // 
-            // button1
+            // saveButton
             // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.Cursor = Cursors.Hand;
-            button1.Enabled = false;
-            button1.FlatStyle = FlatStyle.System;
-            button1.Location = new Point(73, 133);
-            button1.Name = "button1";
-            button1.Size = new Size(44, 31);
-            button1.TabIndex = 7;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = false;
+            saveButton.BackColor = SystemColors.ButtonFace;
+            saveButton.Cursor = Cursors.Hand;
+            saveButton.Enabled = false;
+            saveButton.FlatStyle = FlatStyle.System;
+            saveButton.Location = new Point(69, 133);
+            saveButton.Name = "saveButton";
+            saveButton.Size = new Size(48, 31);
+            saveButton.TabIndex = 7;
+            saveButton.Text = "Save";
+            saveButton.UseVisualStyleBackColor = false;
+            saveButton.Click += saveButton_Click;
             // 
             // label4
             // 
@@ -231,7 +295,7 @@
             // label2
             // 
             label2.Dock = DockStyle.Top;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
             label2.Size = new Size(255, 30);
@@ -282,7 +346,7 @@
         private Label label3;
         private TextBox appNameTextbox;
         private Label label1;
-        private Button button1;
+        private Button saveButton;
         private Button aboutButton;
         private CheckBox customRateCheckbox;
         private Label label5;
@@ -290,5 +354,10 @@
         private TextBox kwhRateTextbox;
         private TextBox hrsPerDayTextbox;
         private TextBox wattageTextbox;
+        private Label label7;
+        private TextBox monthlyBillTextbox;
+        private Label label6;
+        private Label label8;
+        private TextBox yearlyBillTextbox;
     }
 }
