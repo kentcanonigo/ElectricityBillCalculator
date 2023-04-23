@@ -34,6 +34,8 @@ namespace ElectricityBillCalculator
             deleteButton = new Button();
             editButton = new Button();
             panel1 = new Panel();
+            label9 = new Label();
+            appCostTextbox = new TextBox();
             yearlyBillTextbox = new TextBox();
             label8 = new Label();
             label7 = new Label();
@@ -110,7 +112,7 @@ namespace ElectricityBillCalculator
             editButton.Cursor = Cursors.Hand;
             editButton.Enabled = false;
             editButton.FlatStyle = FlatStyle.System;
-            editButton.Location = new Point(3, 133);
+            editButton.Location = new Point(3, 117);
             editButton.Name = "editButton";
             editButton.Size = new Size(64, 31);
             editButton.TabIndex = 4;
@@ -120,6 +122,8 @@ namespace ElectricityBillCalculator
             // 
             // panel1
             // 
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(appCostTextbox);
             panel1.Controls.Add(yearlyBillTextbox);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
@@ -142,10 +146,29 @@ namespace ElectricityBillCalculator
             panel1.Size = new Size(255, 424);
             panel1.TabIndex = 5;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(57, 265);
+            label9.Name = "label9";
+            label9.Size = new Size(147, 21);
+            label9.TabIndex = 20;
+            label9.Text = "Appliance Cost/day:";
+            // 
+            // appCostTextbox
+            // 
+            appCostTextbox.Enabled = false;
+            appCostTextbox.Location = new Point(63, 289);
+            appCostTextbox.MaxLength = 2;
+            appCostTextbox.Name = "appCostTextbox";
+            appCostTextbox.Size = new Size(129, 23);
+            appCostTextbox.TabIndex = 19;
+            // 
             // yearlyBillTextbox
             // 
             yearlyBillTextbox.Enabled = false;
-            yearlyBillTextbox.Location = new Point(64, 380);
+            yearlyBillTextbox.Location = new Point(63, 389);
             yearlyBillTextbox.MaxLength = 2;
             yearlyBillTextbox.Name = "yearlyBillTextbox";
             yearlyBillTextbox.Size = new Size(129, 23);
@@ -155,26 +178,27 @@ namespace ElectricityBillCalculator
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(84, 356);
+            label8.Location = new Point(69, 365);
             label8.Name = "label8";
-            label8.Size = new Size(80, 21);
+            label8.Size = new Size(116, 21);
             label8.TabIndex = 17;
-            label8.Text = "Yearly bill:";
+            label8.Text = "Total Yearly Bill:";
+            label8.TextAlign = ContentAlignment.TopCenter;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(37, 288);
+            label7.Location = new Point(63, 315);
             label7.Name = "label7";
-            label7.Size = new Size(191, 21);
+            label7.Size = new Size(132, 21);
             label7.TabIndex = 16;
-            label7.Text = "Your average monthly bill:";
+            label7.Text = "Total Monthly Bill:";
             // 
             // monthlyBillTextbox
             // 
             monthlyBillTextbox.Enabled = false;
-            monthlyBillTextbox.Location = new Point(64, 312);
+            monthlyBillTextbox.Location = new Point(63, 339);
             monthlyBillTextbox.MaxLength = 2;
             monthlyBillTextbox.Name = "monthlyBillTextbox";
             monthlyBillTextbox.Size = new Size(129, 23);
@@ -184,7 +208,7 @@ namespace ElectricityBillCalculator
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(84, 257);
+            label6.Location = new Point(79, 242);
             label6.Name = "label6";
             label6.Size = new Size(84, 21);
             label6.TabIndex = 14;
@@ -214,18 +238,19 @@ namespace ElectricityBillCalculator
             // kwhRateTextbox
             // 
             kwhRateTextbox.Enabled = false;
-            kwhRateTextbox.Location = new Point(69, 185);
+            kwhRateTextbox.Location = new Point(69, 154);
             kwhRateTextbox.MaxLength = 6;
             kwhRateTextbox.Name = "kwhRateTextbox";
             kwhRateTextbox.Size = new Size(183, 23);
             kwhRateTextbox.TabIndex = 11;
             kwhRateTextbox.Text = "14.28";
+            kwhRateTextbox.TextChanged += kwhRateTextbox_TextChanged;
             kwhRateTextbox.KeyPress += kwhRateTextbox_KeyPress;
             // 
             // customRateCheckbox
             // 
             customRateCheckbox.AutoSize = true;
-            customRateCheckbox.Location = new Point(69, 214);
+            customRateCheckbox.Location = new Point(69, 183);
             customRateCheckbox.Name = "customRateCheckbox";
             customRateCheckbox.Size = new Size(68, 19);
             customRateCheckbox.TabIndex = 10;
@@ -236,7 +261,7 @@ namespace ElectricityBillCalculator
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(3, 188);
+            label5.Location = new Point(3, 157);
             label5.Name = "label5";
             label5.Size = new Size(60, 15);
             label5.TabIndex = 9;
@@ -248,7 +273,7 @@ namespace ElectricityBillCalculator
             saveButton.Cursor = Cursors.Hand;
             saveButton.Enabled = false;
             saveButton.FlatStyle = FlatStyle.System;
-            saveButton.Location = new Point(69, 133);
+            saveButton.Location = new Point(69, 117);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(48, 31);
             saveButton.TabIndex = 7;
@@ -359,5 +384,7 @@ namespace ElectricityBillCalculator
         private Label label6;
         private Label label8;
         private TextBox yearlyBillTextbox;
+        private Label label9;
+        private TextBox appCostTextbox;
     }
 }

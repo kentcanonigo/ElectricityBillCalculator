@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -32,8 +33,8 @@ namespace ElectricityBillCalculator
             }
 
             public string Name;
-            public Int32 Wattage;
-            public Int32 HrsPerDay;
+            public float Wattage;
+            public float HrsPerDay;
         }
 
         private bool alreadyExist(string _text, ref char KeyChar) //Checks if a period already exists in a textbox.
@@ -143,10 +144,17 @@ namespace ElectricityBillCalculator
             {
                 return;
             }
+            UpdateInfo(currentAppliance);
+        }
+
+        private void UpdateInfo(Appliance currentAppliance)
+        {
+            float appCost = ((currentAppliance.Wattage * currentAppliance.HrsPerDay) / 1000.0f) * float.Parse(kwhRateTextbox.Text);
             editButton.Enabled = true;
             appNameTextbox.Text = currentAppliance.Name;
             wattageTextbox.Text = currentAppliance.Wattage.ToString();
             hrsPerDayTextbox.Text = currentAppliance.HrsPerDay.ToString();
+            appCostTextbox.Text = appCost.ToString();
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -169,6 +177,7 @@ namespace ElectricityBillCalculator
             currentAppliance.Wattage = Int32.Parse(wattageTextbox.Text);
             currentAppliance.HrsPerDay = Int32.Parse(hrsPerDayTextbox.Text);
             saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = false;
+            UpdateInfo(currentAppliance);
             applianceList.DrawMode = DrawMode.OwnerDrawFixed;
             applianceList.DrawMode = DrawMode.Normal;
         }
@@ -193,9 +202,20 @@ namespace ElectricityBillCalculator
         private void ResetButtons()
         {
             appNameTextbox.Text = string.Empty;
+            appCostTextbox.Text = string.Empty;
             wattageTextbox.Text = string.Empty;
             hrsPerDayTextbox.Text = string.Empty;
             editButton.Enabled = saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = false;
+        }
+
+        private void kwhRateTextbox_TextChanged(object sender, EventArgs e)
+        {
+            Appliance currentAppliance = (Appliance)applianceList.SelectedItem;
+            if (currentAppliance == null) //Return if there is no current appliance
+            {
+                return;
+            }
+            UpdateInfo(currentAppliance);
         }
     }
 }
