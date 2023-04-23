@@ -1,4 +1,4 @@
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -16,26 +16,6 @@ namespace ElectricityBillCalculator
         {
             applianceList.Items.Add(new Appliance("Test Appliance", 50, 24)); //Create a test appliance to start
             applianceList.Items.Add(new Appliance("Test Appliance 2", 25, 16)); //Create a test appliance to start
-        }
-
-        public class Appliance
-        {
-            public Appliance(string name, int wattage, int hrsPerDay)
-            {
-                this.Name = name;
-                this.Wattage = wattage;
-                this.HrsPerDay = hrsPerDay;
-            }
-
-            public override string ToString() //Required to display proper appliance name in list
-            {
-                return Name;
-            }
-
-            public string Name;
-            public float Wattage;
-            public float HrsPerDay;
-            public float AppCost = 0f;
         }
 
         private bool alreadyExist(string _text, ref char KeyChar) //Checks if a period already exists in a textbox.
@@ -156,9 +136,7 @@ namespace ElectricityBillCalculator
             appNameTextbox.Text = currentAppliance.Name;
             wattageTextbox.Text = currentAppliance.Wattage.ToString();
             hrsPerDayTextbox.Text = currentAppliance.HrsPerDay.ToString();
-            appCostTextbox.Text = appCost.ToString();
-
-
+            appCostTextbox.Text = "₱" + appCost.ToString();
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -238,8 +216,8 @@ namespace ElectricityBillCalculator
             monthlyCost *= 30f;
             yearlyCost = monthlyCost * 12f;
 
-            monthlyBillTextbox.Text = monthlyCost.ToString();
-            yearlyBillTextbox.Text = yearlyCost.ToString();
+            monthlyBillTextbox.Text = "₱" + monthlyCost.ToString();
+            yearlyBillTextbox.Text = "₱" + yearlyCost.ToString();
         }
     }
 }

@@ -1,4 +1,4 @@
-namespace ElectricityBillCalculator
+﻿namespace ElectricityBillCalculator
 {
     partial class Form1
     {
@@ -54,6 +54,8 @@ namespace ElectricityBillCalculator
             appNameTextbox = new TextBox();
             label2 = new Label();
             aboutButton = new Button();
+            label10 = new Label();
+            label11 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -123,6 +125,8 @@ namespace ElectricityBillCalculator
             // 
             // panel1
             // 
+            panel1.Controls.Add(label11);
+            panel1.Controls.Add(label10);
             panel1.Controls.Add(calculateButton);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(appCostTextbox);
@@ -232,10 +236,10 @@ namespace ElectricityBillCalculator
             // hrsPerDayTextbox
             // 
             hrsPerDayTextbox.Enabled = false;
-            hrsPerDayTextbox.Location = new Point(123, 96);
+            hrsPerDayTextbox.Location = new Point(69, 96);
             hrsPerDayTextbox.MaxLength = 2;
             hrsPerDayTextbox.Name = "hrsPerDayTextbox";
-            hrsPerDayTextbox.Size = new Size(129, 23);
+            hrsPerDayTextbox.Size = new Size(183, 23);
             hrsPerDayTextbox.TabIndex = 13;
             hrsPerDayTextbox.KeyPress += hrsPerDayTextbox_KeyPress;
             // 
@@ -253,10 +257,10 @@ namespace ElectricityBillCalculator
             // kwhRateTextbox
             // 
             kwhRateTextbox.Enabled = false;
-            kwhRateTextbox.Location = new Point(69, 162);
+            kwhRateTextbox.Location = new Point(82, 162);
             kwhRateTextbox.MaxLength = 6;
             kwhRateTextbox.Name = "kwhRateTextbox";
-            kwhRateTextbox.Size = new Size(109, 23);
+            kwhRateTextbox.Size = new Size(98, 23);
             kwhRateTextbox.TabIndex = 11;
             kwhRateTextbox.Text = "14.28";
             kwhRateTextbox.TextChanged += kwhRateTextbox_TextChanged;
@@ -276,7 +280,7 @@ namespace ElectricityBillCalculator
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(3, 165);
+            label5.Location = new Point(3, 168);
             label5.Name = "label5";
             label5.Size = new Size(60, 15);
             label5.TabIndex = 9;
@@ -301,9 +305,9 @@ namespace ElectricityBillCalculator
             label4.AutoSize = true;
             label4.Location = new Point(3, 99);
             label4.Name = "label4";
-            label4.Size = new Size(114, 15);
+            label4.Size = new Size(67, 15);
             label4.TabIndex = 6;
-            label4.Text = "Hours Used Per Day:";
+            label4.Text = "Hours/Day:";
             // 
             // label1
             // 
@@ -355,6 +359,26 @@ namespace ElectricityBillCalculator
             aboutButton.Text = "About..";
             aboutButton.UseVisualStyleBackColor = false;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(63, 160);
+            label10.Name = "label10";
+            label10.Size = new Size(19, 21);
+            label10.TabIndex = 21;
+            label10.Text = "₱";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(63, 163);
+            label11.Name = "label11";
+            label11.Size = new Size(19, 21);
+            label11.TabIndex = 21;
+            label11.Text = "₱";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -402,5 +426,7 @@ namespace ElectricityBillCalculator
         private Label label9;
         private TextBox appCostTextbox;
         private Button calculateButton;
+        private Label label11;
+        private Label label10;
     }
 }
