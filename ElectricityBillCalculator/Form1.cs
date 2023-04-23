@@ -35,6 +35,7 @@ namespace ElectricityBillCalculator
             public string Name;
             public float Wattage;
             public float HrsPerDay;
+            public float AppCost = 0f;
         }
 
         private bool alreadyExist(string _text, ref char KeyChar) //Checks if a period already exists in a textbox.
@@ -150,11 +151,14 @@ namespace ElectricityBillCalculator
         private void UpdateInfo(Appliance currentAppliance)
         {
             float appCost = ((currentAppliance.Wattage * currentAppliance.HrsPerDay) / 1000.0f) * float.Parse(kwhRateTextbox.Text);
+            currentAppliance.AppCost = appCost;
             editButton.Enabled = true;
             appNameTextbox.Text = currentAppliance.Name;
             wattageTextbox.Text = currentAppliance.Wattage.ToString();
             hrsPerDayTextbox.Text = currentAppliance.HrsPerDay.ToString();
             appCostTextbox.Text = appCost.ToString();
+
+
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -174,8 +178,8 @@ namespace ElectricityBillCalculator
                 return;
             }
             currentAppliance.Name = appNameTextbox.Text;
-            currentAppliance.Wattage = Int32.Parse(wattageTextbox.Text);
-            currentAppliance.HrsPerDay = Int32.Parse(hrsPerDayTextbox.Text);
+            currentAppliance.Wattage = float.Parse(wattageTextbox.Text);
+            currentAppliance.HrsPerDay = float.Parse(hrsPerDayTextbox.Text);
             saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = false;
             UpdateInfo(currentAppliance);
             applianceList.DrawMode = DrawMode.OwnerDrawFixed;
@@ -216,6 +220,26 @@ namespace ElectricityBillCalculator
                 return;
             }
             UpdateInfo(currentAppliance);
+        }
+
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            float monthlyCost = 0f;
+            float yearlyCost = 0f;
+
+            for (int i = 0; i < applianceList.Items.Count; i++)
+            {
+                Appliance currentAppliance = (Appliance)applianceList.Items[i];
+                currentAppliance.AppCost = ((currentAppliance.Wattage * currentAppliance.HrsPerDay) / 1000.0f) * float.Parse(kwhRateTextbox.Text);
+                //MessageBox.Show(currentAppliance.AppCost.ToString());
+                monthlyCost += currentAppliance.AppCost;
+            }
+
+            monthlyCost *= 30f;
+            yearlyCost = monthlyCost * 12f;
+
+            monthlyBillTextbox.Text = monthlyCost.ToString();
+            yearlyBillTextbox.Text = yearlyCost.ToString();
         }
     }
 }
