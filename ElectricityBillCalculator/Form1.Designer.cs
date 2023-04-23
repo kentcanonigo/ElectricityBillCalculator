@@ -34,6 +34,8 @@
             deleteButton = new Button();
             editButton = new Button();
             panel1 = new Panel();
+            label11 = new Label();
+            label10 = new Label();
             calculateButton = new Button();
             label9 = new Label();
             appCostTextbox = new TextBox();
@@ -54,8 +56,6 @@
             appNameTextbox = new TextBox();
             label2 = new Label();
             aboutButton = new Button();
-            label10 = new Label();
-            label11 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -151,6 +151,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(255, 424);
             panel1.TabIndex = 5;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(63, 163);
+            label11.Name = "label11";
+            label11.Size = new Size(19, 21);
+            label11.TabIndex = 21;
+            label11.Text = "₱";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(63, 160);
+            label10.Name = "label10";
+            label10.Size = new Size(19, 21);
+            label10.TabIndex = 21;
+            label10.Text = "₱";
             // 
             // calculateButton
             // 
@@ -359,26 +379,6 @@
             aboutButton.Text = "About..";
             aboutButton.UseVisualStyleBackColor = false;
             // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(63, 160);
-            label10.Name = "label10";
-            label10.Size = new Size(19, 21);
-            label10.TabIndex = 21;
-            label10.Text = "₱";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(63, 163);
-            label11.Name = "label11";
-            label11.Size = new Size(19, 21);
-            label11.TabIndex = 21;
-            label11.Text = "₱";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -391,6 +391,7 @@
             Controls.Add(applianceList);
             Controls.Add(titleLabel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Form1";
             Text = ".";
             panel1.ResumeLayout(false);
@@ -401,7 +402,7 @@
         #endregion
 
         private Label titleLabel;
-        private ListBox applianceList;
+        public ListBox applianceList;
         private Button newButton;
         private Button deleteButton;
         private Button editButton;

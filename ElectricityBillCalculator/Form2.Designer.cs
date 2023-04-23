@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            addName = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
+            addWattage = new TextBox();
             label4 = new Label();
-            textBox3 = new TextBox();
+            addHrs = new TextBox();
             cancelButton = new Button();
             addButton = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // addName
             // 
-            textBox1.Location = new Point(56, 44);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(181, 23);
-            textBox1.TabIndex = 0;
+            addName.Location = new Point(56, 44);
+            addName.Name = "addName";
+            addName.Size = new Size(181, 23);
+            addName.TabIndex = 0;
             // 
             // label1
             // 
@@ -76,12 +76,14 @@
             label3.TabIndex = 4;
             label3.Text = "Wattage:";
             // 
-            // textBox2
+            // addWattage
             // 
-            textBox2.Location = new Point(72, 73);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(165, 23);
-            textBox2.TabIndex = 3;
+            addWattage.Location = new Point(72, 73);
+            addWattage.MaxLength = 5;
+            addWattage.Name = "addWattage";
+            addWattage.Size = new Size(165, 23);
+            addWattage.TabIndex = 3;
+            addWattage.KeyPress += addWattage_KeyPress;
             // 
             // label4
             // 
@@ -92,12 +94,14 @@
             label4.TabIndex = 6;
             label4.Text = "Hours/Day:";
             // 
-            // textBox3
+            // addHrs
             // 
-            textBox3.Location = new Point(85, 102);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(152, 23);
-            textBox3.TabIndex = 5;
+            addHrs.Location = new Point(85, 102);
+            addHrs.MaxLength = 2;
+            addHrs.Name = "addHrs";
+            addHrs.Size = new Size(152, 23);
+            addHrs.TabIndex = 5;
+            addHrs.KeyPress += addHrs_KeyPress;
             // 
             // cancelButton
             // 
@@ -107,6 +111,7 @@
             cancelButton.TabIndex = 7;
             cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = true;
+            cancelButton.Click += cancelButton_Click;
             // 
             // addButton
             // 
@@ -126,13 +131,14 @@
             Controls.Add(addButton);
             Controls.Add(cancelButton);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(addHrs);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(addWattage);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(addName);
             Name = "Form2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
             ResumeLayout(false);
             PerformLayout();
@@ -140,13 +146,13 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox addName;
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox addWattage;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox addHrs;
         private Button cancelButton;
         private Button addButton;
     }

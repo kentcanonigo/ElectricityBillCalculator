@@ -12,14 +12,41 @@ namespace ElectricityBillCalculator
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        ListBox _appList;
+        public Form2(ListBox appList)
         {
             InitializeComponent();
+            _appList = appList;
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                _appList.Items.Add(new Appliance(addName.Text, Int32.Parse(addWattage.Text), Int32.Parse(addHrs.Text)));
+                this.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Fields cannot be blank!", "Error", MessageBoxButtons.OK);
+            }
+        }
 
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void addWattage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            const char Delete = (char)8;
+            e.Handled = !Char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
+        }
+
+        private void addHrs_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            const char Delete = (char)8;
+            e.Handled = !Char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
         }
     }
 }

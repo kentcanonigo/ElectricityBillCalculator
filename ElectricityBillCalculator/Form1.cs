@@ -9,10 +9,10 @@ namespace ElectricityBillCalculator
         public Form1()
         {
             InitializeComponent();
-            Init();
+            //Init();
         }
 
-        private void Init()
+        private void Init() //Testing purposes (Two test appliances on startup)
         {
             applianceList.Items.Add(new Appliance("Test Appliance", 50, 24)); //Create a test appliance to start
             applianceList.Items.Add(new Appliance("Test Appliance 2", 25, 16)); //Create a test appliance to start
@@ -40,7 +40,9 @@ namespace ElectricityBillCalculator
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
+            //MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
+            Form2 addNewAppForm = new Form2(applianceList);
+            addNewAppForm.ShowDialog();
         }
 
         private void customRateCheckbox_CheckedChanged(object sender, EventArgs e)
