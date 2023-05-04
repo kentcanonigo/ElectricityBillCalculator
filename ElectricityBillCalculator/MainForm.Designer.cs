@@ -241,7 +241,6 @@
             label7.Size = new Size(168, 28);
             label7.TabIndex = 16;
             label7.Text = "Total Monthly Bill:";
-            label7.Click += label7_Click;
             // 
             // monthlyBillTextbox
             // 

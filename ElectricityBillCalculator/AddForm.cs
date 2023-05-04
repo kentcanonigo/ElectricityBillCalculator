@@ -21,6 +21,11 @@ namespace ElectricityBillCalculator
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            if(addName.Text == "" || addWattage.Text == "" || addHrs.Text == "")
+            {
+                MessageBox.Show("Fields cannot be blank!", "Error", MessageBoxButtons.OK);
+            }
+
             try
             {
                 _appList.Items.Add(new Appliance(addName.Text, Int32.Parse(addWattage.Text), Int32.Parse(addHrs.Text)));
