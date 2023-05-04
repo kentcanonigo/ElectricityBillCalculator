@@ -221,5 +221,7 @@ namespace ElectricityBillCalculator
             monthlyBillTextbox.Text = "₱" + monthlyCost.ToString();
             yearlyBillTextbox.Text = "₱" + yearlyCost.ToString();
         }
+
+
     }
 }
