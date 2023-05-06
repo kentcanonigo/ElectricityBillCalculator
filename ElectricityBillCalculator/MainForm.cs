@@ -4,9 +4,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ElectricityBillCalculator
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             //Init();
@@ -222,6 +222,9 @@ namespace ElectricityBillCalculator
             yearlyBillTextbox.Text = "₱" + yearlyCost.ToString();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ElectricityBillCalculator
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -395,7 +395,7 @@
             aboutButton.Text = "About..";
             aboutButton.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -409,8 +409,9 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
-            Name = "Form1";
+            Name = "MainForm";
             Text = ".";
+            Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
