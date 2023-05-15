@@ -71,7 +71,7 @@ namespace ElectricityBillCalculator
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            if (usernameTxtBox.Text == "" ||  passwordTxtBox.Text == "")
+            if (usernameTxtBox.Text == "" || passwordTxtBox.Text == "")
             {
                 MessageBox.Show("Fields cannot be blank!", "Error", MessageBoxButtons.OK);
             }
@@ -99,6 +99,22 @@ namespace ElectricityBillCalculator
                         connection.Close();
                     }
                 }
+            }
+        }
+
+        private void showPassBtn_Click(object sender, EventArgs e)
+        {
+            if (passwordTxtBox.PasswordChar == '•')
+            {
+                // Show the password characters
+                passwordTxtBox.PasswordChar = '\0';
+                showPassBtn.Image = Properties.Resources.showPass;
+            }
+            else
+            {
+                // Hide the password characters
+                passwordTxtBox.PasswordChar = '•';
+                showPassBtn.Image = Properties.Resources.hidePass;
             }
         }
     }

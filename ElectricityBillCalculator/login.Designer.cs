@@ -34,6 +34,8 @@
             passwordLbl = new Label();
             loginBtn = new Button();
             registerBtn = new Button();
+            showPassBtn = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)showPassBtn).BeginInit();
             SuspendLayout();
             // 
             // usernameTxtBox
@@ -47,6 +49,7 @@
             // 
             passwordTxtBox.Location = new Point(275, 258);
             passwordTxtBox.Name = "passwordTxtBox";
+            passwordTxtBox.PasswordChar = '•';
             passwordTxtBox.Size = new Size(285, 27);
             passwordTxtBox.TabIndex = 1;
             // 
@@ -88,11 +91,23 @@
             registerBtn.UseVisualStyleBackColor = true;
             registerBtn.Click += registerBtn_Click;
             // 
+            // showPassBtn
+            // 
+            showPassBtn.Image = Properties.Resources.hidePass;
+            showPassBtn.Location = new Point(529, 263);
+            showPassBtn.Name = "showPassBtn";
+            showPassBtn.Size = new Size(22, 17);
+            showPassBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            showPassBtn.TabIndex = 6;
+            showPassBtn.TabStop = false;
+            showPassBtn.Click += showPassBtn_Click;
+            // 
             // login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(showPassBtn);
             Controls.Add(registerBtn);
             Controls.Add(loginBtn);
             Controls.Add(passwordLbl);
@@ -101,6 +116,7 @@
             Controls.Add(usernameTxtBox);
             Name = "login";
             Text = "login";
+            ((System.ComponentModel.ISupportInitialize)showPassBtn).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -113,5 +129,6 @@
         private Label passwordLbl;
         private Button loginBtn;
         private Button registerBtn;
+        private PictureBox showPassBtn;
     }
 }
