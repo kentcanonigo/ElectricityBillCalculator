@@ -77,18 +77,16 @@ namespace ElectricityBillCalculator
             }
             else
             {
-                string query = "INSERT INTO userinfo (user_name, user_pass) VALUES(@username, @password)";
+                string query = "INSERT INTO `userinfo` (user_name, user_pass) VALUES(" + usernameTxtBox.Text + "," + passwordTxtBox.Text + ")";
                 command = new MySqlCommand(query, connection);
 
-                command.Parameters.AddWithValue("@username", usernameTxtBox.Text);
-                command.Parameters.AddWithValue("@password", passwordTxtBox.Text);
                 try
                 {
                     connection.Open();
                     command.ExecuteNonQuery();
                     MessageBox.Show("New account created!", "Success!", MessageBoxButtons.OK);
                 }
-                catch (MySqlException ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
