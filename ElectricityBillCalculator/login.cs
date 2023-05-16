@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,9 +20,22 @@ namespace ElectricityBillCalculator
         MySqlCommand command;
         MySqlDataReader reader;
 
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+        );
+
         public login()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 100, 100));
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -115,6 +129,50 @@ namespace ElectricityBillCalculator
                 // Hide the password characters
                 passwordTxtBox.PasswordChar = '•';
                 showPassBtn.Image = Properties.Resources.hidePass;
+            }
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            // Adjust corner radius
+            usernameTxtBox.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, usernameTxtBox.Width, usernameTxtBox.Height, 40, 40));
+            passwordTxtBox.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, passwordTxtBox.Width, passwordTxtBox.Height, 40, 40));
+            registerBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, registerBtn.Width, registerBtn.Height, 40, 40));
+        }
+
+        private void usernameTxtBox_Enter(object sender, EventArgs e)
+        {
+            if (usernameTxtBox.Text == "Username")
+            {
+                usernameTxtBox.Text = "";
+                usernameTxtBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void usernameTxtBox_Leave(object sender, EventArgs e)
+        {
+            if (usernameTxtBox.Text == "")
+            {
+                usernameTxtBox.Text = "Username";
+                usernameTxtBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void passwordTxtBox_Enter(object sender, EventArgs e)
+        {
+            if (passwordTxtBox.Text == "Password")
+            {
+                passwordTxtBox.Text = "";
+                passwordTxtBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void passwordTxtBox_Leave(object sender, EventArgs e)
+        {
+            if (passwordTxtBox.Text == "")
+            {
+                passwordTxtBox.Text = "Password";
+                passwordTxtBox.ForeColor = Color.Silver;
             }
         }
     }
