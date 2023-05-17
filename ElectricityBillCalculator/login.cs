@@ -138,42 +138,24 @@ namespace ElectricityBillCalculator
             usernameTxtBox.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, usernameTxtBox.Width, usernameTxtBox.Height, 40, 40));
             passwordTxtBox.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, passwordTxtBox.Width, passwordTxtBox.Height, 40, 40));
             registerBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, registerBtn.Width, registerBtn.Height, 40, 40));
+            
+            // Assuming you have a button named "myButton" on your form
+            fbBtn.MouseEnter += Button_MouseEnter;
+            fbBtn.MouseEnter += Button_MouseLeave;
+            googBtn.MouseLeave += Button_MouseLeave;
+            twtBtn.MouseLeave += Button_MouseLeave;
         }
 
-        private void usernameTxtBox_Enter(object sender, EventArgs e)
+        private void Button_MouseEnter(object sender, EventArgs e)
         {
-            if (usernameTxtBox.Text == "Username")
-            {
-                usernameTxtBox.Text = "";
-                usernameTxtBox.ForeColor = Color.Black;
-            }
+            Button button = (Button)sender;
+            button.BackColor = Color.LightGray;
         }
 
-        private void usernameTxtBox_Leave(object sender, EventArgs e)
+        private void Button_MouseLeave(object sender, EventArgs e)
         {
-            if (usernameTxtBox.Text == "")
-            {
-                usernameTxtBox.Text = "Username";
-                usernameTxtBox.ForeColor = Color.Silver;
-            }
-        }
-
-        private void passwordTxtBox_Enter(object sender, EventArgs e)
-        {
-            if (passwordTxtBox.Text == "Password")
-            {
-                passwordTxtBox.Text = "";
-                passwordTxtBox.ForeColor = Color.Black;
-            }
-        }
-
-        private void passwordTxtBox_Leave(object sender, EventArgs e)
-        {
-            if (passwordTxtBox.Text == "")
-            {
-                passwordTxtBox.Text = "Password";
-                passwordTxtBox.ForeColor = Color.Silver;
-            }
+            Button button = (Button)sender;
+            button.BackColor = SystemColors.Control;
         }
     }
 }

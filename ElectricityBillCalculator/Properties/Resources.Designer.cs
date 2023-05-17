@@ -93,6 +93,26 @@ namespace ElectricityBillCalculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fbFin {
+            get {
+                object obj = ResourceManager.GetObject("fbFin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap googFin {
+            get {
+                object obj = ResourceManager.GetObject("googFin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap google {
             get {
                 object obj = ResourceManager.GetObject("google", resourceCulture);
@@ -136,6 +156,16 @@ namespace ElectricityBillCalculator.Properties {
         internal static System.Drawing.Bitmap twitter__1___1_ {
             get {
                 object obj = ResourceManager.GetObject("twitter (1) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap twtFin {
+            get {
+                object obj = ResourceManager.GetObject("twtFin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

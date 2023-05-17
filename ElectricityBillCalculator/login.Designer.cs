@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             usernameTxtBox = new TextBox();
             passwordTxtBox = new TextBox();
             loginBtn = new Button();
@@ -36,45 +38,38 @@
             wpSignupPbx = new PictureBox();
             label1 = new Label();
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            fbBtn = new Button();
-            googBtn = new Button();
-            twtBtn = new Button();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             signup2Lbl = new Label();
             signUp1Lbl = new Label();
+            twtBtn = new roundBtn();
+            fbBtn = new roundBtn();
+            googBtn = new roundBtn();
+            bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             ((System.ComponentModel.ISupportInitialize)showPassBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wpSignupPbx).BeginInit();
             SuspendLayout();
             // 
             // usernameTxtBox
             // 
-            usernameTxtBox.BackColor = SystemColors.Window;
-            usernameTxtBox.ForeColor = SystemColors.InactiveCaption;
+            usernameTxtBox.BackColor = SystemColors.InactiveCaption;
             usernameTxtBox.Location = new Point(147, 393);
             usernameTxtBox.Multiline = true;
             usernameTxtBox.Name = "usernameTxtBox";
             usernameTxtBox.Size = new Size(534, 65);
             usernameTxtBox.TabIndex = 0;
-            usernameTxtBox.Text = "\r\nUsername";
-            usernameTxtBox.Enter += usernameTxtBox_Enter;
-            usernameTxtBox.Leave += usernameTxtBox_Leave;
             // 
             // passwordTxtBox
             // 
-            passwordTxtBox.BackColor = SystemColors.Window;
-            passwordTxtBox.ForeColor = SystemColors.InactiveCaption;
+            passwordTxtBox.BackColor = SystemColors.InactiveCaption;
             passwordTxtBox.Location = new Point(146, 466);
             passwordTxtBox.Multiline = true;
             passwordTxtBox.Name = "passwordTxtBox";
             passwordTxtBox.PasswordChar = '•';
             passwordTxtBox.Size = new Size(534, 65);
             passwordTxtBox.TabIndex = 1;
-            passwordTxtBox.Text = "\r\nPassword";
-            passwordTxtBox.Enter += passwordTxtBox_Enter;
-            passwordTxtBox.Leave += passwordTxtBox_Leave;
             // 
             // loginBtn
             // 
@@ -138,48 +133,11 @@
             mySqlCommand1.EnableCaching = false;
             mySqlCommand1.Transaction = null;
             // 
-            // fbBtn
-            // 
-            fbBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            fbBtn.BackColor = SystemColors.ControlLightLight;
-            fbBtn.BackgroundImage = Properties.Resources.fb;
-            fbBtn.BackgroundImageLayout = ImageLayout.Center;
-            fbBtn.FlatAppearance.BorderSize = 0;
-            fbBtn.FlatStyle = FlatStyle.Flat;
-            fbBtn.Location = new Point(306, 276);
-            fbBtn.Margin = new Padding(3, 4, 3, 4);
-            fbBtn.Name = "fbBtn";
-            fbBtn.Size = new Size(71, 83);
-            fbBtn.TabIndex = 9;
-            fbBtn.UseVisualStyleBackColor = false;
-            // 
-            // googBtn
-            // 
-            googBtn.BackgroundImage = Properties.Resources.google;
-            googBtn.BackgroundImageLayout = ImageLayout.Center;
-            googBtn.Location = new Point(383, 276);
-            googBtn.Margin = new Padding(3, 4, 3, 4);
-            googBtn.Name = "googBtn";
-            googBtn.Size = new Size(71, 83);
-            googBtn.TabIndex = 10;
-            googBtn.UseVisualStyleBackColor = true;
-            // 
-            // twtBtn
-            // 
-            twtBtn.BackgroundImage = Properties.Resources.twitter__1___1_;
-            twtBtn.BackgroundImageLayout = ImageLayout.Center;
-            twtBtn.Location = new Point(459, 276);
-            twtBtn.Margin = new Padding(3, 4, 3, 4);
-            twtBtn.Name = "twtBtn";
-            twtBtn.Size = new Size(71, 83);
-            twtBtn.TabIndex = 11;
-            twtBtn.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Sylfaen", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(281, 231);
+            label2.Location = new Point(277, 257);
             label2.Name = "label2";
             label2.Size = new Size(288, 31);
             label2.TabIndex = 12;
@@ -189,7 +147,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Sylfaen", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(37, 127);
+            label3.Location = new Point(37, 153);
             label3.Name = "label3";
             label3.Size = new Size(816, 105);
             label3.TabIndex = 13;
@@ -235,19 +193,63 @@
             signUp1Lbl.Text = "New Here?";
             signUp1Lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // twtBtn
+            // 
+            twtBtn.BackColor = SystemColors.Control;
+            twtBtn.BackgroundImage = Properties.Resources.twtFin;
+            twtBtn.BackgroundImageLayout = ImageLayout.Center;
+            twtBtn.FlatAppearance.BorderSize = 0;
+            twtBtn.FlatStyle = FlatStyle.Flat;
+            twtBtn.Location = new Point(462, 299);
+            twtBtn.Name = "twtBtn";
+            twtBtn.Size = new Size(62, 62);
+            twtBtn.TabIndex = 20;
+            twtBtn.UseVisualStyleBackColor = false;
+            // 
+            // fbBtn
+            // 
+            fbBtn.BackColor = SystemColors.Control;
+            fbBtn.BackgroundImage = (Image)resources.GetObject("fbBtn.BackgroundImage");
+            fbBtn.BackgroundImageLayout = ImageLayout.Center;
+            fbBtn.FlatAppearance.BorderSize = 0;
+            fbBtn.FlatStyle = FlatStyle.Flat;
+            fbBtn.Location = new Point(309, 299);
+            fbBtn.Name = "fbBtn";
+            fbBtn.Size = new Size(62, 62);
+            fbBtn.TabIndex = 21;
+            fbBtn.UseVisualStyleBackColor = false;
+            // 
+            // googBtn
+            // 
+            googBtn.BackColor = SystemColors.Control;
+            googBtn.BackgroundImage = (Image)resources.GetObject("googBtn.BackgroundImage");
+            googBtn.BackgroundImageLayout = ImageLayout.Center;
+            googBtn.FlatAppearance.BorderSize = 0;
+            googBtn.FlatStyle = FlatStyle.Flat;
+            googBtn.Location = new Point(386, 299);
+            googBtn.Name = "googBtn";
+            googBtn.Size = new Size(62, 62);
+            googBtn.TabIndex = 22;
+            googBtn.UseVisualStyleBackColor = false;
+            // 
+            // bunifuElipse1
+            // 
+            bunifuElipse1.ElipseRadius = 20;
+            bunifuElipse1.TargetControl = this;
+            // 
             // login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1328, 712);
+            Controls.Add(googBtn);
+            Controls.Add(fbBtn);
+            Controls.Add(twtBtn);
             Controls.Add(signUp1Lbl);
             Controls.Add(signup2Lbl);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(twtBtn);
-            Controls.Add(googBtn);
-            Controls.Add(fbBtn);
             Controls.Add(label1);
             Controls.Add(showPassBtn);
             Controls.Add(registerBtn);
@@ -277,14 +279,15 @@
         private PictureBox wpSignupPbx;
         private Label label1;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
-        private Button fbBtn;
-        private Button googBtn;
-        private Button twtBtn;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label signup2Lbl;
         private Label signUp1Lbl;
+        private roundBtn twtBtn;
+        private roundBtn fbBtn;
+        private roundBtn googBtn;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
