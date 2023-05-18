@@ -138,18 +138,29 @@ namespace ElectricityBillCalculator
             usernameTxtBox.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, usernameTxtBox.Width, usernameTxtBox.Height, 40, 40));
             passwordTxtBox.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, passwordTxtBox.Width, passwordTxtBox.Height, 40, 40));
             registerBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, registerBtn.Width, registerBtn.Height, 40, 40));
-            
+            loginBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, loginBtn.Width, loginBtn.Height, 40, 40));
+
             // Assuming you have a button named "myButton" on your form
             fbBtn.MouseEnter += Button_MouseEnter;
             fbBtn.MouseEnter += Button_MouseLeave;
+            googBtn.MouseEnter += Button_MouseEnter;
             googBtn.MouseLeave += Button_MouseLeave;
+            twtBtn.MouseEnter += Button_MouseEnter;
             twtBtn.MouseLeave += Button_MouseLeave;
+
+            // Transparent background for labels
+            signUp1Lbl.Parent = wpSignupPbx;
+            signUp1Lbl.BackColor = Color.Transparent;
+            signUp2Lbl.Parent = wpSignupPbx;
+            signUp2Lbl.BackColor = Color.Transparent;
+            signUp1Lbl.location = new Point(10, 10);
+
         }
 
         private void Button_MouseEnter(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            button.BackColor = Color.LightGray;
+            button.BackColor = Color.WhiteSmoke;
         }
 
         private void Button_MouseLeave(object sender, EventArgs e)
