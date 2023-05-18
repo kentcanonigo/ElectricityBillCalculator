@@ -153,8 +153,8 @@ namespace ElectricityBillCalculator
             signUp1Lbl.BackColor = Color.Transparent;
             signUp2Lbl.Parent = wpSignupPbx;
             signUp2Lbl.BackColor = Color.Transparent;
-            signUp1Lbl.location = new Point(10, 10);
-
+            signUp1Lbl.Location = new Point(55, 280);
+            signUp2Lbl.Location = new Point(65, 350);
         }
 
         private void Button_MouseEnter(object sender, EventArgs e)

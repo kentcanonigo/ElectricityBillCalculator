@@ -55,7 +55,8 @@
             // usernameTxtBox
             // 
             usernameTxtBox.BackColor = SystemColors.InactiveCaption;
-            usernameTxtBox.Location = new Point(147, 367);
+            usernameTxtBox.BorderStyle = BorderStyle.None;
+            usernameTxtBox.Location = new Point(146, 367);
             usernameTxtBox.Multiline = true;
             usernameTxtBox.Name = "usernameTxtBox";
             usernameTxtBox.Size = new Size(534, 65);
@@ -64,6 +65,7 @@
             // passwordTxtBox
             // 
             passwordTxtBox.BackColor = SystemColors.InactiveCaption;
+            passwordTxtBox.BorderStyle = BorderStyle.None;
             passwordTxtBox.Location = new Point(146, 440);
             passwordTxtBox.Multiline = true;
             passwordTxtBox.Name = "passwordTxtBox";
@@ -73,6 +75,7 @@
             // 
             // loginBtn
             // 
+            loginBtn.FlatAppearance.BorderSize = 0;
             loginBtn.Font = new Font("Moon", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             loginBtn.Location = new Point(281, 519);
             loginBtn.Name = "loginBtn";
@@ -84,8 +87,9 @@
             // 
             // registerBtn
             // 
+            registerBtn.FlatAppearance.BorderSize = 0;
             registerBtn.Font = new Font("Moon", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            registerBtn.Location = new Point(977, 445);
+            registerBtn.Location = new Point(958, 445);
             registerBtn.Name = "registerBtn";
             registerBtn.Size = new Size(264, 61);
             registerBtn.TabIndex = 5;
@@ -109,7 +113,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Moon", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(406, 343);
+            label1.Location = new Point(408, 341);
             label1.Name = "label1";
             label1.Size = new Size(24, 14);
             label1.TabIndex = 8;
@@ -145,7 +149,7 @@
             // label4
             // 
             label4.BorderStyle = BorderStyle.Fixed3D;
-            label4.Location = new Point(59, 350);
+            label4.Location = new Point(63, 347);
             label4.Name = "label4";
             label4.Size = new Size(345, 3);
             label4.TabIndex = 14;
@@ -153,7 +157,7 @@
             // label5
             // 
             label5.BorderStyle = BorderStyle.Fixed3D;
-            label5.Location = new Point(432, 350);
+            label5.Location = new Point(433, 347);
             label5.Name = "label5";
             label5.Size = new Size(345, 3);
             label5.TabIndex = 15;
@@ -163,8 +167,8 @@
             signUp2Lbl.AutoSize = true;
             signUp2Lbl.BackColor = Color.Transparent;
             signUp2Lbl.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            signUp2Lbl.ForeColor = SystemColors.InfoText;
-            signUp2Lbl.Location = new Point(928, 367);
+            signUp2Lbl.ForeColor = Color.White;
+            signUp2Lbl.Location = new Point(912, 367);
             signUp2Lbl.Name = "signUp2Lbl";
             signUp2Lbl.Size = new Size(356, 66);
             signUp2Lbl.TabIndex = 16;
@@ -177,11 +181,11 @@
             signUp1Lbl.BackColor = Color.Transparent;
             signUp1Lbl.CausesValidation = false;
             signUp1Lbl.FlatStyle = FlatStyle.Flat;
-            signUp1Lbl.Font = new Font("Moon", 37.8F, FontStyle.Regular, GraphicsUnit.Point);
-            signUp1Lbl.ForeColor = Color.Black;
-            signUp1Lbl.Location = new Point(918, 291);
+            signUp1Lbl.Font = new Font("Moon", 37.8F, FontStyle.Bold, GraphicsUnit.Point);
+            signUp1Lbl.ForeColor = Color.White;
+            signUp1Lbl.Location = new Point(895, 291);
             signUp1Lbl.Name = "signUp1Lbl";
-            signUp1Lbl.Size = new Size(377, 66);
+            signUp1Lbl.Size = new Size(390, 66);
             signUp1Lbl.TabIndex = 17;
             signUp1Lbl.Text = "New Here?";
             signUp1Lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -232,16 +236,15 @@
             // 
             // wpSignupPbx
             // 
-            wpSignupPbx.BackColor = SystemColors.ButtonHighlight;
-            wpSignupPbx.BackgroundImage = Properties.Resources.wp4_safeimagekit1;
+            wpSignupPbx.BackColor = Color.Black;
+            wpSignupPbx.BackgroundImage = (Image)resources.GetObject("wpSignupPbx.BackgroundImage");
             wpSignupPbx.BackgroundImageLayout = ImageLayout.Center;
             wpSignupPbx.Dock = DockStyle.Right;
-            wpSignupPbx.Image = Properties.Resources.wp4_safeimagekit;
-            wpSignupPbx.InitialImage = Properties.Resources.wp4_safeimagekit;
-            wpSignupPbx.Location = new Point(868, 0);
+            wpSignupPbx.InitialImage = null;
+            wpSignupPbx.Location = new Point(848, 0);
             wpSignupPbx.Margin = new Padding(0);
             wpSignupPbx.Name = "wpSignupPbx";
-            wpSignupPbx.Size = new Size(460, 712);
+            wpSignupPbx.Size = new Size(480, 712);
             wpSignupPbx.TabIndex = 7;
             wpSignupPbx.TabStop = false;
             // 
