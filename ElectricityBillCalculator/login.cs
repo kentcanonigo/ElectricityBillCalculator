@@ -122,21 +122,21 @@ namespace ElectricityBillCalculator
             {
                 // Show the password characters
                 passwordTxtBox.PasswordChar = '\0';
-                showPassBtn.Image = Properties.Resources.showPass;
+                showPassBtn.Image = Properties.Resources.hidePass;
             }
             else
             {
                 // Hide the password characters
                 passwordTxtBox.PasswordChar = '•';
-                showPassBtn.Image = Properties.Resources.hidePass;
+                showPassBtn.Image = Properties.Resources.showPass;
             }
         }
 
         private void login_Load(object sender, EventArgs e)
         {
             // Adjust corner radius
-            usernameTxtBox.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, usernameTxtBox.Width, usernameTxtBox.Height, 40, 40));
-            passwordTxtBox.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, passwordTxtBox.Width, passwordTxtBox.Height, 40, 40));
+            usernamePanel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, usernamePanel.Width, usernamePanel.Height, 40, 40));
+            passwordPanel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, passwordPanel.Width, passwordPanel.Height, 40, 40));
             registerBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, registerBtn.Width, registerBtn.Height, 40, 40));
             loginBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, loginBtn.Width, loginBtn.Height, 40, 40));
 

@@ -153,6 +153,16 @@ namespace ElectricityBillCalculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap showPass1 {
+            get {
+                object obj = ResourceManager.GetObject("showPass1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap twitter__1___1_ {
             get {
                 object obj = ResourceManager.GetObject("twitter (1) (1)", resourceCulture);
@@ -206,6 +216,16 @@ namespace ElectricityBillCalculator.Properties {
         internal static System.Drawing.Bitmap wp4_safeimagekit1 {
             get {
                 object obj = ResourceManager.GetObject("wp4-safeimagekit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wpSignUpBg {
+            get {
+                object obj = ResourceManager.GetObject("wpSignUpBg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

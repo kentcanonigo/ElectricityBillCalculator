@@ -48,63 +48,78 @@
             googBtn = new roundBtn();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             wpSignupPbx = new PictureBox();
+            usernamePanel = new Panel();
+            passwordPanel = new Panel();
             ((System.ComponentModel.ISupportInitialize)showPassBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wpSignupPbx).BeginInit();
+            passwordPanel.SuspendLayout();
             SuspendLayout();
             // 
             // usernameTxtBox
             // 
             usernameTxtBox.BackColor = SystemColors.InactiveCaption;
             usernameTxtBox.BorderStyle = BorderStyle.None;
-            usernameTxtBox.Location = new Point(146, 367);
+            usernameTxtBox.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            usernameTxtBox.Location = new Point(155, 383);
             usernameTxtBox.Multiline = true;
             usernameTxtBox.Name = "usernameTxtBox";
-            usernameTxtBox.Size = new Size(534, 65);
+            usernameTxtBox.Size = new Size(457, 34);
             usernameTxtBox.TabIndex = 0;
             // 
             // passwordTxtBox
             // 
             passwordTxtBox.BackColor = SystemColors.InactiveCaption;
             passwordTxtBox.BorderStyle = BorderStyle.None;
-            passwordTxtBox.Location = new Point(146, 440);
+            passwordTxtBox.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordTxtBox.Location = new Point(155, 456);
             passwordTxtBox.Multiline = true;
             passwordTxtBox.Name = "passwordTxtBox";
             passwordTxtBox.PasswordChar = '•';
-            passwordTxtBox.Size = new Size(534, 65);
+            passwordTxtBox.Size = new Size(457, 34);
             passwordTxtBox.TabIndex = 1;
+            passwordTxtBox.Text = "\r\n";
             // 
             // loginBtn
             // 
+            loginBtn.BackColor = Color.PowderBlue;
+            loginBtn.Cursor = Cursors.Hand;
             loginBtn.FlatAppearance.BorderSize = 0;
+            loginBtn.FlatStyle = FlatStyle.Flat;
             loginBtn.Font = new Font("Moon", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             loginBtn.Location = new Point(281, 519);
+            loginBtn.Margin = new Padding(0);
             loginBtn.Name = "loginBtn";
             loginBtn.Size = new Size(264, 61);
             loginBtn.TabIndex = 4;
             loginBtn.Text = "Login";
-            loginBtn.UseVisualStyleBackColor = true;
+            loginBtn.UseVisualStyleBackColor = false;
             loginBtn.Click += loginBtn_Click;
             // 
             // registerBtn
             // 
+            registerBtn.BackColor = Color.PowderBlue;
+            registerBtn.Cursor = Cursors.Hand;
             registerBtn.FlatAppearance.BorderSize = 0;
+            registerBtn.FlatStyle = FlatStyle.Flat;
             registerBtn.Font = new Font("Moon", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             registerBtn.Location = new Point(958, 445);
+            registerBtn.Margin = new Padding(0);
             registerBtn.Name = "registerBtn";
             registerBtn.Size = new Size(264, 61);
             registerBtn.TabIndex = 5;
             registerBtn.Text = "Sign Up";
-            registerBtn.UseVisualStyleBackColor = true;
+            registerBtn.UseVisualStyleBackColor = false;
             registerBtn.Click += registerBtn_Click;
             // 
             // showPassBtn
             // 
-            showPassBtn.BackColor = SystemColors.ControlLightLight;
+            showPassBtn.BackColor = SystemColors.InactiveCaption;
+            showPassBtn.Cursor = Cursors.Hand;
             showPassBtn.Image = Properties.Resources.hidePass;
-            showPassBtn.Location = new Point(623, 456);
+            showPassBtn.Location = new Point(444, 5);
             showPassBtn.Name = "showPassBtn";
-            showPassBtn.Size = new Size(42, 33);
-            showPassBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            showPassBtn.Size = new Size(87, 57);
+            showPassBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             showPassBtn.TabIndex = 6;
             showPassBtn.TabStop = false;
             showPassBtn.Click += showPassBtn_Click;
@@ -195,6 +210,7 @@
             twtBtn.BackColor = SystemColors.Control;
             twtBtn.BackgroundImage = Properties.Resources.twtFin;
             twtBtn.BackgroundImageLayout = ImageLayout.Center;
+            twtBtn.Cursor = Cursors.Hand;
             twtBtn.FlatAppearance.BorderSize = 0;
             twtBtn.FlatStyle = FlatStyle.Flat;
             twtBtn.Location = new Point(462, 273);
@@ -208,6 +224,7 @@
             fbBtn.BackColor = SystemColors.Control;
             fbBtn.BackgroundImage = (Image)resources.GetObject("fbBtn.BackgroundImage");
             fbBtn.BackgroundImageLayout = ImageLayout.Center;
+            fbBtn.Cursor = Cursors.Hand;
             fbBtn.FlatAppearance.BorderSize = 0;
             fbBtn.FlatStyle = FlatStyle.Flat;
             fbBtn.Location = new Point(309, 273);
@@ -221,6 +238,7 @@
             googBtn.BackColor = SystemColors.Control;
             googBtn.BackgroundImage = (Image)resources.GetObject("googBtn.BackgroundImage");
             googBtn.BackgroundImageLayout = ImageLayout.Center;
+            googBtn.Cursor = Cursors.Hand;
             googBtn.FlatAppearance.BorderSize = 0;
             googBtn.FlatStyle = FlatStyle.Flat;
             googBtn.Location = new Point(386, 273);
@@ -237,7 +255,7 @@
             // wpSignupPbx
             // 
             wpSignupPbx.BackColor = Color.Black;
-            wpSignupPbx.BackgroundImage = (Image)resources.GetObject("wpSignupPbx.BackgroundImage");
+            wpSignupPbx.BackgroundImage = Properties.Resources.wpSignUpBg;
             wpSignupPbx.BackgroundImageLayout = ImageLayout.Center;
             wpSignupPbx.Dock = DockStyle.Right;
             wpSignupPbx.InitialImage = null;
@@ -247,6 +265,23 @@
             wpSignupPbx.Size = new Size(480, 712);
             wpSignupPbx.TabIndex = 7;
             wpSignupPbx.TabStop = false;
+            // 
+            // usernamePanel
+            // 
+            usernamePanel.BackColor = SystemColors.InactiveCaption;
+            usernamePanel.Location = new Point(146, 367);
+            usernamePanel.Name = "usernamePanel";
+            usernamePanel.Size = new Size(534, 65);
+            usernamePanel.TabIndex = 23;
+            // 
+            // passwordPanel
+            // 
+            passwordPanel.BackColor = SystemColors.InactiveCaption;
+            passwordPanel.Controls.Add(showPassBtn);
+            passwordPanel.Location = new Point(146, 440);
+            passwordPanel.Name = "passwordPanel";
+            passwordPanel.Size = new Size(534, 65);
+            passwordPanel.TabIndex = 24;
             // 
             // login
             // 
@@ -263,19 +298,21 @@
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(showPassBtn);
             Controls.Add(loginBtn);
-            Controls.Add(passwordTxtBox);
             Controls.Add(usernameTxtBox);
             Controls.Add(label3);
             Controls.Add(wpSignupPbx);
+            Controls.Add(usernamePanel);
+            Controls.Add(passwordTxtBox);
+            Controls.Add(passwordPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "login";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "login";
+            Text = "z";
             Load += login_Load;
             ((System.ComponentModel.ISupportInitialize)showPassBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)wpSignupPbx).EndInit();
+            passwordPanel.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -300,5 +337,7 @@
         private roundBtn googBtn;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private PictureBox wpSignupPbx;
+        private Panel usernamePanel;
+        private Panel passwordPanel;
     }
 }
