@@ -51,6 +51,8 @@
             usernamePanel = new Panel();
             passwordPanel = new Panel();
             loginClose = new Button();
+            loginRestore = new Button();
+            loginMinimize = new Button();
             ((System.ComponentModel.ISupportInitialize)showPassBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wpSignupPbx).BeginInit();
             passwordPanel.SuspendLayout();
@@ -299,11 +301,43 @@
             loginClose.UseVisualStyleBackColor = false;
             loginClose.Click += loginClose_Click;
             // 
+            // loginRestore
+            // 
+            loginRestore.BackColor = Color.Transparent;
+            loginRestore.BackgroundImage = Properties.Resources.loginRestore1;
+            loginRestore.BackgroundImageLayout = ImageLayout.Center;
+            loginRestore.FlatAppearance.BorderSize = 0;
+            loginRestore.FlatStyle = FlatStyle.Flat;
+            loginRestore.ForeColor = Color.White;
+            loginRestore.Location = new Point(1266, 0);
+            loginRestore.Name = "loginRestore";
+            loginRestore.Size = new Size(25, 25);
+            loginRestore.TabIndex = 26;
+            loginRestore.UseVisualStyleBackColor = false;
+            loginRestore.Click += loginRestore_Click;
+            // 
+            // loginMinimize
+            // 
+            loginMinimize.BackColor = Color.Transparent;
+            loginMinimize.BackgroundImage = Properties.Resources.loginMinimize;
+            loginMinimize.BackgroundImageLayout = ImageLayout.Center;
+            loginMinimize.FlatAppearance.BorderSize = 0;
+            loginMinimize.FlatStyle = FlatStyle.Flat;
+            loginMinimize.ForeColor = Color.White;
+            loginMinimize.Location = new Point(1241, 0);
+            loginMinimize.Name = "loginMinimize";
+            loginMinimize.Size = new Size(25, 25);
+            loginMinimize.TabIndex = 27;
+            loginMinimize.UseVisualStyleBackColor = false;
+            loginMinimize.Click += loginMinimize_Click;
+            // 
             // login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1328, 712);
+            Controls.Add(loginMinimize);
+            Controls.Add(loginRestore);
             Controls.Add(loginClose);
             Controls.Add(registerBtn);
             Controls.Add(signUp2Lbl);
@@ -357,5 +391,7 @@
         private Panel usernamePanel;
         private Panel passwordPanel;
         private Button loginClose;
+        private Button loginMinimize;
+        private Button loginRestore;
     }
 }

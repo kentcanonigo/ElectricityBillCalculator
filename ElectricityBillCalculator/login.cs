@@ -31,6 +31,8 @@ namespace ElectricityBillCalculator
             int nHeightEllipse // width of ellipse
         );
 
+        private FormWindowState previousWindowState;
+
         public login()
         {
             InitializeComponent();
@@ -158,6 +160,15 @@ namespace ElectricityBillCalculator
             loginClose.Parent = wpSignupPbx;
             loginClose.BackColor = Color.Transparent;
             loginClose.Location = new Point(445, 10);
+            loginRestore.Parent = wpSignupPbx;
+            loginRestore.BackColor = Color.Transparent;
+            loginRestore.Location = new Point(410, 10);
+            loginMinimize.Parent = wpSignupPbx;
+            loginMinimize.BackColor = Color.Transparent;
+            loginMinimize.Location = new Point(375, 10);
+
+            // for restore button
+            previousWindowState = this.WindowState;
         }
 
         private void Button_MouseEnter(object sender, EventArgs e)
@@ -175,6 +186,25 @@ namespace ElectricityBillCalculator
         private void loginClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void loginRestore_Click(object sender, EventArgs e)
+        {
+            this.WindowState = previousWindowState;
+        }
+
+        private void login_Resize(object sender, EventArgs e)
+        {
+            // Update the previous window state when the form is resized
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                previousWindowState = this.WindowState;
+            }
+        }
+
+        private void loginMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
