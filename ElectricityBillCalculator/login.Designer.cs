@@ -50,6 +50,7 @@
             wpSignupPbx = new PictureBox();
             usernamePanel = new Panel();
             passwordPanel = new Panel();
+            loginClose = new Button();
             ((System.ComponentModel.ISupportInitialize)showPassBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wpSignupPbx).BeginInit();
             passwordPanel.SuspendLayout();
@@ -116,9 +117,9 @@
             showPassBtn.BackColor = SystemColors.InactiveCaption;
             showPassBtn.Cursor = Cursors.Hand;
             showPassBtn.Image = Properties.Resources.hidePass;
-            showPassBtn.Location = new Point(444, 5);
+            showPassBtn.Location = new Point(465, 5);
             showPassBtn.Name = "showPassBtn";
-            showPassBtn.Size = new Size(87, 57);
+            showPassBtn.Size = new Size(68, 57);
             showPassBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             showPassBtn.TabIndex = 6;
             showPassBtn.TabStop = false;
@@ -283,11 +284,27 @@
             passwordPanel.Size = new Size(534, 65);
             passwordPanel.TabIndex = 24;
             // 
+            // loginClose
+            // 
+            loginClose.BackColor = Color.Transparent;
+            loginClose.BackgroundImage = Properties.Resources.loginClose3;
+            loginClose.BackgroundImageLayout = ImageLayout.Center;
+            loginClose.FlatAppearance.BorderSize = 0;
+            loginClose.FlatStyle = FlatStyle.Flat;
+            loginClose.ForeColor = Color.White;
+            loginClose.Location = new Point(1291, 0);
+            loginClose.Name = "loginClose";
+            loginClose.Size = new Size(25, 25);
+            loginClose.TabIndex = 25;
+            loginClose.UseVisualStyleBackColor = false;
+            loginClose.Click += loginClose_Click;
+            // 
             // login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1328, 712);
+            Controls.Add(loginClose);
             Controls.Add(registerBtn);
             Controls.Add(signUp2Lbl);
             Controls.Add(signUp1Lbl);
@@ -339,5 +356,6 @@
         private PictureBox wpSignupPbx;
         private Panel usernamePanel;
         private Panel passwordPanel;
+        private Button loginClose;
     }
 }

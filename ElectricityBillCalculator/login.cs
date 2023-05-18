@@ -155,6 +155,9 @@ namespace ElectricityBillCalculator
             signUp2Lbl.BackColor = Color.Transparent;
             signUp1Lbl.Location = new Point(55, 280);
             signUp2Lbl.Location = new Point(65, 350);
+            loginClose.Parent = wpSignupPbx;
+            loginClose.BackColor = Color.Transparent;
+            loginClose.Location = new Point(445, 10);
         }
 
         private void Button_MouseEnter(object sender, EventArgs e)
@@ -167,6 +170,11 @@ namespace ElectricityBillCalculator
         {
             Button button = (Button)sender;
             button.BackColor = SystemColors.Control;
+        }
+
+        private void loginClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

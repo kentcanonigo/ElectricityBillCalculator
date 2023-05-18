@@ -127,14 +127,17 @@
   <data name="googFin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\googFin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="twtFin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\twtFin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loginClose2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginClose2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twitter (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitter (1) (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wpSignUpBg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wpSignUpBg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hidePass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hidePass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="twtFin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twtFin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="showPass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\showPass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +151,14 @@
   <data name="wp4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wp4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="twitter (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\twitter (1) (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loginClose1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginClose1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fb (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fb (1) (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="showPass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\showPass1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="346149129_1434678470625565_4382516407507418401_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\346149129_1434678470625565_4382516407507418401_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,10 +169,16 @@
   <data name="output-onlinepngtools" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\output-onlinepngtools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hidePass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hidePass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="wp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wp3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="showPass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\showPass1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loginClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginClose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginClose3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginClose3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
