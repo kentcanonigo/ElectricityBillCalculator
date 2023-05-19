@@ -31,8 +31,6 @@ namespace ElectricityBillCalculator
             int nHeightEllipse // width of ellipse
         );
 
-        private FormWindowState previousWindowState;
-
         public login()
         {
             InitializeComponent();
@@ -87,35 +85,9 @@ namespace ElectricityBillCalculator
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            if (usernameTxtBox.Text == "" || passwordTxtBox.Text == "")
-            {
-                MessageBox.Show("Fields cannot be blank!", "Error", MessageBoxButtons.OK);
-            }
-            else
-            {
-                string query = "INSERT INTO userinfo (user_name, user_pass) VALUES(@username, @password)";
-                command = new MySqlCommand(query, connection);
-
-                command.Parameters.AddWithValue("@username", usernameTxtBox.Text);
-                command.Parameters.AddWithValue("@password", passwordTxtBox.Text);
-                try
-                {
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("New account created!", "Success!", MessageBoxButtons.OK);
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-                finally
-                {
-                    if (connection != null)
-                    {
-                        connection.Close();
-                    }
-                }
-            }
+            SignUp regForm = new SignUp();
+            regForm.Show();
+            this.Close();
         }
 
         private void showPassBtn_Click(object sender, EventArgs e)
@@ -141,6 +113,7 @@ namespace ElectricityBillCalculator
             passwordPanel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, passwordPanel.Width, passwordPanel.Height, 40, 40));
             registerBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, registerBtn.Width, registerBtn.Height, 40, 40));
             loginBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, loginBtn.Width, loginBtn.Height, 40, 40));
+            showPassBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, showPassBtn.Width, showPassBtn.Height, 40, 40));
 
             // Assuming you have a button named "myButton" on your form
             fbBtn.MouseEnter += Button_MouseEnter;
@@ -153,9 +126,9 @@ namespace ElectricityBillCalculator
             // Transparent background for labels
             signUp1Lbl.Parent = wpSignupPbx;
             signUp1Lbl.BackColor = Color.Transparent;
+            signUp1Lbl.Location = new Point(55, 280);
             signUp2Lbl.Parent = wpSignupPbx;
             signUp2Lbl.BackColor = Color.Transparent;
-            signUp1Lbl.Location = new Point(55, 280);
             signUp2Lbl.Location = new Point(65, 350);
             loginClose.Parent = wpSignupPbx;
             loginClose.BackColor = Color.Transparent;
@@ -166,9 +139,6 @@ namespace ElectricityBillCalculator
             loginMinimize.Parent = wpSignupPbx;
             loginMinimize.BackColor = Color.Transparent;
             loginMinimize.Location = new Point(375, 10);
-
-            // for restore button
-            previousWindowState = this.WindowState;
         }
 
         private void Button_MouseEnter(object sender, EventArgs e)
@@ -190,21 +160,13 @@ namespace ElectricityBillCalculator
 
         private void loginRestore_Click(object sender, EventArgs e)
         {
-            this.WindowState = previousWindowState;
-        }
 
-        private void login_Resize(object sender, EventArgs e)
-        {
-            // Update the previous window state when the form is resized
-            if (this.WindowState != FormWindowState.Minimized)
-            {
-                previousWindowState = this.WindowState;
-            }
         }
 
         private void loginMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
     }
 }

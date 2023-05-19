@@ -66,6 +66,7 @@
             usernameTxtBox.Location = new Point(155, 383);
             usernameTxtBox.Multiline = true;
             usernameTxtBox.Name = "usernameTxtBox";
+            usernameTxtBox.PlaceholderText = "Username";
             usernameTxtBox.Size = new Size(457, 34);
             usernameTxtBox.TabIndex = 0;
             // 
@@ -78,9 +79,9 @@
             passwordTxtBox.Multiline = true;
             passwordTxtBox.Name = "passwordTxtBox";
             passwordTxtBox.PasswordChar = '•';
+            passwordTxtBox.PlaceholderText = "Password";
             passwordTxtBox.Size = new Size(457, 34);
             passwordTxtBox.TabIndex = 1;
-            passwordTxtBox.Text = "\r\n";
             // 
             // loginBtn
             // 
@@ -119,7 +120,7 @@
             showPassBtn.BackColor = SystemColors.InactiveCaption;
             showPassBtn.Cursor = Cursors.Hand;
             showPassBtn.Image = Properties.Resources.hidePass;
-            showPassBtn.Location = new Point(465, 5);
+            showPassBtn.Location = new Point(466, 5);
             showPassBtn.Name = "showPassBtn";
             showPassBtn.Size = new Size(68, 57);
             showPassBtn.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -130,6 +131,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Cursor = Cursors.IBeam;
             label1.Font = new Font("Moon", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(408, 341);
             label1.Name = "label1";
@@ -147,6 +149,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Cursor = Cursors.IBeam;
             label2.Font = new Font("Avoda", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(253, 231);
             label2.Name = "label2";
@@ -157,6 +160,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Cursor = Cursors.IBeam;
             label3.Font = new Font("ArterioNonCommercial", 34.2F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(49, 174);
             label3.Name = "label3";
@@ -184,6 +188,7 @@
             // 
             signUp2Lbl.AutoSize = true;
             signUp2Lbl.BackColor = Color.Transparent;
+            signUp2Lbl.Cursor = Cursors.IBeam;
             signUp2Lbl.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             signUp2Lbl.ForeColor = Color.White;
             signUp2Lbl.Location = new Point(912, 367);
@@ -198,6 +203,7 @@
             signUp1Lbl.AutoSize = true;
             signUp1Lbl.BackColor = Color.Transparent;
             signUp1Lbl.CausesValidation = false;
+            signUp1Lbl.Cursor = Cursors.IBeam;
             signUp1Lbl.FlatStyle = FlatStyle.Flat;
             signUp1Lbl.Font = new Font("Moon", 37.8F, FontStyle.Bold, GraphicsUnit.Point);
             signUp1Lbl.ForeColor = Color.White;
@@ -335,6 +341,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(1328, 712);
             Controls.Add(loginMinimize);
             Controls.Add(loginRestore);
@@ -359,7 +366,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "login";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "z";
             Load += login_Load;
             ((System.ComponentModel.ISupportInitialize)showPassBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)wpSignupPbx).EndInit();
