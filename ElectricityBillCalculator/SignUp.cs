@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,9 @@ namespace ElectricityBillCalculator
 {
     public partial class SignUp : Form
     {
+        MySqlConnection connection = new MySqlConnection("server=localhost;user=root;password=;database=testBC");
+        MySqlCommand command;
+        MySqlDataReader reader;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -49,7 +53,35 @@ namespace ElectricityBillCalculator
 
         private void singupBtn_Click(object sender, EventArgs e)
         {
+            if (regUserTbx.Text == "" || regPassTbx.Text == "" || regConfPassTbx.Text == "")
+            {
+                MessageBox.Show("Fields cannot be blank!", "Error", MessageBoxButtons.OK);
+            }
+            else
+            {
+                string query = "INSERT INTO userinfo (user_name, user_pass) VALUES(@username, @password)";
+                command = new MySqlCommand(query, connection);
 
+                command.Parameters.AddWithValue("@username", regUserTbx.Text);
+                command.Parameters.AddWithValue("@password", regConfPassTbx.Text);
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("New account created!", "Success!", MessageBoxButtons.OK);
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection != null)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
         }
 
         private void Button_MouseEnter(object sender, EventArgs e)
