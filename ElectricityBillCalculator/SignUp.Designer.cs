@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             regConfPassShowBtn = new PictureBox();
             regConfPassTbx = new TextBox();
             regConfPassPanel = new Panel();
@@ -41,9 +42,10 @@
             regMailPanel = new Panel();
             regMailTbx = new TextBox();
             regInfoPanel = new Panel();
-            LoginLinkLabel = new LinkLabel();
+            loginLabel = new Label();
             label3 = new Label();
             signupBtn = new Button();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)regConfPassShowBtn).BeginInit();
             regConfPassPanel.SuspendLayout();
             regPassPanel.SuspendLayout();
@@ -53,6 +55,7 @@
             // 
             // regConfPassShowBtn
             // 
+            regConfPassShowBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regConfPassShowBtn.BackColor = Color.White;
             regConfPassShowBtn.Cursor = Cursors.Hand;
             regConfPassShowBtn.Image = Properties.Resources.hidePass;
@@ -66,6 +69,7 @@
             // 
             // regConfPassTbx
             // 
+            regConfPassTbx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regConfPassTbx.BackColor = Color.White;
             regConfPassTbx.BorderStyle = BorderStyle.None;
             regConfPassTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
@@ -79,6 +83,7 @@
             // 
             // regConfPassPanel
             // 
+            regConfPassPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regConfPassPanel.BackColor = Color.White;
             regConfPassPanel.Controls.Add(regConfPassShowBtn);
             regConfPassPanel.Location = new Point(54, 423);
@@ -88,6 +93,7 @@
             // 
             // regPassTbx
             // 
+            regPassTbx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regPassTbx.BackColor = Color.White;
             regPassTbx.BorderStyle = BorderStyle.None;
             regPassTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
@@ -102,6 +108,7 @@
             // 
             // regPassPanel
             // 
+            regPassPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regPassPanel.BackColor = Color.White;
             regPassPanel.Controls.Add(regPassShowBtn);
             regPassPanel.Location = new Point(54, 346);
@@ -111,6 +118,7 @@
             // 
             // regPassShowBtn
             // 
+            regPassShowBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regPassShowBtn.BackColor = Color.White;
             regPassShowBtn.Cursor = Cursors.Hand;
             regPassShowBtn.Image = Properties.Resources.hidePass;
@@ -124,19 +132,21 @@
             // 
             // regUserTbx
             // 
+            regUserTbx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regUserTbx.BackColor = Color.White;
             regUserTbx.BorderStyle = BorderStyle.None;
             regUserTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             regUserTbx.ForeColor = SystemColors.WindowText;
-            regUserTbx.Location = new Point(68, 205);
+            regUserTbx.Location = new Point(64, 204);
             regUserTbx.Multiline = true;
             regUserTbx.Name = "regUserTbx";
             regUserTbx.PlaceholderText = "Username";
-            regUserTbx.Size = new Size(334, 30);
+            regUserTbx.Size = new Size(334, 33);
             regUserTbx.TabIndex = 35;
             // 
             // regUserPanel
             // 
+            regUserPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regUserPanel.BackColor = Color.White;
             regUserPanel.Location = new Point(54, 192);
             regUserPanel.Name = "regUserPanel";
@@ -145,6 +155,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Moon", 40.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
@@ -156,6 +167,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Geomanist", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
@@ -167,6 +179,7 @@
             // 
             // regMailPanel
             // 
+            regMailPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regMailPanel.BackColor = Color.White;
             regMailPanel.Location = new Point(54, 269);
             regMailPanel.Name = "regMailPanel";
@@ -175,44 +188,49 @@
             // 
             // regMailTbx
             // 
+            regMailTbx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regMailTbx.BackColor = Color.White;
             regMailTbx.BorderStyle = BorderStyle.None;
             regMailTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            regMailTbx.Location = new Point(68, 284);
+            regMailTbx.Location = new Point(64, 282);
             regMailTbx.Multiline = true;
             regMailTbx.Name = "regMailTbx";
             regMailTbx.PlaceholderText = "Email";
-            regMailTbx.Size = new Size(334, 30);
+            regMailTbx.Size = new Size(334, 33);
             regMailTbx.TabIndex = 29;
             // 
             // regInfoPanel
             // 
+            regInfoPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regInfoPanel.BackColor = Color.PowderBlue;
-            regInfoPanel.Controls.Add(LoginLinkLabel);
+            regInfoPanel.Controls.Add(loginLabel);
             regInfoPanel.Controls.Add(label3);
             regInfoPanel.Location = new Point(39, 171);
             regInfoPanel.Name = "regInfoPanel";
             regInfoPanel.Size = new Size(392, 375);
             regInfoPanel.TabIndex = 39;
             // 
-            // LoginLinkLabel
+            // loginLabel
             // 
-            LoginLinkLabel.AutoSize = true;
-            LoginLinkLabel.Font = new Font("Geomanist", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            LoginLinkLabel.Location = new Point(245, 324);
-            LoginLinkLabel.Name = "LoginLinkLabel";
-            LoginLinkLabel.Size = new Size(108, 22);
-            LoginLinkLabel.TabIndex = 41;
-            LoginLinkLabel.TabStop = true;
-            LoginLinkLabel.Text = "Log in Now!";
-            LoginLinkLabel.LinkClicked += LoginLinkLabel_LinkClicked;
+            loginLabel.AutoSize = true;
+            loginLabel.Cursor = Cursors.Hand;
+            loginLabel.FlatStyle = FlatStyle.Flat;
+            loginLabel.Font = new Font("Geomanist", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            loginLabel.ForeColor = Color.Blue;
+            loginLabel.Location = new Point(247, 324);
+            loginLabel.Name = "loginLabel";
+            loginLabel.Size = new Size(108, 22);
+            loginLabel.TabIndex = 42;
+            loginLabel.Text = "Log in Now!";
+            loginLabel.Click += loginLabel_Click;
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Geomanist", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(29, 324);
+            label3.Location = new Point(36, 324);
             label3.Name = "label3";
             label3.Size = new Size(213, 22);
             label3.TabIndex = 0;
@@ -220,6 +238,7 @@
             // 
             // signupBtn
             // 
+            signupBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             signupBtn.Cursor = Cursors.Hand;
             signupBtn.Font = new Font("Moon", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             signupBtn.Location = new Point(39, 552);
@@ -230,6 +249,19 @@
             signupBtn.UseVisualStyleBackColor = true;
             signupBtn.Click += singupBtn_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Geomanist", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Image = Properties.Resources.iconEBC;
+            label6.ImageAlign = ContentAlignment.MiddleLeft;
+            label6.Location = new Point(20, 15);
+            label6.Name = "label6";
+            label6.Size = new Size(210, 19);
+            label6.TabIndex = 41;
+            label6.Text = "     RK - Electricity Bill Calculator";
+            // 
             // SignUp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -237,6 +269,7 @@
             BackColor = Color.Black;
             BackgroundImage = Properties.Resources.wpSignUpBg;
             ClientSize = new Size(462, 665);
+            Controls.Add(label6);
             Controls.Add(signupBtn);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -250,6 +283,7 @@
             Controls.Add(regConfPassPanel);
             Controls.Add(regInfoPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "SignUp";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SignUp";
@@ -280,6 +314,7 @@
         private Panel regInfoPanel;
         private Label label3;
         private Button signupBtn;
-        private LinkLabel LoginLinkLabel;
+        private Label loginLabel;
+        private Label label6;
     }
 }

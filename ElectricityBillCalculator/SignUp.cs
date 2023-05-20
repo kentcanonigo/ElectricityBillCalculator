@@ -48,7 +48,6 @@ namespace ElectricityBillCalculator
             label1.BackColor = Color.Transparent;
             label2.BackColor = Color.Transparent;
             regInfoPanel.BackColor = Color.PowderBlue;
-
         }
 
         private void singupBtn_Click(object sender, EventArgs e)
@@ -63,7 +62,15 @@ namespace ElectricityBillCalculator
                 command = new MySqlCommand(query, connection);
 
                 command.Parameters.AddWithValue("@username", regUserTbx.Text);
-                command.Parameters.AddWithValue("@password", regConfPassTbx.Text);
+                if (regPassTbx.Text == regConfPassTbx.Text)
+                {
+                    command.Parameters.AddWithValue("@password", regConfPassTbx.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Passwords should be the same", "Failed", MessageBoxButtons.OK);
+                }
+
                 try
                 {
                     connection.Open();
@@ -96,13 +103,6 @@ namespace ElectricityBillCalculator
             button.BackColor = SystemColors.Control;
         }
 
-        private void LoginLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            login main = new login();
-            main.Show();
-            this.Close();
-        }
-
         private void regPassShowBtn_Click(object sender, EventArgs e)
         {
             if (regPassTbx.PasswordChar == '•')
@@ -133,6 +133,13 @@ namespace ElectricityBillCalculator
                 regConfPassTbx.PasswordChar = '•';
                 regConfPassShowBtn.Image = Properties.Resources.showPass;
             }
+        }
+
+        private void loginLabel_Click(object sender, EventArgs e)
+        {
+            login main = new login();
+            main.Show();
+            this.Close();
         }
     }
 }

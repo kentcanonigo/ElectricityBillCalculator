@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             titleLabel = new Label();
             applianceList = new ListBox();
             newButton = new Button();
@@ -407,10 +408,11 @@
             Controls.Add(applianceList);
             Controls.Add(titleLabel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "MainForm";
-            Text = ".";
+            Text = "RK - Electricity Bill Calculator";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

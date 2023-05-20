@@ -53,6 +53,7 @@
             loginClose = new Button();
             loginRestore = new Button();
             loginMinimize = new Button();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)showPassBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wpSignupPbx).BeginInit();
             passwordPanel.SuspendLayout();
@@ -60,6 +61,7 @@
             // 
             // usernameTxtBox
             // 
+            usernameTxtBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             usernameTxtBox.BackColor = SystemColors.InactiveCaption;
             usernameTxtBox.BorderStyle = BorderStyle.None;
             usernameTxtBox.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
@@ -72,6 +74,7 @@
             // 
             // passwordTxtBox
             // 
+            passwordTxtBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             passwordTxtBox.BackColor = SystemColors.InactiveCaption;
             passwordTxtBox.BorderStyle = BorderStyle.None;
             passwordTxtBox.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
@@ -85,6 +88,8 @@
             // 
             // loginBtn
             // 
+            loginBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginBtn.AutoSize = true;
             loginBtn.BackColor = Color.PowderBlue;
             loginBtn.Cursor = Cursors.Hand;
             loginBtn.FlatAppearance.BorderSize = 0;
@@ -93,7 +98,7 @@
             loginBtn.Location = new Point(281, 519);
             loginBtn.Margin = new Padding(0);
             loginBtn.Name = "loginBtn";
-            loginBtn.Size = new Size(264, 61);
+            loginBtn.Size = new Size(282, 80);
             loginBtn.TabIndex = 4;
             loginBtn.Text = "Login";
             loginBtn.UseVisualStyleBackColor = false;
@@ -101,6 +106,8 @@
             // 
             // registerBtn
             // 
+            registerBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            registerBtn.AutoSize = true;
             registerBtn.BackColor = Color.PowderBlue;
             registerBtn.Cursor = Cursors.Hand;
             registerBtn.FlatAppearance.BorderSize = 0;
@@ -109,7 +116,7 @@
             registerBtn.Location = new Point(958, 445);
             registerBtn.Margin = new Padding(0);
             registerBtn.Name = "registerBtn";
-            registerBtn.Size = new Size(264, 61);
+            registerBtn.Size = new Size(282, 80);
             registerBtn.TabIndex = 5;
             registerBtn.Text = "Sign Up";
             registerBtn.UseVisualStyleBackColor = false;
@@ -117,6 +124,7 @@
             // 
             // showPassBtn
             // 
+            showPassBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             showPassBtn.BackColor = SystemColors.InactiveCaption;
             showPassBtn.Cursor = Cursors.Hand;
             showPassBtn.Image = Properties.Resources.hidePass;
@@ -130,6 +138,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Cursor = Cursors.IBeam;
             label1.Font = new Font("Moon", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -148,6 +157,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Cursor = Cursors.IBeam;
             label2.Font = new Font("Avoda", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
@@ -159,6 +169,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Cursor = Cursors.IBeam;
             label3.Font = new Font("ArterioNonCommercial", 34.2F, FontStyle.Bold, GraphicsUnit.Point);
@@ -170,6 +181,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.BorderStyle = BorderStyle.Fixed3D;
             label4.Location = new Point(63, 347);
             label4.Name = "label4";
@@ -178,6 +190,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.BorderStyle = BorderStyle.Fixed3D;
             label5.Location = new Point(433, 347);
             label5.Name = "label5";
@@ -186,6 +199,7 @@
             // 
             // signUp2Lbl
             // 
+            signUp2Lbl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             signUp2Lbl.AutoSize = true;
             signUp2Lbl.BackColor = Color.Transparent;
             signUp2Lbl.Cursor = Cursors.IBeam;
@@ -200,6 +214,7 @@
             // 
             // signUp1Lbl
             // 
+            signUp1Lbl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             signUp1Lbl.AutoSize = true;
             signUp1Lbl.BackColor = Color.Transparent;
             signUp1Lbl.CausesValidation = false;
@@ -216,6 +231,8 @@
             // 
             // twtBtn
             // 
+            twtBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            twtBtn.AutoSize = true;
             twtBtn.BackColor = SystemColors.Control;
             twtBtn.BackgroundImage = Properties.Resources.twtFin;
             twtBtn.BackgroundImageLayout = ImageLayout.Center;
@@ -230,6 +247,8 @@
             // 
             // fbBtn
             // 
+            fbBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            fbBtn.AutoSize = true;
             fbBtn.BackColor = SystemColors.Control;
             fbBtn.BackgroundImage = (Image)resources.GetObject("fbBtn.BackgroundImage");
             fbBtn.BackgroundImageLayout = ImageLayout.Center;
@@ -244,6 +263,8 @@
             // 
             // googBtn
             // 
+            googBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            googBtn.AutoSize = true;
             googBtn.BackColor = SystemColors.Control;
             googBtn.BackgroundImage = (Image)resources.GetObject("googBtn.BackgroundImage");
             googBtn.BackgroundImageLayout = ImageLayout.Center;
@@ -263,10 +284,10 @@
             // 
             // wpSignupPbx
             // 
+            wpSignupPbx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             wpSignupPbx.BackColor = Color.Black;
             wpSignupPbx.BackgroundImage = Properties.Resources.wpSignUpBg;
             wpSignupPbx.BackgroundImageLayout = ImageLayout.Center;
-            wpSignupPbx.Dock = DockStyle.Right;
             wpSignupPbx.InitialImage = null;
             wpSignupPbx.Location = new Point(848, 0);
             wpSignupPbx.Margin = new Padding(0);
@@ -277,6 +298,7 @@
             // 
             // usernamePanel
             // 
+            usernamePanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             usernamePanel.BackColor = SystemColors.InactiveCaption;
             usernamePanel.Location = new Point(146, 367);
             usernamePanel.Name = "usernamePanel";
@@ -285,6 +307,7 @@
             // 
             // passwordPanel
             // 
+            passwordPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             passwordPanel.BackColor = SystemColors.InactiveCaption;
             passwordPanel.Controls.Add(showPassBtn);
             passwordPanel.Location = new Point(146, 440);
@@ -294,6 +317,7 @@
             // 
             // loginClose
             // 
+            loginClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             loginClose.BackColor = Color.Transparent;
             loginClose.BackgroundImage = Properties.Resources.loginClose3;
             loginClose.BackgroundImageLayout = ImageLayout.Center;
@@ -309,8 +333,9 @@
             // 
             // loginRestore
             // 
+            loginRestore.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             loginRestore.BackColor = Color.Transparent;
-            loginRestore.BackgroundImage = Properties.Resources.loginRestore1;
+            loginRestore.BackgroundImage = Properties.Resources.loginMaximize1;
             loginRestore.BackgroundImageLayout = ImageLayout.Center;
             loginRestore.FlatAppearance.BorderSize = 0;
             loginRestore.FlatStyle = FlatStyle.Flat;
@@ -324,6 +349,7 @@
             // 
             // loginMinimize
             // 
+            loginMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             loginMinimize.BackColor = Color.Transparent;
             loginMinimize.BackgroundImage = Properties.Resources.loginMinimize;
             loginMinimize.BackgroundImageLayout = ImageLayout.Center;
@@ -337,12 +363,25 @@
             loginMinimize.UseVisualStyleBackColor = false;
             loginMinimize.Click += loginMinimize_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Geomanist", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Image = Properties.Resources.iconEBC;
+            label6.ImageAlign = ContentAlignment.MiddleLeft;
+            label6.Location = new Point(10, 10);
+            label6.Name = "label6";
+            label6.Size = new Size(210, 19);
+            label6.TabIndex = 28;
+            label6.Text = "     RK - Electricity Bill Calculator";
+            // 
             // login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(1328, 712);
+            Controls.Add(label6);
             Controls.Add(loginMinimize);
             Controls.Add(loginRestore);
             Controls.Add(loginClose);
@@ -364,6 +403,7 @@
             Controls.Add(passwordTxtBox);
             Controls.Add(passwordPanel);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "login";
             StartPosition = FormStartPosition.CenterScreen;
             Load += login_Load;
@@ -399,5 +439,6 @@
         private Button loginClose;
         private Button loginMinimize;
         private Button loginRestore;
+        private Label label6;
     }
 }
