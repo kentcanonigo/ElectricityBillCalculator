@@ -76,6 +76,9 @@ namespace ElectricityBillCalculator
                     connection.Open();
                     command.ExecuteNonQuery();
                     MessageBox.Show("New account created!", "Success!", MessageBoxButtons.OK);
+                    login main = new login();
+                    main.Show();
+                    this.Close();
                 }
                 catch (MySqlException ex)
                 {
