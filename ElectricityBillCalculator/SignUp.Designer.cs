@@ -61,9 +61,10 @@
             regConfPassShowBtn.BackColor = Color.White;
             regConfPassShowBtn.Cursor = Cursors.Hand;
             regConfPassShowBtn.Image = Properties.Resources.hidePass;
-            regConfPassShowBtn.Location = new Point(296, 0);
+            regConfPassShowBtn.Location = new Point(259, 0);
+            regConfPassShowBtn.Margin = new Padding(3, 2, 3, 2);
             regConfPassShowBtn.Name = "regConfPassShowBtn";
-            regConfPassShowBtn.Size = new Size(68, 57);
+            regConfPassShowBtn.Size = new Size(59, 50);
             regConfPassShowBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             regConfPassShowBtn.TabIndex = 6;
             regConfPassShowBtn.TabStop = false;
@@ -75,12 +76,13 @@
             regConfPassTbx.BackColor = Color.White;
             regConfPassTbx.BorderStyle = BorderStyle.None;
             regConfPassTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            regConfPassTbx.Location = new Point(64, 461);
+            regConfPassTbx.Location = new Point(56, 345);
+            regConfPassTbx.Margin = new Padding(3, 2, 3, 2);
             regConfPassTbx.Multiline = true;
             regConfPassTbx.Name = "regConfPassTbx";
             regConfPassTbx.PasswordChar = '•';
             regConfPassTbx.PlaceholderText = "Confirm Password";
-            regConfPassTbx.Size = new Size(280, 33);
+            regConfPassTbx.Size = new Size(245, 32);
             regConfPassTbx.TabIndex = 27;
             // 
             // regConfPassPanel
@@ -88,9 +90,10 @@
             regConfPassPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regConfPassPanel.BackColor = Color.White;
             regConfPassPanel.Controls.Add(regConfPassShowBtn);
-            regConfPassPanel.Location = new Point(54, 449);
+            regConfPassPanel.Location = new Point(47, 336);
+            regConfPassPanel.Margin = new Padding(3, 2, 3, 2);
             regConfPassPanel.Name = "regConfPassPanel";
-            regConfPassPanel.Size = new Size(364, 57);
+            regConfPassPanel.Size = new Size(318, 50);
             regConfPassPanel.TabIndex = 28;
             // 
             // regPassTbx
@@ -100,12 +103,13 @@
             regPassTbx.BorderStyle = BorderStyle.None;
             regPassTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             regPassTbx.ForeColor = SystemColors.WindowText;
-            regPassTbx.Location = new Point(64, 362);
+            regPassTbx.Location = new Point(56, 262);
+            regPassTbx.Margin = new Padding(3, 2, 3, 2);
             regPassTbx.Multiline = true;
             regPassTbx.Name = "regPassTbx";
             regPassTbx.PasswordChar = '•';
             regPassTbx.PlaceholderText = "Password";
-            regPassTbx.Size = new Size(280, 33);
+            regPassTbx.Size = new Size(245, 32);
             regPassTbx.TabIndex = 31;
             // 
             // regPassPanel
@@ -113,9 +117,10 @@
             regPassPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regPassPanel.BackColor = Color.White;
             regPassPanel.Controls.Add(regPassShowBtn);
-            regPassPanel.Location = new Point(54, 350);
+            regPassPanel.Location = new Point(47, 253);
+            regPassPanel.Margin = new Padding(3, 2, 3, 2);
             regPassPanel.Name = "regPassPanel";
-            regPassPanel.Size = new Size(364, 57);
+            regPassPanel.Size = new Size(318, 50);
             regPassPanel.TabIndex = 32;
             // 
             // regPassShowBtn
@@ -124,9 +129,10 @@
             regPassShowBtn.BackColor = Color.White;
             regPassShowBtn.Cursor = Cursors.Hand;
             regPassShowBtn.Image = Properties.Resources.hidePass;
-            regPassShowBtn.Location = new Point(296, 0);
+            regPassShowBtn.Location = new Point(259, 0);
+            regPassShowBtn.Margin = new Padding(3, 2, 3, 2);
             regPassShowBtn.Name = "regPassShowBtn";
-            regPassShowBtn.Size = new Size(68, 57);
+            regPassShowBtn.Size = new Size(59, 51);
             regPassShowBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             regPassShowBtn.TabIndex = 7;
             regPassShowBtn.TabStop = false;
@@ -139,20 +145,22 @@
             regUserTbx.BorderStyle = BorderStyle.None;
             regUserTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             regUserTbx.ForeColor = SystemColors.WindowText;
-            regUserTbx.Location = new Point(64, 214);
+            regUserTbx.Location = new Point(56, 151);
+            regUserTbx.Margin = new Padding(3, 2, 3, 2);
             regUserTbx.Multiline = true;
             regUserTbx.Name = "regUserTbx";
             regUserTbx.PlaceholderText = "Username";
-            regUserTbx.Size = new Size(334, 33);
+            regUserTbx.Size = new Size(292, 32);
             regUserTbx.TabIndex = 35;
             // 
             // regUserPanel
             // 
             regUserPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regUserPanel.BackColor = Color.White;
-            regUserPanel.Location = new Point(54, 202);
+            regUserPanel.Location = new Point(47, 142);
+            regUserPanel.Margin = new Padding(3, 2, 3, 2);
             regUserPanel.Name = "regUserPanel";
-            regUserPanel.Size = new Size(364, 57);
+            regUserPanel.Size = new Size(318, 50);
             regUserPanel.TabIndex = 36;
             // 
             // label1
@@ -161,9 +169,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Moon", 40.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(100, 60);
+            label1.Location = new Point(88, 45);
             label1.Name = "label1";
-            label1.Size = new Size(295, 70);
+            label1.Size = new Size(238, 56);
             label1.TabIndex = 37;
             label1.Text = "Sign Up";
             // 
@@ -173,9 +181,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Geomanist", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(137, 130);
+            label2.Location = new Point(120, 98);
             label2.Name = "label2";
-            label2.Size = new Size(202, 25);
+            label2.Size = new Size(163, 20);
             label2.TabIndex = 38;
             label2.Text = "Create a new account";
             // 
@@ -183,9 +191,10 @@
             // 
             regMailPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regMailPanel.BackColor = Color.White;
-            regMailPanel.Location = new Point(54, 276);
+            regMailPanel.Location = new Point(47, 198);
+            regMailPanel.Margin = new Padding(3, 2, 3, 2);
             regMailPanel.Name = "regMailPanel";
-            regMailPanel.Size = new Size(364, 57);
+            regMailPanel.Size = new Size(318, 50);
             regMailPanel.TabIndex = 30;
             // 
             // regMailTbx
@@ -194,11 +203,12 @@
             regMailTbx.BackColor = Color.White;
             regMailTbx.BorderStyle = BorderStyle.None;
             regMailTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            regMailTbx.Location = new Point(64, 289);
+            regMailTbx.Location = new Point(56, 208);
+            regMailTbx.Margin = new Padding(3, 2, 3, 2);
             regMailTbx.Multiline = true;
             regMailTbx.Name = "regMailTbx";
             regMailTbx.PlaceholderText = "Email";
-            regMailTbx.Size = new Size(334, 33);
+            regMailTbx.Size = new Size(292, 32);
             regMailTbx.TabIndex = 29;
             // 
             // regInfoPanel
@@ -209,9 +219,10 @@
             regInfoPanel.Controls.Add(generatePassBtn);
             regInfoPanel.Controls.Add(loginLabel);
             regInfoPanel.Controls.Add(label3);
-            regInfoPanel.Location = new Point(39, 167);
+            regInfoPanel.Location = new Point(34, 125);
+            regInfoPanel.Margin = new Padding(3, 2, 3, 2);
             regInfoPanel.Name = "regInfoPanel";
-            regInfoPanel.Size = new Size(392, 375);
+            regInfoPanel.Size = new Size(343, 292);
             regInfoPanel.TabIndex = 39;
             // 
             // generateLengthCbx
@@ -224,9 +235,10 @@
             generateLengthCbx.ForeColor = Color.Black;
             generateLengthCbx.FormattingEnabled = true;
             generateLengthCbx.Items.AddRange(new object[] { "8 Char", "10 Char", "12 Char" });
-            generateLengthCbx.Location = new Point(268, 247);
+            generateLengthCbx.Location = new Point(234, 183);
+            generateLengthCbx.Margin = new Padding(3, 2, 3, 2);
             generateLengthCbx.Name = "generateLengthCbx";
-            generateLengthCbx.Size = new Size(99, 27);
+            generateLengthCbx.Size = new Size(87, 23);
             generateLengthCbx.TabIndex = 44;
             // 
             // generatePassBtn
@@ -236,9 +248,9 @@
             generatePassBtn.FlatStyle = FlatStyle.Flat;
             generatePassBtn.Font = new Font("Geomanist", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             generatePassBtn.ForeColor = Color.Blue;
-            generatePassBtn.Location = new Point(26, 249);
+            generatePassBtn.Location = new Point(23, 185);
             generatePassBtn.Name = "generatePassBtn";
-            generatePassBtn.Size = new Size(236, 22);
+            generatePassBtn.Size = new Size(195, 19);
             generatePassBtn.TabIndex = 43;
             generatePassBtn.Text = "Generate Random Password";
             generatePassBtn.TextAlign = ContentAlignment.MiddleCenter;
@@ -251,9 +263,9 @@
             loginLabel.FlatStyle = FlatStyle.Flat;
             loginLabel.Font = new Font("Geomanist", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             loginLabel.ForeColor = Color.Blue;
-            loginLabel.Location = new Point(247, 346);
+            loginLabel.Location = new Point(216, 265);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(108, 22);
+            loginLabel.Size = new Size(89, 19);
             loginLabel.TabIndex = 42;
             loginLabel.Text = "Log in Now!";
             loginLabel.Click += loginLabel_Click;
@@ -264,9 +276,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Geomanist", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(36, 346);
+            label3.Location = new Point(32, 265);
             label3.Name = "label3";
-            label3.Size = new Size(213, 22);
+            label3.Size = new Size(179, 19);
             label3.TabIndex = 0;
             label3.Text = "Already have an account?";
             // 
@@ -275,9 +287,10 @@
             signupBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             signupBtn.Cursor = Cursors.Hand;
             signupBtn.Font = new Font("Moon", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            signupBtn.Location = new Point(39, 547);
+            signupBtn.Location = new Point(34, 421);
+            signupBtn.Margin = new Padding(3, 2, 3, 2);
             signupBtn.Name = "signupBtn";
-            signupBtn.Size = new Size(392, 63);
+            signupBtn.Size = new Size(343, 47);
             signupBtn.TabIndex = 40;
             signupBtn.Text = "Sign up";
             signupBtn.UseVisualStyleBackColor = true;
@@ -290,19 +303,19 @@
             label6.ForeColor = Color.White;
             label6.Image = Properties.Resources.iconEBC;
             label6.ImageAlign = ContentAlignment.MiddleLeft;
-            label6.Location = new Point(20, 15);
+            label6.Location = new Point(15, 15);
             label6.Name = "label6";
-            label6.Size = new Size(210, 19);
+            label6.Size = new Size(174, 15);
             label6.TabIndex = 41;
             label6.Text = "     RK - Electricity Bill Calculator";
             // 
             // SignUp
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             BackgroundImage = Properties.Resources.wpSignUpBg;
-            ClientSize = new Size(462, 665);
+            ClientSize = new Size(404, 499);
             Controls.Add(label6);
             Controls.Add(signupBtn);
             Controls.Add(label2);
@@ -318,6 +331,7 @@
             Controls.Add(regInfoPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "SignUp";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SignUp";

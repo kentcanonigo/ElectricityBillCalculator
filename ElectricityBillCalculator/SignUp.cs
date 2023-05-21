@@ -148,19 +148,19 @@ namespace ElectricityBillCalculator
 
         private void generatePassBtn_Click(object sender, EventArgs e)
         {
-            if(generateLengthCbx.Text == "8 Char")
+            if (generateLengthCbx.Text == "8 Char")
             {
                 PasswordGenerator(8);
             }
-            else if(generateLengthCbx.Text == "10 Char")
+            else if (generateLengthCbx.Text == "10 Char")
             {
                 PasswordGenerator(10);
             }
-            else if(generateLengthCbx.Text == "12 Char")
+            else if (generateLengthCbx.Text == "12 Char")
             {
                 PasswordGenerator(12);
             }
-            else  
+            else
             {
                 MessageBox.Show("Select the Length for your password", "Password Length", MessageBoxButtons.OK);
             }
