@@ -276,5 +276,12 @@ namespace ElectricityBillCalculator
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void aboutButton_Click(object sender, EventArgs e)
+        {
+            About abt = new About();
+            abt.Show();
+            this.Close();
+        }
     }
 }

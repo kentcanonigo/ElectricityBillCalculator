@@ -386,6 +386,7 @@
             aboutButton.TabIndex = 8;
             aboutButton.Text = "About..";
             aboutButton.UseVisualStyleBackColor = false;
+            aboutButton.Click += aboutButton_Click;
             // 
             // loginMinimize
             // 
