@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -143,6 +144,39 @@ namespace ElectricityBillCalculator
             login main = new login();
             main.Show();
             this.Close();
+        }
+
+        private void generatePassBtn_Click(object sender, EventArgs e)
+        {
+            if (generateLengthCbx.Text == "8 Char")
+            {
+                PasswordGenerator(8);
+            }
+            else if (generateLengthCbx.Text == "10 Char")
+            {
+                PasswordGenerator(10);
+            }
+            else if (generateLengthCbx.Text == "12 Char")
+            {
+                PasswordGenerator(12);
+            }
+            else
+            {
+                MessageBox.Show("Select the Length for your password", "Password Length", MessageBoxButtons.OK);
+            }
+        }
+
+        public void PasswordGenerator(int length)
+        {
+            const string ValidChar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            StringBuilder result = new StringBuilder();
+            Random rand = new Random();
+
+            while (0 < length--)
+            {
+                result.Append(ValidChar[rand.Next(ValidChar.Length)]);
+            }
+            regPassTbx.Text = result.ToString();
         }
     }
 }

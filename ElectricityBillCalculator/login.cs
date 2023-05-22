@@ -126,10 +126,10 @@ namespace ElectricityBillCalculator
             // Transparent background for labels
             signUp1Lbl.Parent = wpSignupPbx;
             signUp1Lbl.BackColor = Color.Transparent;
-            signUp1Lbl.Location = new Point(55, 280);
+            signUp1Lbl.Location = new Point(57, 280);
             signUp2Lbl.Parent = wpSignupPbx;
             signUp2Lbl.BackColor = Color.Transparent;
-            signUp2Lbl.Location = new Point(65, 350);
+            signUp2Lbl.Location = new Point(72, 350);
             loginClose.Parent = wpSignupPbx;
             loginClose.BackColor = Color.Transparent;
             loginClose.Location = new Point(445, 10);

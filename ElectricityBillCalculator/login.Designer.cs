@@ -54,6 +54,8 @@
             loginRestore = new Button();
             loginMinimize = new Button();
             label6 = new Label();
+            label7 = new Label();
+            checkBox1 = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)showPassBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wpSignupPbx).BeginInit();
             passwordPanel.SuspendLayout();
@@ -65,7 +67,7 @@
             usernameTxtBox.BackColor = SystemColors.InactiveCaption;
             usernameTxtBox.BorderStyle = BorderStyle.None;
             usernameTxtBox.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            usernameTxtBox.Location = new Point(155, 383);
+            usernameTxtBox.Location = new Point(155, 369);
             usernameTxtBox.Multiline = true;
             usernameTxtBox.Name = "usernameTxtBox";
             usernameTxtBox.PlaceholderText = "Username";
@@ -78,7 +80,7 @@
             passwordTxtBox.BackColor = SystemColors.InactiveCaption;
             passwordTxtBox.BorderStyle = BorderStyle.None;
             passwordTxtBox.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            passwordTxtBox.Location = new Point(155, 456);
+            passwordTxtBox.Location = new Point(155, 442);
             passwordTxtBox.Multiline = true;
             passwordTxtBox.Name = "passwordTxtBox";
             passwordTxtBox.PasswordChar = '•';
@@ -95,7 +97,7 @@
             loginBtn.FlatAppearance.BorderSize = 0;
             loginBtn.FlatStyle = FlatStyle.Flat;
             loginBtn.Font = new Font("Moon", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            loginBtn.Location = new Point(281, 519);
+            loginBtn.Location = new Point(281, 526);
             loginBtn.Margin = new Padding(0);
             loginBtn.Name = "loginBtn";
             loginBtn.Size = new Size(282, 80);
@@ -113,7 +115,7 @@
             registerBtn.FlatAppearance.BorderSize = 0;
             registerBtn.FlatStyle = FlatStyle.Flat;
             registerBtn.Font = new Font("Moon", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            registerBtn.Location = new Point(958, 445);
+            registerBtn.Location = new Point(958, 431);
             registerBtn.Margin = new Padding(0);
             registerBtn.Name = "registerBtn";
             registerBtn.Size = new Size(282, 80);
@@ -128,7 +130,7 @@
             showPassBtn.BackColor = SystemColors.InactiveCaption;
             showPassBtn.Cursor = Cursors.Hand;
             showPassBtn.Image = Properties.Resources.hidePass;
-            showPassBtn.Location = new Point(466, 5);
+            showPassBtn.Location = new Point(466, 4);
             showPassBtn.Name = "showPassBtn";
             showPassBtn.Size = new Size(68, 57);
             showPassBtn.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -142,9 +144,9 @@
             label1.AutoSize = true;
             label1.Cursor = Cursors.IBeam;
             label1.Font = new Font("Moon", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(408, 341);
+            label1.Location = new Point(408, 327);
             label1.Name = "label1";
-            label1.Size = new Size(24, 14);
+            label1.Size = new Size(20, 11);
             label1.TabIndex = 8;
             label1.Text = "OR";
             // 
@@ -161,9 +163,9 @@
             label2.AutoSize = true;
             label2.Cursor = Cursors.IBeam;
             label2.Font = new Font("Avoda", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(253, 231);
+            label2.Location = new Point(286, 217);
             label2.Name = "label2";
-            label2.Size = new Size(348, 42);
+            label2.Size = new Size(270, 34);
             label2.TabIndex = 12;
             label2.Text = "Login using social networks";
             // 
@@ -172,10 +174,10 @@
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Cursor = Cursors.IBeam;
-            label3.Font = new Font("ArterioNonCommercial", 34.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(49, 174);
+            label3.Font = new Font("ArterioNonCommercial", 39.7499962F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(67, 160);
             label3.Name = "label3";
-            label3.Size = new Size(754, 57);
+            label3.Size = new Size(706, 53);
             label3.TabIndex = 13;
             label3.Text = "Login to Your Account";
             // 
@@ -183,7 +185,7 @@
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.BorderStyle = BorderStyle.Fixed3D;
-            label4.Location = new Point(63, 347);
+            label4.Location = new Point(63, 333);
             label4.Name = "label4";
             label4.Size = new Size(345, 3);
             label4.TabIndex = 14;
@@ -192,7 +194,7 @@
             // 
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.BorderStyle = BorderStyle.Fixed3D;
-            label5.Location = new Point(433, 347);
+            label5.Location = new Point(433, 333);
             label5.Name = "label5";
             label5.Size = new Size(345, 3);
             label5.TabIndex = 15;
@@ -203,9 +205,9 @@
             signUp2Lbl.AutoSize = true;
             signUp2Lbl.BackColor = Color.Transparent;
             signUp2Lbl.Cursor = Cursors.IBeam;
-            signUp2Lbl.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            signUp2Lbl.Font = new Font("Geomanist", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point);
             signUp2Lbl.ForeColor = Color.White;
-            signUp2Lbl.Location = new Point(912, 367);
+            signUp2Lbl.Location = new Point(924, 353);
             signUp2Lbl.Name = "signUp2Lbl";
             signUp2Lbl.Size = new Size(356, 66);
             signUp2Lbl.TabIndex = 16;
@@ -220,11 +222,11 @@
             signUp1Lbl.CausesValidation = false;
             signUp1Lbl.Cursor = Cursors.IBeam;
             signUp1Lbl.FlatStyle = FlatStyle.Flat;
-            signUp1Lbl.Font = new Font("Moon", 37.8F, FontStyle.Bold, GraphicsUnit.Point);
+            signUp1Lbl.Font = new Font("Moon", 48F, FontStyle.Bold, GraphicsUnit.Point);
             signUp1Lbl.ForeColor = Color.White;
-            signUp1Lbl.Location = new Point(895, 291);
+            signUp1Lbl.Location = new Point(895, 277);
             signUp1Lbl.Name = "signUp1Lbl";
-            signUp1Lbl.Size = new Size(390, 66);
+            signUp1Lbl.Size = new Size(397, 67);
             signUp1Lbl.TabIndex = 17;
             signUp1Lbl.Text = "New Here?";
             signUp1Lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -239,7 +241,7 @@
             twtBtn.Cursor = Cursors.Hand;
             twtBtn.FlatAppearance.BorderSize = 0;
             twtBtn.FlatStyle = FlatStyle.Flat;
-            twtBtn.Location = new Point(462, 273);
+            twtBtn.Location = new Point(462, 259);
             twtBtn.Name = "twtBtn";
             twtBtn.Size = new Size(62, 62);
             twtBtn.TabIndex = 20;
@@ -255,7 +257,7 @@
             fbBtn.Cursor = Cursors.Hand;
             fbBtn.FlatAppearance.BorderSize = 0;
             fbBtn.FlatStyle = FlatStyle.Flat;
-            fbBtn.Location = new Point(309, 273);
+            fbBtn.Location = new Point(309, 259);
             fbBtn.Name = "fbBtn";
             fbBtn.Size = new Size(62, 62);
             fbBtn.TabIndex = 21;
@@ -271,7 +273,7 @@
             googBtn.Cursor = Cursors.Hand;
             googBtn.FlatAppearance.BorderSize = 0;
             googBtn.FlatStyle = FlatStyle.Flat;
-            googBtn.Location = new Point(386, 273);
+            googBtn.Location = new Point(386, 259);
             googBtn.Name = "googBtn";
             googBtn.Size = new Size(62, 62);
             googBtn.TabIndex = 22;
@@ -300,7 +302,7 @@
             // 
             usernamePanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             usernamePanel.BackColor = SystemColors.InactiveCaption;
-            usernamePanel.Location = new Point(146, 367);
+            usernamePanel.Location = new Point(146, 353);
             usernamePanel.Name = "usernamePanel";
             usernamePanel.Size = new Size(534, 65);
             usernamePanel.TabIndex = 23;
@@ -310,7 +312,7 @@
             passwordPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             passwordPanel.BackColor = SystemColors.InactiveCaption;
             passwordPanel.Controls.Add(showPassBtn);
-            passwordPanel.Location = new Point(146, 440);
+            passwordPanel.Location = new Point(146, 426);
             passwordPanel.Name = "passwordPanel";
             passwordPanel.Size = new Size(534, 65);
             passwordPanel.TabIndex = 24;
@@ -371,16 +373,45 @@
             label6.ImageAlign = ContentAlignment.MiddleLeft;
             label6.Location = new Point(10, 10);
             label6.Name = "label6";
-            label6.Size = new Size(210, 19);
+            label6.Size = new Size(174, 15);
             label6.TabIndex = 28;
             label6.Text = "     RK - Electricity Bill Calculator";
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Cursor = Cursors.Hand;
+            label7.FlatStyle = FlatStyle.Flat;
+            label7.Font = new Font("Geomanist", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(262, 498);
+            label7.Name = "label7";
+            label7.Size = new Size(121, 17);
+            label7.TabIndex = 29;
+            label7.Text = "Forgot password?";
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Cursor = Cursors.Hand;
+            checkBox1.FlatAppearance.BorderSize = 0;
+            checkBox1.FlatStyle = FlatStyle.Flat;
+            checkBox1.Font = new Font("Geomanist", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox1.ForeColor = Color.Blue;
+            checkBox1.Location = new Point(474, 496);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(117, 21);
+            checkBox1.TabIndex = 30;
+            checkBox1.Text = "Remember me";
+            checkBox1.TextAlign = ContentAlignment.TopCenter;
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
             // login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             AutoSize = true;
             ClientSize = new Size(1328, 712);
+            Controls.Add(checkBox1);
+            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(loginMinimize);
             Controls.Add(loginRestore);
@@ -440,5 +471,7 @@
         private Button loginMinimize;
         private Button loginRestore;
         private Label label6;
+        private CheckBox checkBox1;
+        private Label label7;
     }
 }
