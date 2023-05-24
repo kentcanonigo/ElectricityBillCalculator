@@ -200,7 +200,7 @@ namespace ElectricityBillCalculator
             else if (res == 2)
             {
                 signupBtn.Enabled = true;
-                passwordCheckerBtn.BackColor = Color.Green;
+                passwordCheckerBtn.BackColor = Color.DarkGreen;
             }
             pwCheckerTooltip.SetToolTip(passwordCheckerBtn, message);
         }
