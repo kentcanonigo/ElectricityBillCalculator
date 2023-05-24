@@ -22,7 +22,13 @@ namespace ElectricityBillCalculator
         public MainForm()
         {
             InitializeComponent(); //Init();
+
+
+            // Set the form's FormBorderStyle property to None, which removes the window border.
             this.FormBorderStyle = FormBorderStyle.None;
+
+            // Create a new Region object for the form's Region property using the FromHrgn method.
+            // The FromHrgn method takes the handle to a GDI region and returns a corresponding Region object.
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 100, 100));
         }
 

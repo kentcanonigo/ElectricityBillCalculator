@@ -37,9 +37,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(102, 29);
+            label1.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(93, 23);
             label1.Name = "label1";
-            label1.Size = new Size(135, 45);
+            label1.Size = new Size(149, 48);
             label1.TabIndex = 0;
             label1.Text = "This app was created by:\r\nRex C. Sumalinog\r\nKent Y. Canonigo\r\n";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -47,9 +48,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(120, 104);
+            label2.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(115, 104);
             label2.Name = "label2";
-            label2.Size = new Size(97, 15);
+            label2.Size = new Size(104, 16);
             label2.TabIndex = 1;
             label2.Text = "Found any bugs?";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -57,16 +59,20 @@
             // contactLink
             // 
             contactLink.AutoSize = true;
-            contactLink.Location = new Point(131, 119);
+            contactLink.Cursor = Cursors.Hand;
+            contactLink.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
+            contactLink.Location = new Point(128, 119);
             contactLink.Name = "contactLink";
-            contactLink.Size = new Size(68, 15);
+            contactLink.Size = new Size(73, 16);
             contactLink.TabIndex = 2;
             contactLink.TabStop = true;
             contactLink.Text = "Contact Us!";
             // 
             // okButton
             // 
-            okButton.Location = new Point(131, 151);
+            okButton.Cursor = Cursors.Hand;
+            okButton.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
+            okButton.Location = new Point(126, 151);
             okButton.Name = "okButton";
             okButton.Size = new Size(75, 23);
             okButton.TabIndex = 3;

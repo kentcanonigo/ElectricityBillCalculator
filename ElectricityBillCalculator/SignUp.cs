@@ -37,6 +37,8 @@ namespace ElectricityBillCalculator
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 100, 100));
         }
 
+        PasswordChecker pwchk = new PasswordChecker();
+
         private void SignUp_Load(object sender, EventArgs e)
         {
             regInfoPanel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, regInfoPanel.Width, regInfoPanel.Height, 20, 20));
@@ -49,6 +51,30 @@ namespace ElectricityBillCalculator
             label1.BackColor = Color.Transparent;
             label2.BackColor = Color.Transparent;
             regInfoPanel.BackColor = Color.PowderBlue;
+        }
+
+        private void passwordCheckerBtn_MouseHover(object sender, EventArgs e)
+        {
+            passwordCheckerBtn.PerformClick();
+            if (regPassTbx.Text == string.Empty) return;
+
+            string message = string.Empty;
+            
+            if (pwchk.IsStrong(regPassTbx.Text, out message))
+            {
+                if(string.IsNullOrEmpty(message))
+                {
+                    pwCheckerTooltip.Show("Password is not entered.", passwordCheckerBtn);
+                }
+                else
+                {
+                    pwCheckerTooltip.Show(message, passwordCheckerBtn);
+                }
+            }
+            else
+            {
+                pwCheckerTooltip.Show(message, passwordCheckerBtn);
+            }
         }
 
         private void singupBtn_Click(object sender, EventArgs e)
@@ -177,6 +203,14 @@ namespace ElectricityBillCalculator
                 result.Append(ValidChar[rand.Next(ValidChar.Length)]);
             }
             regPassTbx.Text = result.ToString();
+        }
+
+        private void regPassTbx_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                passwordCheckerBtn.PerformClick();
+            }
         }
     }
 }
