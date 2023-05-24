@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             regConfPassShowBtn = new PictureBox();
             regConfPassTbx = new TextBox();
@@ -42,12 +43,14 @@
             regMailPanel = new Panel();
             regMailTbx = new TextBox();
             regInfoPanel = new Panel();
+            passwordCheckerBtn = new roundBtn();
             generateLengthCbx = new ComboBox();
             generatePassBtn = new Label();
             loginLabel = new Label();
             label3 = new Label();
             signupBtn = new Button();
             label6 = new Label();
+            pwCheckerTooltip = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)regConfPassShowBtn).BeginInit();
             regConfPassPanel.SuspendLayout();
             regPassPanel.SuspendLayout();
@@ -83,7 +86,7 @@
             regConfPassTbx.PasswordChar = '•';
             regConfPassTbx.PlaceholderText = "Confirm Password";
             regConfPassTbx.Size = new Size(245, 32);
-            regConfPassTbx.TabIndex = 27;
+            regConfPassTbx.TabIndex = 5;
             // 
             // regConfPassPanel
             // 
@@ -110,7 +113,8 @@
             regPassTbx.PasswordChar = '•';
             regPassTbx.PlaceholderText = "Password";
             regPassTbx.Size = new Size(245, 32);
-            regPassTbx.TabIndex = 31;
+            regPassTbx.TabIndex = 2;
+            regPassTbx.KeyDown += regPassTbx_KeyDown;
             // 
             // regPassPanel
             // 
@@ -151,7 +155,7 @@
             regUserTbx.Name = "regUserTbx";
             regUserTbx.PlaceholderText = "Username";
             regUserTbx.Size = new Size(292, 32);
-            regUserTbx.TabIndex = 35;
+            regUserTbx.TabIndex = 0;
             // 
             // regUserPanel
             // 
@@ -209,12 +213,13 @@
             regMailTbx.Name = "regMailTbx";
             regMailTbx.PlaceholderText = "Email";
             regMailTbx.Size = new Size(292, 32);
-            regMailTbx.TabIndex = 29;
+            regMailTbx.TabIndex = 1;
             // 
             // regInfoPanel
             // 
             regInfoPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regInfoPanel.BackColor = Color.PowderBlue;
+            regInfoPanel.Controls.Add(passwordCheckerBtn);
             regInfoPanel.Controls.Add(generateLengthCbx);
             regInfoPanel.Controls.Add(generatePassBtn);
             regInfoPanel.Controls.Add(loginLabel);
@@ -224,6 +229,18 @@
             regInfoPanel.Name = "regInfoPanel";
             regInfoPanel.Size = new Size(343, 292);
             regInfoPanel.TabIndex = 39;
+            // 
+            // passwordCheckerBtn
+            // 
+            passwordCheckerBtn.BackColor = Color.White;
+            passwordCheckerBtn.FlatAppearance.BorderSize = 0;
+            passwordCheckerBtn.FlatStyle = FlatStyle.Flat;
+            passwordCheckerBtn.Location = new Point(19, 184);
+            passwordCheckerBtn.Name = "passwordCheckerBtn";
+            passwordCheckerBtn.Size = new Size(20, 20);
+            passwordCheckerBtn.TabIndex = 42;
+            passwordCheckerBtn.UseVisualStyleBackColor = false;
+            passwordCheckerBtn.MouseHover += passwordCheckerBtn_MouseHover;
             // 
             // generateLengthCbx
             // 
@@ -235,11 +252,11 @@
             generateLengthCbx.ForeColor = Color.Black;
             generateLengthCbx.FormattingEnabled = true;
             generateLengthCbx.Items.AddRange(new object[] { "8 Char", "10 Char", "12 Char" });
-            generateLengthCbx.Location = new Point(234, 183);
+            generateLengthCbx.Location = new Point(237, 183);
             generateLengthCbx.Margin = new Padding(3, 2, 3, 2);
             generateLengthCbx.Name = "generateLengthCbx";
             generateLengthCbx.Size = new Size(87, 23);
-            generateLengthCbx.TabIndex = 44;
+            generateLengthCbx.TabIndex = 4;
             // 
             // generatePassBtn
             // 
@@ -248,10 +265,10 @@
             generatePassBtn.FlatStyle = FlatStyle.Flat;
             generatePassBtn.Font = new Font("Geomanist", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             generatePassBtn.ForeColor = Color.Blue;
-            generatePassBtn.Location = new Point(23, 185);
+            generatePassBtn.Location = new Point(39, 185);
             generatePassBtn.Name = "generatePassBtn";
             generatePassBtn.Size = new Size(195, 19);
-            generatePassBtn.TabIndex = 43;
+            generatePassBtn.TabIndex = 3;
             generatePassBtn.Text = "Generate Random Password";
             generatePassBtn.TextAlign = ContentAlignment.MiddleCenter;
             generatePassBtn.Click += generatePassBtn_Click;
@@ -266,7 +283,7 @@
             loginLabel.Location = new Point(216, 265);
             loginLabel.Name = "loginLabel";
             loginLabel.Size = new Size(89, 19);
-            loginLabel.TabIndex = 42;
+            loginLabel.TabIndex = 6;
             loginLabel.Text = "Log in Now!";
             loginLabel.Click += loginLabel_Click;
             // 
@@ -291,7 +308,7 @@
             signupBtn.Margin = new Padding(3, 2, 3, 2);
             signupBtn.Name = "signupBtn";
             signupBtn.Size = new Size(343, 47);
-            signupBtn.TabIndex = 40;
+            signupBtn.TabIndex = 7;
             signupBtn.Text = "Sign up";
             signupBtn.UseVisualStyleBackColor = true;
             signupBtn.Click += singupBtn_Click;
@@ -309,6 +326,15 @@
             label6.TabIndex = 41;
             label6.Text = "     RK - Electricity Bill Calculator";
             // 
+            // pwCheckerTooltip
+            // 
+            pwCheckerTooltip.AutoPopDelay = 5000;
+            pwCheckerTooltip.InitialDelay = 50;
+            pwCheckerTooltip.IsBalloon = true;
+            pwCheckerTooltip.ReshowDelay = 50;
+            pwCheckerTooltip.ToolTipIcon = ToolTipIcon.Info;
+            pwCheckerTooltip.ToolTipTitle = "Password Strength";
+            // 
             // SignUp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -322,12 +348,12 @@
             Controls.Add(label1);
             Controls.Add(regUserTbx);
             Controls.Add(regUserPanel);
-            Controls.Add(regPassTbx);
-            Controls.Add(regPassPanel);
             Controls.Add(regMailTbx);
             Controls.Add(regMailPanel);
             Controls.Add(regConfPassTbx);
             Controls.Add(regConfPassPanel);
+            Controls.Add(regPassTbx);
+            Controls.Add(regPassPanel);
             Controls.Add(regInfoPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -366,5 +392,7 @@
         private Label label6;
         private Label generatePassBtn;
         private ComboBox generateLengthCbx;
+        private roundBtn passwordCheckerBtn;
+        private ToolTip pwCheckerTooltip;
     }
 }

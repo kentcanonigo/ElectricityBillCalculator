@@ -1,4 +1,6 @@
-﻿using System.Linq.Expressions;
+﻿using MySqlX.XDevAPI.Common;
+using System.Linq.Expressions;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -6,10 +8,28 @@ namespace ElectricityBillCalculator
 {
     public partial class MainForm : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+        );
+
         public MainForm()
         {
-            InitializeComponent();
-            //Init();
+            InitializeComponent(); //Init();
+
+
+            // Set the form's FormBorderStyle property to None, which removes the window border.
+            this.FormBorderStyle = FormBorderStyle.None;
+
+            // Create a new Region object for the form's Region property using the FromHrgn method.
+            // The FromHrgn method takes the handle to a GDI region and returns a corresponding Region object.
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 100, 100));
         }
 
         private void Init() //Testing purposes (Two test appliances on startup)
@@ -222,9 +242,52 @@ namespace ElectricityBillCalculator
             yearlyBillTextbox.Text = "₱" + yearlyCost.ToString();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure?", "Signout", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                login login = new login();
+                login.Show();
+                this.Close();
+            }
+        }
+
+        private void loginClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void loginRestore_Click(object sender, EventArgs e)
+        {
+            /*if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+                loginRestore.Image = Properties.Resources.loginRestore1;
+            }
+            else if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+                loginRestore.Image = Properties.Resources.loginMaximize;
+            }*/
+        }
+
+        private void loginMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void aboutButton_Click(object sender, EventArgs e)
+        {
+            About abt = new About();
+            abt.Show();
+            this.Close();
         }
     }
 }

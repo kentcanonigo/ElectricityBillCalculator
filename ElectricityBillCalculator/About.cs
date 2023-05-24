@@ -16,10 +16,5 @@ namespace ElectricityBillCalculator
         {
             InitializeComponent();
         }
-
-        private void contactLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://google.com"); //Change to compose email
-        }
     }
 }
