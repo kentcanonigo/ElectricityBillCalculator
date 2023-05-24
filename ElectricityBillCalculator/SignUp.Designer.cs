@@ -114,7 +114,7 @@
             regPassTbx.PlaceholderText = "Password";
             regPassTbx.Size = new Size(245, 32);
             regPassTbx.TabIndex = 2;
-            regPassTbx.KeyDown += regPassTbx_KeyDown;
+            regPassTbx.TextChanged += regPassTbx_TextChanged;
             // 
             // regPassPanel
             // 
@@ -240,7 +240,6 @@
             passwordCheckerBtn.Size = new Size(20, 20);
             passwordCheckerBtn.TabIndex = 42;
             passwordCheckerBtn.UseVisualStyleBackColor = false;
-            passwordCheckerBtn.MouseHover += passwordCheckerBtn_MouseHover;
             // 
             // generateLengthCbx
             // 

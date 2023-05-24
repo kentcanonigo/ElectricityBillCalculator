@@ -51,30 +51,7 @@ namespace ElectricityBillCalculator
             label1.BackColor = Color.Transparent;
             label2.BackColor = Color.Transparent;
             regInfoPanel.BackColor = Color.PowderBlue;
-        }
-
-        private void passwordCheckerBtn_MouseHover(object sender, EventArgs e)
-        {
-            passwordCheckerBtn.PerformClick();
-            if (regPassTbx.Text == string.Empty) return;
-
-            string message = string.Empty;
-            
-            if (pwchk.IsStrong(regPassTbx.Text, out message))
-            {
-                if(string.IsNullOrEmpty(message))
-                {
-                    pwCheckerTooltip.Show("Password is not entered.", passwordCheckerBtn);
-                }
-                else
-                {
-                    pwCheckerTooltip.Show(message, passwordCheckerBtn);
-                }
-            }
-            else
-            {
-                pwCheckerTooltip.Show(message, passwordCheckerBtn);
-            }
+            signupBtn.Enabled = false;
         }
 
         private void singupBtn_Click(object sender, EventArgs e)
@@ -205,12 +182,27 @@ namespace ElectricityBillCalculator
             regPassTbx.Text = result.ToString();
         }
 
-        private void regPassTbx_KeyDown(object sender, KeyEventArgs e)
+        string message = string.Empty;
+
+        private void regPassTbx_TextChanged(object sender, EventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            int res = pwchk.IsStrong(regPassTbx.Text, out message);
+            if (res == 0)
             {
-                passwordCheckerBtn.PerformClick();
+                signupBtn.Enabled = false;
+                passwordCheckerBtn.BackColor = Color.Red;
             }
+            else if (res == 1)
+            {
+                signupBtn.Enabled = true;
+                passwordCheckerBtn.BackColor = Color.Yellow;
+            }
+            else if (res == 2)
+            {
+                signupBtn.Enabled = true;
+                passwordCheckerBtn.BackColor = Color.Green;
+            }
+            pwCheckerTooltip.SetToolTip(passwordCheckerBtn, message);
         }
     }
 }

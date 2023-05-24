@@ -19,18 +19,17 @@ namespace ElectricityBillCalculator
             Suggestions.Add(PasswordStrength.LowerCase, "Add Lowercase Character.");
             Suggestions.Add(PasswordStrength.Symbol, "Add Special Character.");
             Suggestions.Add(PasswordStrength.Digit, "Add Number.");
-            Suggestions.Add(PasswordStrength.Length, "Password must have a minimum length of 8.");
             Suggestions.Add(PasswordStrength.NotCommon, "Password is common. Try a more complicated one.");
         }
 
-        internal bool IsStrong(string password, out string message)
+        internal int IsStrong(string password, out string message)
         {
             message = string.Empty;
             setPasswordStrengths(password);
             return checkPasswordScore(ref message);
         }
 
-        private bool checkPasswordScore(ref string message)
+        private int checkPasswordScore(ref string message)
         {
             int passwordScore = 0;
             foreach(var strength in Conditions)
@@ -43,41 +42,46 @@ namespace ElectricityBillCalculator
 
             if(passwordScore <= 50)
             {
-                message = "Password is in the common list. Probably easy to crack";
-                return false;
+                message = "Password is too common or empty!";
+                return 0;
             }
 
             if(passwordScore > 50 && passwordScore < 60)
             {
                 message = "Password is very weak. \n" +additionalSuggestions();
-                return false;
+                return 0;
             }
 
             if (passwordScore >= 60 && passwordScore < 70)
             {
                 message = "Password is weak. \n" + additionalSuggestions();
-                return false;
+                return 0;
             }
 
             if (passwordScore >= 70 && passwordScore < 80)
             {
                 message = "Password is medium. \n" + additionalSuggestions();
-                return false;
+                return 1;
             }
 
             if (passwordScore >= 80 && passwordScore <= 90)
             {
                 message = "Password is strong. \n" + additionalSuggestions();
-                return false;
+                return 2;
             }
 
-            return true;
+            if (passwordScore > 90)
+            {
+                message = "Password is strong. \n";
+                return 2;
+            }
+
+            return 0;
         }
 
         private void setPasswordStrengths(string password)
         {
             Conditions.Clear();
-            setPasswordStrengths(PasswordStrength.Length, password.Length > 8);
             setPasswordStrengths(PasswordStrength.UpperCase, password.Any(char.IsUpper));
             setPasswordStrengths(PasswordStrength.LowerCase, password.Any(char.IsLower));
             setPasswordStrengths(PasswordStrength.Symbol, password.Any(c => !char.IsLetterOrDigit(c)));
