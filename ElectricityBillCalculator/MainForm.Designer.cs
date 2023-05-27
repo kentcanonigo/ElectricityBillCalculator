@@ -35,6 +35,8 @@
             deleteButton = new Button();
             editButton = new Button();
             panel1 = new Panel();
+            label10 = new Label();
+            daysUsedTextbox = new TextBox();
             label11 = new Label();
             calculateButton = new Button();
             label9 = new Label();
@@ -125,7 +127,7 @@
             editButton.Enabled = false;
             editButton.FlatStyle = FlatStyle.System;
             editButton.Font = new Font("Geomanist", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            editButton.Location = new Point(119, 125);
+            editButton.Location = new Point(119, 162);
             editButton.Name = "editButton";
             editButton.Size = new Size(114, 31);
             editButton.TabIndex = 4;
@@ -136,6 +138,8 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(daysUsedTextbox);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(calculateButton);
             panel1.Controls.Add(label9);
@@ -162,11 +166,30 @@
             panel1.Size = new Size(409, 424);
             panel1.TabIndex = 5;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(25, 130);
+            label10.Name = "label10";
+            label10.Size = new Size(67, 16);
+            label10.TabIndex = 23;
+            label10.Text = "Days used:";
+            // 
+            // daysUsedTextbox
+            // 
+            daysUsedTextbox.Enabled = false;
+            daysUsedTextbox.Location = new Point(98, 126);
+            daysUsedTextbox.MaxLength = 2;
+            daysUsedTextbox.Name = "daysUsedTextbox";
+            daysUsedTextbox.Size = new Size(287, 23);
+            daysUsedTextbox.TabIndex = 22;
+            // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(142, 176);
+            label11.Location = new Point(142, 213);
             label11.Name = "label11";
             label11.Size = new Size(19, 21);
             label11.TabIndex = 21;
@@ -190,7 +213,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Geomanist", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(82, 211);
+            label9.Location = new Point(82, 248);
             label9.Name = "label9";
             label9.Size = new Size(115, 15);
             label9.TabIndex = 20;
@@ -199,7 +222,7 @@
             // appCostTextbox
             // 
             appCostTextbox.Enabled = false;
-            appCostTextbox.Location = new Point(202, 208);
+            appCostTextbox.Location = new Point(202, 245);
             appCostTextbox.MaxLength = 2;
             appCostTextbox.Name = "appCostTextbox";
             appCostTextbox.Size = new Size(129, 23);
@@ -248,7 +271,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Moon", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(161, 275);
+            label6.Location = new Point(161, 286);
             label6.Name = "label6";
             label6.Size = new Size(88, 16);
             label6.TabIndex = 14;
@@ -267,7 +290,7 @@
             // wattageTextbox
             // 
             wattageTextbox.Enabled = false;
-            wattageTextbox.Location = new Point(99, 67);
+            wattageTextbox.Location = new Point(98, 66);
             wattageTextbox.MaxLength = 5;
             wattageTextbox.Name = "wattageTextbox";
             wattageTextbox.Size = new Size(286, 23);
@@ -278,7 +301,7 @@
             // kwhRateTextbox
             // 
             kwhRateTextbox.Enabled = false;
-            kwhRateTextbox.Location = new Point(161, 175);
+            kwhRateTextbox.Location = new Point(161, 212);
             kwhRateTextbox.MaxLength = 6;
             kwhRateTextbox.Name = "kwhRateTextbox";
             kwhRateTextbox.Size = new Size(98, 23);
@@ -291,7 +314,7 @@
             // 
             customRateCheckbox.AutoSize = true;
             customRateCheckbox.Font = new Font("Geomanist", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            customRateCheckbox.Location = new Point(263, 177);
+            customRateCheckbox.Location = new Point(263, 214);
             customRateCheckbox.Name = "customRateCheckbox";
             customRateCheckbox.Size = new Size(67, 19);
             customRateCheckbox.TabIndex = 10;
@@ -303,7 +326,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Geomanist", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(82, 181);
+            label5.Location = new Point(82, 218);
             label5.Name = "label5";
             label5.Size = new Size(61, 15);
             label5.TabIndex = 9;
@@ -316,7 +339,7 @@
             saveButton.Enabled = false;
             saveButton.FlatStyle = FlatStyle.System;
             saveButton.Font = new Font("Geomanist", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            saveButton.Location = new Point(239, 125);
+            saveButton.Location = new Point(239, 162);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(129, 31);
             saveButton.TabIndex = 7;
@@ -328,7 +351,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(21, 103);
+            label4.Location = new Point(21, 100);
             label4.Name = "label4";
             label4.Size = new Size(71, 16);
             label4.TabIndex = 6;
@@ -338,7 +361,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(34, 74);
+            label1.Location = new Point(34, 70);
             label1.Name = "label1";
             label1.Size = new Size(59, 16);
             label1.TabIndex = 4;
@@ -348,7 +371,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(49, 48);
+            label3.Location = new Point(49, 40);
             label3.Name = "label3";
             label3.Size = new Size(44, 16);
             label3.TabIndex = 2;
@@ -357,7 +380,7 @@
             // appNameTextbox
             // 
             appNameTextbox.Enabled = false;
-            appNameTextbox.Location = new Point(99, 41);
+            appNameTextbox.Location = new Point(98, 36);
             appNameTextbox.MaxLength = 20;
             appNameTextbox.Name = "appNameTextbox";
             appNameTextbox.Size = new Size(286, 23);
@@ -365,11 +388,10 @@
             // 
             // label2
             // 
-            label2.Dock = DockStyle.Top;
             label2.Font = new Font("Moon", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(0, 0);
+            label2.Location = new Point(0, 9);
             label2.Name = "label2";
-            label2.Size = new Size(409, 31);
+            label2.Size = new Size(409, 30);
             label2.TabIndex = 0;
             label2.Text = "Appliance Info";
             label2.TextAlign = ContentAlignment.TopCenter;
@@ -457,7 +479,7 @@
             // 
             logoutBtn.Cursor = Cursors.Hand;
             logoutBtn.Font = new Font("Geomanist", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            logoutBtn.Location = new Point(709, 630);
+            logoutBtn.Location = new Point(626, 618);
             logoutBtn.Name = "logoutBtn";
             logoutBtn.Size = new Size(111, 31);
             logoutBtn.TabIndex = 32;
@@ -532,5 +554,7 @@
         private Button loginClose;
         private Label label12;
         private Button logoutBtn;
+        private Label label10;
+        private TextBox daysUsedTextbox;
     }
 }

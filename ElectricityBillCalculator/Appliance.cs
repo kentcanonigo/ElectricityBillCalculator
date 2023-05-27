@@ -2,11 +2,12 @@
 
 public class Appliance
 {
-    public Appliance(string name, int wattage, int hrsPerDay)
+    public Appliance(string name, int wattage, int hrsPerDay, int daysPerMonth)
     {
         this.Name = name;
         this.Wattage = wattage;
         this.HrsPerDay = hrsPerDay;
+        this.DaysPerMonth = daysPerMonth;
     }
 
     public override string ToString() //Required to display proper appliance name in list
@@ -18,4 +19,5 @@ public class Appliance
     public float Wattage;
     public float HrsPerDay;
     public float AppCost = 0f;
+    public float DaysPerMonth;
 }

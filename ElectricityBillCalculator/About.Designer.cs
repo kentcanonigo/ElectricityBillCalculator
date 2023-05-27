@@ -78,6 +78,7 @@
             okButton.TabIndex = 3;
             okButton.Text = "Cool!";
             okButton.UseVisualStyleBackColor = true;
+            okButton.Click += okButton_Click;
             // 
             // About
             // 
@@ -89,6 +90,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "About";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "About";
             ResumeLayout(false);
             PerformLayout();

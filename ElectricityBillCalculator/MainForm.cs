@@ -34,8 +34,8 @@ namespace ElectricityBillCalculator
 
         private void Init() //Testing purposes (Two test appliances on startup)
         {
-            applianceList.Items.Add(new Appliance("Test Appliance", 50, 24)); //Create a test appliance to start
-            applianceList.Items.Add(new Appliance("Test Appliance 2", 25, 16)); //Create a test appliance to start
+            //applianceList.Items.Add(new Appliance("Test Appliance", 50, 24)); //Create a test appliance to start
+            //applianceList.Items.Add(new Appliance("Test Appliance 2", 25, 16)); //Create a test appliance to start
         }
 
         private bool alreadyExist(string _text, ref char KeyChar) //Checks if a period already exists in a textbox.
@@ -159,6 +159,7 @@ namespace ElectricityBillCalculator
             wattageTextbox.Text = currentAppliance.Wattage.ToString();
             hrsPerDayTextbox.Text = currentAppliance.HrsPerDay.ToString();
             appCostTextbox.Text = "₱" + appCost.ToString();
+            daysUsedTextbox.Text = currentAppliance.DaysPerMonth.ToString();
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -167,7 +168,7 @@ namespace ElectricityBillCalculator
             {
                 return;
             }
-            saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = true;
+            saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = daysUsedTextbox.Enabled = true;
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -180,7 +181,8 @@ namespace ElectricityBillCalculator
             currentAppliance.Name = appNameTextbox.Text;
             currentAppliance.Wattage = float.Parse(wattageTextbox.Text);
             currentAppliance.HrsPerDay = float.Parse(hrsPerDayTextbox.Text);
-            saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = false;
+            currentAppliance.DaysPerMonth = float.Parse(daysUsedTextbox.Text);
+            saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = daysUsedTextbox.Enabled = false;
             UpdateInfo(currentAppliance);
             applianceList.DrawMode = DrawMode.OwnerDrawFixed;
             applianceList.DrawMode = DrawMode.Normal;
@@ -230,12 +232,11 @@ namespace ElectricityBillCalculator
             for (int i = 0; i < applianceList.Items.Count; i++)
             {
                 Appliance currentAppliance = (Appliance)applianceList.Items[i];
-                currentAppliance.AppCost = ((currentAppliance.Wattage * currentAppliance.HrsPerDay) / 1000.0f) * float.Parse(kwhRateTextbox.Text);
+                currentAppliance.AppCost = (((currentAppliance.Wattage * currentAppliance.HrsPerDay) * currentAppliance.DaysPerMonth) / 1000.0f) * float.Parse(kwhRateTextbox.Text);
                 //MessageBox.Show(currentAppliance.AppCost.ToString());
                 monthlyCost += currentAppliance.AppCost;
             }
 
-            monthlyCost *= 30f;
             yearlyCost = monthlyCost * 12f;
 
             monthlyBillTextbox.Text = "₱" + monthlyCost.ToString();
