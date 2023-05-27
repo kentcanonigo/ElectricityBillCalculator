@@ -124,6 +124,9 @@
   <data name="loginClose2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loginClose2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="helpBtn3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\helpBtn3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loginClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loginClose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,11 +148,20 @@
   <data name="wp4-safeimagekit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wp4-safeimagekit.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bgMainform" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bgMainform.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="helpForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\helpForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loginMinimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loginMinimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fbFin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fbFin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="showPass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\showPass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loginRestore1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loginRestore1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,14 +181,17 @@
   <data name="showPass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\showPass1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="showPass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\showPass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="twitter (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\twitter (1) (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="twtFin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\twtFin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="helpBtn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\helpBtn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="helpBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\helpBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loginClose3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loginClose3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,13 +208,25 @@
   <data name="fb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="helpBtn4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\helpBtn4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="addHelp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addHelp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="googFin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\googFin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="helpBtn2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\helpBtn2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fb (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fb (1) (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bgMainform" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bgMainform.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="twtFin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twtFin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calcHelp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calcHelp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

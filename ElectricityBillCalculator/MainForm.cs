@@ -29,13 +29,37 @@ namespace ElectricityBillCalculator
 
             // Create a new Region object for the form's Region property using the FromHrgn method.
             // The FromHrgn method takes the handle to a GDI region and returns a corresponding Region object.
-            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 100, 100));
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
         }
 
         private void Init() //Testing purposes (Two test appliances on startup)
         {
             //applianceList.Items.Add(new Appliance("Test Appliance", 50, 24)); //Create a test appliance to start
             //applianceList.Items.Add(new Appliance("Test Appliance 2", 25, 16)); //Create a test appliance to start
+        }
+
+        public void ShowHelp()
+        {
+            appNameTextbox.BackColor = wattageTextbox.BackColor = hrsPerDayTextbox.BackColor = daysUsedTextbox.BackColor = Color.PowderBlue;
+            MessageBox.Show("Information Highlighted");
+            Thread.Sleep(100);
+            appNameTextbox.BackColor = wattageTextbox.BackColor = hrsPerDayTextbox.BackColor = daysUsedTextbox.BackColor = SystemColors.Window;
+        }
+
+        public void ShowCalc()
+        {
+            monthlyBillTextbox.BackColor = yearlyBillTextbox.BackColor = calculateButton.BackColor = Color.PowderBlue;
+            MessageBox.Show("Information Highlighted");
+            Thread.Sleep(100);
+            monthlyBillTextbox.BackColor = yearlyBillTextbox.BackColor = calculateButton.BackColor = SystemColors.Window;
+        }
+
+        public void ShowExtra()
+        {
+            newButton.BackColor = deleteButton.BackColor = editButton.BackColor = saveButton.BackColor = aboutButton.BackColor = Color.PowderBlue;
+            MessageBox.Show("Button Highlighted");
+            Thread.Sleep(100);
+            newButton.BackColor = deleteButton.BackColor = editButton.BackColor = saveButton.BackColor = aboutButton.BackColor = SystemColors.Window;
         }
 
         private bool alreadyExist(string _text, ref char KeyChar) //Checks if a period already exists in a textbox.
@@ -211,7 +235,8 @@ namespace ElectricityBillCalculator
             appCostTextbox.Text = string.Empty;
             wattageTextbox.Text = string.Empty;
             hrsPerDayTextbox.Text = string.Empty;
-            editButton.Enabled = saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = false;
+            daysUsedTextbox.Text = string.Empty;
+            editButton.Enabled = saveButton.Enabled = appNameTextbox.Enabled = wattageTextbox.Enabled = hrsPerDayTextbox.Enabled = daysUsedTextbox.Enabled = false;
         }
 
         private void kwhRateTextbox_TextChanged(object sender, EventArgs e)
@@ -245,7 +270,7 @@ namespace ElectricityBillCalculator
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            newButton.Region = deleteButton.Region = editButton.Region = saveButton.Region = aboutButton.Region = calculateButton.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, newButton.Width, newButton.Height, 10, 10));
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
@@ -289,6 +314,12 @@ namespace ElectricityBillCalculator
             About abt = new About();
             abt.Show();
             this.Close();
+        }
+
+        private void helpBtn_Click(object sender, EventArgs e)
+        {
+            Help help = new Help(applianceList, calculateButton, appNameTextbox, wattageTextbox, hrsPerDayTextbox, daysUsedTextbox);
+            help.Show();
         }
     }
 }
