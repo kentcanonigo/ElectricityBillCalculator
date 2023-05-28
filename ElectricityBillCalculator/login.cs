@@ -200,9 +200,7 @@ namespace ElectricityBillCalculator
 
         private void forgotPassBtn_Click(object sender, EventArgs e)
         {
-            sendCode sc = new sendCode();
-            this.Close();
-            sc.Show();
+            
         }
     }
 }
