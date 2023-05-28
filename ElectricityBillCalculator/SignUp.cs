@@ -1,8 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -10,6 +13,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Media3D;
 
 namespace ElectricityBillCalculator
 {
@@ -17,6 +21,8 @@ namespace ElectricityBillCalculator
     {
         MySqlConnection connection = new MySqlConnection("server=localhost;user=root;password=;database=testBC");
         MySqlCommand command;
+        bool isUsernameGood = false;
+        int res = 0;
         MySqlDataReader reader;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -35,6 +41,7 @@ namespace ElectricityBillCalculator
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 100, 100));
+            connection.Open();
         }
 
         PasswordChecker pwchk = new PasswordChecker();
@@ -70,31 +77,33 @@ namespace ElectricityBillCalculator
                 if (regPassTbx.Text == regConfPassTbx.Text)
                 {
                     command.Parameters.AddWithValue("@password", regConfPassTbx.Text);
+                    try
+                    {
+                        if (connection.State != ConnectionState.Open)
+                        {
+                            connection.Open();
+                        }
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("New account created!", "Success!", MessageBoxButtons.OK);
+                        login main = new login();
+                        main.Show();
+                        this.Close();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Passwords should be the same", "Failed", MessageBoxButtons.OK);
-                }
-
-                try
-                {
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("New account created!", "Success!", MessageBoxButtons.OK);
-                    login main = new login();
-                    main.Show();
-                    this.Close();
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-                finally
-                {
-                    if (connection != null)
-                    {
-                        connection.Close();
-                    }
                 }
             }
         }
@@ -187,23 +196,64 @@ namespace ElectricityBillCalculator
 
         private void regPassTbx_TextChanged(object sender, EventArgs e)
         {
-            int res = pwchk.IsStrong(regPassTbx.Text, out message);
+            res = pwchk.IsStrong(regPassTbx.Text, out message);
             if (res == 0)
             {
-                signupBtn.Enabled = false;
+                CheckConditions(res, isUsernameGood);
                 passwordCheckerBtn.BackColor = Color.Red;
             }
             else if (res == 1)
             {
-                signupBtn.Enabled = true;
+                CheckConditions(res, isUsernameGood);
                 passwordCheckerBtn.BackColor = Color.Yellow;
             }
             else if (res == 2)
             {
-                signupBtn.Enabled = true;
+                CheckConditions(res, isUsernameGood);
                 passwordCheckerBtn.BackColor = Color.DarkGreen;
             }
             pwCheckerTooltip.SetToolTip(passwordCheckerBtn, message);
+        }
+
+        private void CheckConditions(int passStrength, bool isUsernameGood)
+        {
+            if (passStrength > 0 && isUsernameGood) //Check if both password strength and username are good
+            {
+                signupBtn.Enabled = true;
+            }
+            else
+                signupBtn.Enabled = false;
+        }
+
+        private void regUserTbx_TextChanged(object sender, EventArgs e)
+        {
+            using (connection)
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+                MySqlCommand command = new MySqlCommand("SELECT COUNT(*) FROM userinfo WHERE user_name = @Username", connection);
+                command.Parameters.AddWithValue("@Username", regUserTbx.Text);
+
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                if (count > 0 || regUserTbx.Text == String.Empty)
+                {
+                    usernameCheckerPic.Image = Properties.Resources.rcLxML7Ri2;
+                    usernameTooltip.ToolTipIcon = ToolTipIcon.Warning;
+                    usernameTooltip.SetToolTip(usernameCheckerPic, "Username is already taken!");
+                    isUsernameGood = false;
+                }
+                else
+                {
+                    isUsernameGood = true;
+                    CheckConditions(res, isUsernameGood);
+                    usernameTooltip.ToolTipIcon = ToolTipIcon.Info;
+                    usernameTooltip.SetToolTip(usernameCheckerPic, "Username is available!");
+                    usernameCheckerPic.Image = Properties.Resources.checkmark_xxl;
+                }
+            }
         }
     }
 }

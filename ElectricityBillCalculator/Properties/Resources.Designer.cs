@@ -113,6 +113,16 @@ namespace ElectricityBillCalculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkmark_xxl {
+            get {
+                object obj = ResourceManager.GetObject("checkmark-xxl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fb {
             get {
                 object obj = ResourceManager.GetObject("fb", resourceCulture);
@@ -336,6 +346,36 @@ namespace ElectricityBillCalculator.Properties {
         internal static System.Drawing.Bitmap output_onlinepngtools {
             get {
                 object obj = ResourceManager.GetObject("output-onlinepngtools", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rcLxML7Ri {
+            get {
+                object obj = ResourceManager.GetObject("rcLxML7Ri", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rcLxML7Ri1 {
+            get {
+                object obj = ResourceManager.GetObject("rcLxML7Ri1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rcLxML7Ri2 {
+            get {
+                object obj = ResourceManager.GetObject("rcLxML7Ri2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

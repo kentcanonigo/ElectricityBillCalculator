@@ -38,6 +38,7 @@
             regPassShowBtn = new PictureBox();
             regUserTbx = new TextBox();
             regUserPanel = new Panel();
+            usernameCheckerPic = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             regMailPanel = new Panel();
@@ -51,10 +52,13 @@
             signupBtn = new Button();
             label6 = new Label();
             pwCheckerTooltip = new ToolTip(components);
+            usernameTooltip = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)regConfPassShowBtn).BeginInit();
             regConfPassPanel.SuspendLayout();
             regPassPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)regPassShowBtn).BeginInit();
+            regUserPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)usernameCheckerPic).BeginInit();
             regInfoPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -157,18 +161,33 @@
             regUserTbx.Multiline = true;
             regUserTbx.Name = "regUserTbx";
             regUserTbx.PlaceholderText = "Username";
-            regUserTbx.Size = new Size(292, 32);
+            regUserTbx.Size = new Size(245, 32);
             regUserTbx.TabIndex = 0;
+            regUserTbx.TextChanged += regUserTbx_TextChanged;
             // 
             // regUserPanel
             // 
             regUserPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regUserPanel.BackColor = Color.White;
+            regUserPanel.Controls.Add(usernameCheckerPic);
             regUserPanel.Location = new Point(47, 142);
             regUserPanel.Margin = new Padding(3, 2, 3, 2);
             regUserPanel.Name = "regUserPanel";
             regUserPanel.Size = new Size(318, 50);
             regUserPanel.TabIndex = 36;
+            // 
+            // usernameCheckerPic
+            // 
+            usernameCheckerPic.ErrorImage = Properties.Resources.rcLxML7Ri;
+            usernameCheckerPic.Image = Properties.Resources.rcLxML7Ri2;
+            usernameCheckerPic.InitialImage = Properties.Resources.rcLxML7Ri2;
+            usernameCheckerPic.Location = new Point(277, 12);
+            usernameCheckerPic.Name = "usernameCheckerPic";
+            usernameCheckerPic.Size = new Size(29, 29);
+            usernameCheckerPic.SizeMode = PictureBoxSizeMode.StretchImage;
+            usernameCheckerPic.TabIndex = 0;
+            usernameCheckerPic.TabStop = false;
+            usernameTooltip.SetToolTip(usernameCheckerPic, "Username already taken!");
             // 
             // label1
             // 
@@ -339,6 +358,11 @@
             pwCheckerTooltip.ToolTipIcon = ToolTipIcon.Info;
             pwCheckerTooltip.ToolTipTitle = "Password Strength";
             // 
+            // usernameTooltip
+            // 
+            usernameTooltip.ToolTipIcon = ToolTipIcon.Error;
+            usernameTooltip.ToolTipTitle = "Username";
+            // 
             // SignUp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -370,6 +394,8 @@
             regConfPassPanel.ResumeLayout(false);
             regPassPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)regPassShowBtn).EndInit();
+            regUserPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)usernameCheckerPic).EndInit();
             regInfoPanel.ResumeLayout(false);
             regInfoPanel.PerformLayout();
             ResumeLayout(false);
@@ -398,5 +424,7 @@
         private ComboBox generateLengthCbx;
         private roundBtn passwordCheckerBtn;
         private ToolTip pwCheckerTooltip;
+        private PictureBox usernameCheckerPic;
+        private ToolTip usernameTooltip;
     }
 }
