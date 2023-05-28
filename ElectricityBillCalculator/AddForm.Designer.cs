@@ -43,6 +43,7 @@
             // 
             // addName
             // 
+            addName.Cursor = Cursors.IBeam;
             addName.Location = new Point(97, 44);
             addName.Name = "addName";
             addName.Size = new Size(169, 23);
@@ -82,6 +83,7 @@
             // 
             // addWattage
             // 
+            addWattage.Cursor = Cursors.IBeam;
             addWattage.Location = new Point(97, 74);
             addWattage.MaxLength = 5;
             addWattage.Name = "addWattage";
@@ -101,6 +103,7 @@
             // 
             // addHrs
             // 
+            addHrs.Cursor = Cursors.IBeam;
             addHrs.Location = new Point(97, 104);
             addHrs.MaxLength = 2;
             addHrs.Name = "addHrs";
@@ -110,6 +113,7 @@
             // 
             // cancelButton
             // 
+            cancelButton.Cursor = Cursors.Hand;
             cancelButton.Font = new Font("Geomanist", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             cancelButton.Location = new Point(44, 164);
             cancelButton.Name = "cancelButton";
@@ -121,6 +125,7 @@
             // 
             // addButton
             // 
+            addButton.Cursor = Cursors.Hand;
             addButton.Font = new Font("Geomanist", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             addButton.Location = new Point(155, 164);
             addButton.Name = "addButton";
@@ -142,6 +147,7 @@
             // 
             // addDays
             // 
+            addDays.Cursor = Cursors.IBeam;
             addDays.Location = new Point(97, 134);
             addDays.MaxLength = 2;
             addDays.Name = "addDays";

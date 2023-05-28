@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,11 @@ namespace ElectricityBillCalculator
             MainForm mf = new MainForm();
             mf.Show();
             this.Close();
+        }
+
+        private void contactLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           // Process.Start("");
         }
     }
 }

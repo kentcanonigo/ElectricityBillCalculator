@@ -54,8 +54,8 @@
             loginRestore = new Button();
             loginMinimize = new Button();
             label6 = new Label();
-            label7 = new Label();
-            checkBox1 = new CheckBox();
+            forgotPassBtn = new Label();
+            rememberCheckBox = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)showPassBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wpSignupPbx).BeginInit();
             passwordPanel.SuspendLayout();
@@ -66,6 +66,7 @@
             usernameTxtBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             usernameTxtBox.BackColor = SystemColors.InactiveCaption;
             usernameTxtBox.BorderStyle = BorderStyle.None;
+            usernameTxtBox.Cursor = Cursors.IBeam;
             usernameTxtBox.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             usernameTxtBox.Location = new Point(155, 369);
             usernameTxtBox.Multiline = true;
@@ -79,6 +80,7 @@
             passwordTxtBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             passwordTxtBox.BackColor = SystemColors.InactiveCaption;
             passwordTxtBox.BorderStyle = BorderStyle.None;
+            passwordTxtBox.Cursor = Cursors.IBeam;
             passwordTxtBox.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             passwordTxtBox.Location = new Point(155, 442);
             passwordTxtBox.Multiline = true;
@@ -377,41 +379,42 @@
             label6.TabIndex = 28;
             label6.Text = "     RK - Electricity Bill Calculator";
             // 
-            // label7
+            // forgotPassBtn
             // 
-            label7.AutoSize = true;
-            label7.Cursor = Cursors.Hand;
-            label7.FlatStyle = FlatStyle.Flat;
-            label7.Font = new Font("Geomanist", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(262, 498);
-            label7.Name = "label7";
-            label7.Size = new Size(121, 17);
-            label7.TabIndex = 29;
-            label7.Text = "Forgot password?";
+            forgotPassBtn.AutoSize = true;
+            forgotPassBtn.Cursor = Cursors.Hand;
+            forgotPassBtn.FlatStyle = FlatStyle.Flat;
+            forgotPassBtn.Font = new Font("Geomanist", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            forgotPassBtn.Location = new Point(262, 498);
+            forgotPassBtn.Name = "forgotPassBtn";
+            forgotPassBtn.Size = new Size(121, 17);
+            forgotPassBtn.TabIndex = 29;
+            forgotPassBtn.Text = "Forgot password?";
+            forgotPassBtn.Click += forgotPassBtn_Click;
             // 
-            // checkBox1
+            // rememberCheckBox
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Cursor = Cursors.Hand;
-            checkBox1.FlatAppearance.BorderSize = 0;
-            checkBox1.FlatStyle = FlatStyle.Flat;
-            checkBox1.Font = new Font("Geomanist", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.ForeColor = Color.Blue;
-            checkBox1.Location = new Point(474, 496);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(117, 21);
-            checkBox1.TabIndex = 30;
-            checkBox1.Text = "Remember me";
-            checkBox1.TextAlign = ContentAlignment.TopCenter;
-            checkBox1.UseVisualStyleBackColor = true;
+            rememberCheckBox.AutoSize = true;
+            rememberCheckBox.Cursor = Cursors.Hand;
+            rememberCheckBox.FlatAppearance.BorderSize = 0;
+            rememberCheckBox.FlatStyle = FlatStyle.Flat;
+            rememberCheckBox.Font = new Font("Geomanist", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            rememberCheckBox.ForeColor = Color.Blue;
+            rememberCheckBox.Location = new Point(474, 496);
+            rememberCheckBox.Name = "rememberCheckBox";
+            rememberCheckBox.Size = new Size(117, 21);
+            rememberCheckBox.TabIndex = 30;
+            rememberCheckBox.Text = "Remember me";
+            rememberCheckBox.TextAlign = ContentAlignment.TopCenter;
+            rememberCheckBox.UseVisualStyleBackColor = true;
             // 
             // login
             // 
             AutoScaleMode = AutoScaleMode.Inherit;
             AutoSize = true;
             ClientSize = new Size(1328, 712);
-            Controls.Add(checkBox1);
-            Controls.Add(label7);
+            Controls.Add(rememberCheckBox);
+            Controls.Add(forgotPassBtn);
             Controls.Add(label6);
             Controls.Add(loginMinimize);
             Controls.Add(loginRestore);
@@ -471,7 +474,7 @@
         private Button loginMinimize;
         private Button loginRestore;
         private Label label6;
-        private CheckBox checkBox1;
-        private Label label7;
+        private CheckBox rememberCheckBox;
+        private Label forgotPassBtn;
     }
 }

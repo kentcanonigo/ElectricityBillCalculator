@@ -67,6 +67,7 @@
             contactLink.TabIndex = 2;
             contactLink.TabStop = true;
             contactLink.Text = "Contact Us!";
+            contactLink.LinkClicked += contactLink_LinkClicked;
             // 
             // okButton
             // 

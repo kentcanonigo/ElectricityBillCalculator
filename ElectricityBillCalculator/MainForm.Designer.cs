@@ -456,7 +456,6 @@
             loginMinimize.BackColor = Color.Transparent;
             loginMinimize.BackgroundImage = Properties.Resources.loginMinimize;
             loginMinimize.BackgroundImageLayout = ImageLayout.Center;
-            loginMinimize.Cursor = Cursors.Hand;
             loginMinimize.FlatAppearance.BorderSize = 0;
             loginMinimize.FlatStyle = FlatStyle.Flat;
             loginMinimize.ForeColor = Color.White;
@@ -473,7 +472,6 @@
             loginRestore.BackColor = Color.Transparent;
             loginRestore.BackgroundImage = Properties.Resources.loginMaximize1;
             loginRestore.BackgroundImageLayout = ImageLayout.Center;
-            loginRestore.Cursor = Cursors.Hand;
             loginRestore.FlatAppearance.BorderSize = 0;
             loginRestore.FlatStyle = FlatStyle.Flat;
             loginRestore.ForeColor = Color.White;
@@ -490,7 +488,6 @@
             loginClose.BackColor = Color.Transparent;
             loginClose.BackgroundImage = Properties.Resources.loginClose3;
             loginClose.BackgroundImageLayout = ImageLayout.Center;
-            loginClose.Cursor = Cursors.Hand;
             loginClose.FlatAppearance.BorderSize = 0;
             loginClose.FlatStyle = FlatStyle.Flat;
             loginClose.ForeColor = Color.White;

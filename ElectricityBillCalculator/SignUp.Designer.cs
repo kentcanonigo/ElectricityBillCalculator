@@ -78,6 +78,7 @@
             regConfPassTbx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regConfPassTbx.BackColor = Color.White;
             regConfPassTbx.BorderStyle = BorderStyle.None;
+            regConfPassTbx.Cursor = Cursors.IBeam;
             regConfPassTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             regConfPassTbx.Location = new Point(56, 345);
             regConfPassTbx.Margin = new Padding(3, 2, 3, 2);
@@ -104,6 +105,7 @@
             regPassTbx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regPassTbx.BackColor = Color.White;
             regPassTbx.BorderStyle = BorderStyle.None;
+            regPassTbx.Cursor = Cursors.IBeam;
             regPassTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             regPassTbx.ForeColor = SystemColors.WindowText;
             regPassTbx.Location = new Point(56, 262);
@@ -147,6 +149,7 @@
             regUserTbx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regUserTbx.BackColor = Color.White;
             regUserTbx.BorderStyle = BorderStyle.None;
+            regUserTbx.Cursor = Cursors.IBeam;
             regUserTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             regUserTbx.ForeColor = SystemColors.WindowText;
             regUserTbx.Location = new Point(56, 151);
@@ -207,6 +210,7 @@
             regMailTbx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             regMailTbx.BackColor = Color.White;
             regMailTbx.BorderStyle = BorderStyle.None;
+            regMailTbx.Cursor = Cursors.IBeam;
             regMailTbx.Font = new Font("Geomanist", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
             regMailTbx.Location = new Point(56, 208);
             regMailTbx.Margin = new Padding(3, 2, 3, 2);
