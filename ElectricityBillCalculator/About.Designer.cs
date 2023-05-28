@@ -66,7 +66,7 @@
             okButton.Name = "okButton";
             okButton.Size = new Size(75, 23);
             okButton.TabIndex = 3;
-            okButton.Text = "Cool!";
+            okButton.Text = "Rate";
             okButton.UseVisualStyleBackColor = true;
             okButton.Click += okButton_Click;
             // 
