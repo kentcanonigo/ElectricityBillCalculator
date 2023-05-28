@@ -52,6 +52,7 @@
             signupBtn = new Button();
             label6 = new Label();
             pwCheckerTooltip = new ToolTip(components);
+            usernameTooltip = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)regConfPassShowBtn).BeginInit();
             regConfPassPanel.SuspendLayout();
             regPassPanel.SuspendLayout();
@@ -186,6 +187,7 @@
             usernameCheckerPic.SizeMode = PictureBoxSizeMode.StretchImage;
             usernameCheckerPic.TabIndex = 0;
             usernameCheckerPic.TabStop = false;
+            usernameTooltip.SetToolTip(usernameCheckerPic, "Username already taken!");
             // 
             // label1
             // 
@@ -356,6 +358,11 @@
             pwCheckerTooltip.ToolTipIcon = ToolTipIcon.Info;
             pwCheckerTooltip.ToolTipTitle = "Password Strength";
             // 
+            // usernameTooltip
+            // 
+            usernameTooltip.ToolTipIcon = ToolTipIcon.Error;
+            usernameTooltip.ToolTipTitle = "Username";
+            // 
             // SignUp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -418,5 +425,6 @@
         private roundBtn passwordCheckerBtn;
         private ToolTip pwCheckerTooltip;
         private PictureBox usernameCheckerPic;
+        private ToolTip usernameTooltip;
     }
 }

@@ -241,12 +241,16 @@ namespace ElectricityBillCalculator
                 if (count > 0 || regUserTbx.Text == String.Empty)
                 {
                     usernameCheckerPic.Image = Properties.Resources.rcLxML7Ri2;
+                    usernameTooltip.ToolTipIcon = ToolTipIcon.Warning;
+                    usernameTooltip.SetToolTip(usernameCheckerPic, "Username is already taken!");
                     isUsernameGood = false;
                 }
                 else
                 {
                     isUsernameGood = true;
                     CheckConditions(res, isUsernameGood);
+                    usernameTooltip.ToolTipIcon = ToolTipIcon.Info;
+                    usernameTooltip.SetToolTip(usernameCheckerPic, "Username is available!");
                     usernameCheckerPic.Image = Properties.Resources.checkmark_xxl;
                 }
             }
