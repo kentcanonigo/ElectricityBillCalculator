@@ -56,16 +56,17 @@ namespace ElectricityBillCalculator
 
         private void singupBtn_Click(object sender, EventArgs e)
         {
-            if (regUserTbx.Text == "" || regPassTbx.Text == "" || regConfPassTbx.Text == "")
+            if (regUserTbx.Text == "" || regPassTbx.Text == "" || regConfPassTbx.Text == "" || regMailTbx.Text == "")
             {
                 MessageBox.Show("Fields cannot be blank!", "Error", MessageBoxButtons.OK);
             }
             else
             {
-                string query = "INSERT INTO userinfo (user_name, user_pass) VALUES(@username, @password)";
+                string query = "INSERT INTO userinfo (user_name, user_email, user_pass) VALUES(@username, @email, @password)";
                 command = new MySqlCommand(query, connection);
 
                 command.Parameters.AddWithValue("@username", regUserTbx.Text);
+                command.Parameters.AddWithValue("email", regMailTbx.Text);
                 if (regPassTbx.Text == regConfPassTbx.Text)
                 {
                     command.Parameters.AddWithValue("@password", regConfPassTbx.Text);

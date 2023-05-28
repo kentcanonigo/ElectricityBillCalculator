@@ -81,6 +81,17 @@ namespace ElectricityBillCalculator
                     connection.Close();
                 }
             }
+
+            if (rememberCheckBox.Checked == true)
+            {
+                Properties.Settings.Default.Username = usernameTxtBox.Text;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                Properties.Settings.Default.Username = "";
+                Properties.Settings.Default.Save();
+            }
         }
 
         private void registerBtn_Click(object sender, EventArgs e)
@@ -139,6 +150,16 @@ namespace ElectricityBillCalculator
             loginMinimize.Parent = wpSignupPbx;
             loginMinimize.BackColor = Color.Transparent;
             loginMinimize.Location = new Point(375, 10);
+
+            usernameTxtBox.Text = Properties.Settings.Default.Username;
+            if (usernameTxtBox.Text != "")
+            {
+                rememberCheckBox.Checked = true;
+            }
+            else
+            {
+                rememberCheckBox.Checked = false;
+            }
         }
 
         private void Button_MouseEnter(object sender, EventArgs e)
@@ -177,5 +198,11 @@ namespace ElectricityBillCalculator
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void forgotPassBtn_Click(object sender, EventArgs e)
+        {
+            sendCode sc = new sendCode();
+            this.Close();
+            sc.Show();
+        }
     }
 }

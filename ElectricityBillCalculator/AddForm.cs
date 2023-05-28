@@ -21,14 +21,14 @@ namespace ElectricityBillCalculator
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            if(addName.Text == "" || addWattage.Text == "" || addHrs.Text == "")
+            if (addName.Text == "" || addWattage.Text == "" || addHrs.Text == "" || addDays.Text == "")
             {
                 MessageBox.Show("Fields cannot be blank!", "Error", MessageBoxButtons.OK);
             }
 
             try
             {
-                _appList.Items.Add(new Appliance(addName.Text, Int32.Parse(addWattage.Text), Int32.Parse(addHrs.Text)));
+                _appList.Items.Add(new Appliance(addName.Text, Int32.Parse(addWattage.Text), Int32.Parse(addHrs.Text), Int32.Parse(addDays.Text)));
                 this.Close();
             }
             catch (Exception exception)
@@ -49,6 +49,12 @@ namespace ElectricityBillCalculator
         }
 
         private void addHrs_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            const char Delete = (char)8;
+            e.Handled = !Char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
+        }
+
+        private void addDays_KeyPress(object sender, KeyPressEventArgs e)
         {
             const char Delete = (char)8;
             e.Handled = !Char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
