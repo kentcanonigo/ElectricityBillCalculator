@@ -102,8 +102,9 @@
             Controls.Add(calcHelp);
             Controls.Add(infoHelp);
             Controls.Add(addBtn);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Help";
-            Text = "Help";
+            Text = "App Functionalities";
             ResumeLayout(false);
         }
 

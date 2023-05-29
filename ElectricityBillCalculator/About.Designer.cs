@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             label1 = new Label();
             label2 = new Label();
             okButton = new Button();
@@ -118,9 +119,10 @@
             Controls.Add(okButton);
             Controls.Add(label2);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "About";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "About";
+            Text = "Contact Developers";
             ResumeLayout(false);
             PerformLayout();
         }

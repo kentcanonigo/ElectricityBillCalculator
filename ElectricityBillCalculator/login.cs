@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -127,12 +128,12 @@ namespace ElectricityBillCalculator
             showPassBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, showPassBtn.Width, showPassBtn.Height, 40, 40));
 
             // Assuming you have a button named "myButton" on your form
-            fbBtn.MouseEnter += Button_MouseEnter;
-            fbBtn.MouseEnter += Button_MouseLeave;
-            googBtn.MouseEnter += Button_MouseEnter;
-            googBtn.MouseLeave += Button_MouseLeave;
-            twtBtn.MouseEnter += Button_MouseEnter;
-            twtBtn.MouseLeave += Button_MouseLeave;
+            loginRex.MouseEnter += Button_MouseEnter;
+            loginRex.MouseEnter += Button_MouseLeave;
+            loginRK.MouseEnter += Button_MouseEnter;
+            loginRK.MouseLeave += Button_MouseLeave;
+            loginKent.MouseEnter += Button_MouseEnter;
+            loginKent.MouseLeave += Button_MouseLeave;
 
             // Transparent background for labels
             signUp1Lbl.Parent = wpSignupPbx;
@@ -144,12 +145,9 @@ namespace ElectricityBillCalculator
             loginClose.Parent = wpSignupPbx;
             loginClose.BackColor = Color.Transparent;
             loginClose.Location = new Point(445, 10);
-            loginRestore.Parent = wpSignupPbx;
-            loginRestore.BackColor = Color.Transparent;
-            loginRestore.Location = new Point(410, 10);
             loginMinimize.Parent = wpSignupPbx;
             loginMinimize.BackColor = Color.Transparent;
-            loginMinimize.Location = new Point(375, 10);
+            loginMinimize.Location = new Point(410, 10);
 
             usernameTxtBox.Text = Properties.Settings.Default.Username;
             if (usernameTxtBox.Text != "")
@@ -179,20 +177,6 @@ namespace ElectricityBillCalculator
             Application.Exit();
         }
 
-        private void loginRestore_Click(object sender, EventArgs e)
-        {
-            /*if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-                loginRestore.Image = Properties.Resources.loginRestore1;
-            }
-            else if (WindowState == FormWindowState.Maximized)
-            {
-                WindowState = FormWindowState.Normal;
-                loginRestore.Image = Properties.Resources.loginMaximize;
-            }*/
-        }
-
         private void loginMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -203,6 +187,57 @@ namespace ElectricityBillCalculator
             this.Close();
             forgotPass fp = new forgotPass();
             fp.Show();
+        }
+
+        private void loginRex_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "cmd",
+                    Arguments = $"/c start https://www.messenger.com/t/100006781365745",
+                    CreateNoWindow = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
+        private void loginKent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "cmd",
+                    Arguments = $"/c start https://www.messenger.com/t/100001353648920",
+                    CreateNoWindow = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
+        private void loginRK_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "cmd",
+                    Arguments = $"/c start https://github.com/kentcanonigo/ElectricityBillCalculator.git",
+                    CreateNoWindow = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
     }
 }

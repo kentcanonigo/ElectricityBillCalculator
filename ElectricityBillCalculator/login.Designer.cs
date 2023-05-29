@@ -43,15 +43,14 @@
             label5 = new Label();
             signUp2Lbl = new Label();
             signUp1Lbl = new Label();
-            twtBtn = new roundBtn();
-            fbBtn = new roundBtn();
-            googBtn = new roundBtn();
+            loginKent = new roundBtn();
+            loginRex = new roundBtn();
+            loginRK = new roundBtn();
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             wpSignupPbx = new PictureBox();
             usernamePanel = new Panel();
             passwordPanel = new Panel();
             loginClose = new Button();
-            loginRestore = new Button();
             loginMinimize = new Button();
             label6 = new Label();
             forgotPassBtn = new Label();
@@ -233,53 +232,56 @@
             signUp1Lbl.Text = "New Here?";
             signUp1Lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // twtBtn
+            // loginKent
             // 
-            twtBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            twtBtn.AutoSize = true;
-            twtBtn.BackColor = SystemColors.Control;
-            twtBtn.BackgroundImage = Properties.Resources.loginKent;
-            twtBtn.BackgroundImageLayout = ImageLayout.Center;
-            twtBtn.Cursor = Cursors.Hand;
-            twtBtn.FlatAppearance.BorderSize = 0;
-            twtBtn.FlatStyle = FlatStyle.Flat;
-            twtBtn.Location = new Point(462, 259);
-            twtBtn.Name = "twtBtn";
-            twtBtn.Size = new Size(62, 62);
-            twtBtn.TabIndex = 20;
-            twtBtn.UseVisualStyleBackColor = false;
+            loginKent.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginKent.AutoSize = true;
+            loginKent.BackColor = SystemColors.Control;
+            loginKent.BackgroundImage = Properties.Resources.loginKent;
+            loginKent.BackgroundImageLayout = ImageLayout.Center;
+            loginKent.Cursor = Cursors.Hand;
+            loginKent.FlatAppearance.BorderSize = 0;
+            loginKent.FlatStyle = FlatStyle.Flat;
+            loginKent.Location = new Point(462, 259);
+            loginKent.Name = "loginKent";
+            loginKent.Size = new Size(62, 62);
+            loginKent.TabIndex = 20;
+            loginKent.UseVisualStyleBackColor = false;
+            loginKent.Click += loginKent_Click;
             // 
-            // fbBtn
+            // loginRex
             // 
-            fbBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            fbBtn.AutoSize = true;
-            fbBtn.BackColor = SystemColors.Control;
-            fbBtn.BackgroundImage = Properties.Resources.loginRex;
-            fbBtn.BackgroundImageLayout = ImageLayout.Center;
-            fbBtn.Cursor = Cursors.Hand;
-            fbBtn.FlatAppearance.BorderSize = 0;
-            fbBtn.FlatStyle = FlatStyle.Flat;
-            fbBtn.Location = new Point(309, 259);
-            fbBtn.Name = "fbBtn";
-            fbBtn.Size = new Size(62, 62);
-            fbBtn.TabIndex = 21;
-            fbBtn.UseVisualStyleBackColor = false;
+            loginRex.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginRex.AutoSize = true;
+            loginRex.BackColor = SystemColors.Control;
+            loginRex.BackgroundImage = Properties.Resources.loginRex;
+            loginRex.BackgroundImageLayout = ImageLayout.Center;
+            loginRex.Cursor = Cursors.Hand;
+            loginRex.FlatAppearance.BorderSize = 0;
+            loginRex.FlatStyle = FlatStyle.Flat;
+            loginRex.Location = new Point(309, 259);
+            loginRex.Name = "loginRex";
+            loginRex.Size = new Size(62, 62);
+            loginRex.TabIndex = 21;
+            loginRex.UseVisualStyleBackColor = false;
+            loginRex.Click += loginRex_Click;
             // 
-            // googBtn
+            // loginRK
             // 
-            googBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            googBtn.AutoSize = true;
-            googBtn.BackColor = SystemColors.Control;
-            googBtn.BackgroundImage = (Image)resources.GetObject("googBtn.BackgroundImage");
-            googBtn.BackgroundImageLayout = ImageLayout.Stretch;
-            googBtn.Cursor = Cursors.Hand;
-            googBtn.FlatAppearance.BorderSize = 0;
-            googBtn.FlatStyle = FlatStyle.Flat;
-            googBtn.Location = new Point(386, 259);
-            googBtn.Name = "googBtn";
-            googBtn.Size = new Size(62, 62);
-            googBtn.TabIndex = 22;
-            googBtn.UseVisualStyleBackColor = false;
+            loginRK.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginRK.AutoSize = true;
+            loginRK.BackColor = SystemColors.Control;
+            loginRK.BackgroundImage = Properties.Resources.loginLogo;
+            loginRK.BackgroundImageLayout = ImageLayout.Center;
+            loginRK.Cursor = Cursors.Hand;
+            loginRK.FlatAppearance.BorderSize = 0;
+            loginRK.FlatStyle = FlatStyle.Flat;
+            loginRK.Location = new Point(386, 259);
+            loginRK.Name = "loginRK";
+            loginRK.Size = new Size(62, 62);
+            loginRK.TabIndex = 22;
+            loginRK.UseVisualStyleBackColor = false;
+            loginRK.Click += loginRK_Click;
             // 
             // bunifuElipse1
             // 
@@ -335,22 +337,6 @@
             loginClose.UseVisualStyleBackColor = false;
             loginClose.Click += loginClose_Click;
             // 
-            // loginRestore
-            // 
-            loginRestore.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            loginRestore.BackColor = Color.Transparent;
-            loginRestore.BackgroundImage = Properties.Resources.loginMaximize1;
-            loginRestore.BackgroundImageLayout = ImageLayout.Center;
-            loginRestore.FlatAppearance.BorderSize = 0;
-            loginRestore.FlatStyle = FlatStyle.Flat;
-            loginRestore.ForeColor = Color.White;
-            loginRestore.Location = new Point(1266, 0);
-            loginRestore.Name = "loginRestore";
-            loginRestore.Size = new Size(25, 25);
-            loginRestore.TabIndex = 26;
-            loginRestore.UseVisualStyleBackColor = false;
-            loginRestore.Click += loginRestore_Click;
-            // 
             // loginMinimize
             // 
             loginMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -360,7 +346,7 @@
             loginMinimize.FlatAppearance.BorderSize = 0;
             loginMinimize.FlatStyle = FlatStyle.Flat;
             loginMinimize.ForeColor = Color.White;
-            loginMinimize.Location = new Point(1241, 0);
+            loginMinimize.Location = new Point(1265, 0);
             loginMinimize.Name = "loginMinimize";
             loginMinimize.Size = new Size(25, 25);
             loginMinimize.TabIndex = 27;
@@ -375,9 +361,9 @@
             label6.ImageAlign = ContentAlignment.MiddleLeft;
             label6.Location = new Point(10, 10);
             label6.Name = "label6";
-            label6.Size = new Size(174, 15);
+            label6.Size = new Size(180, 15);
             label6.TabIndex = 28;
-            label6.Text = "     RK - Electricity Bill Calculator";
+            label6.Text = "       RK - Electricity Bill Calculator";
             // 
             // forgotPassBtn
             // 
@@ -417,14 +403,13 @@
             Controls.Add(forgotPassBtn);
             Controls.Add(label6);
             Controls.Add(loginMinimize);
-            Controls.Add(loginRestore);
             Controls.Add(loginClose);
             Controls.Add(registerBtn);
             Controls.Add(signUp2Lbl);
             Controls.Add(signUp1Lbl);
-            Controls.Add(googBtn);
-            Controls.Add(fbBtn);
-            Controls.Add(twtBtn);
+            Controls.Add(loginRK);
+            Controls.Add(loginRex);
+            Controls.Add(loginKent);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label2);
@@ -463,16 +448,15 @@
         private Label label5;
         private Label signUp2Lbl;
         private Label signUp1Lbl;
-        private roundBtn twtBtn;
-        private roundBtn fbBtn;
-        private roundBtn googBtn;
+        private roundBtn loginKent;
+        private roundBtn loginRex;
+        private roundBtn loginRK;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private PictureBox wpSignupPbx;
         private Panel usernamePanel;
         private Panel passwordPanel;
         private Button loginClose;
         private Button loginMinimize;
-        private Button loginRestore;
         private Label label6;
         private CheckBox rememberCheckBox;
         private Label forgotPassBtn;

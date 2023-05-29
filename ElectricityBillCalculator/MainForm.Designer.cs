@@ -36,6 +36,7 @@
             deleteButton = new Button();
             editButton = new Button();
             panel1 = new Panel();
+            roundBtn1 = new roundBtn();
             helpBtn = new roundBtn();
             label10 = new Label();
             daysUsedTextbox = new TextBox();
@@ -61,12 +62,10 @@
             label2 = new Label();
             aboutButton = new Button();
             loginMinimize = new Button();
-            loginRestore = new Button();
             loginClose = new Button();
             label12 = new Label();
             logoutBtn = new Button();
             appInfoToolTip = new ToolTip(components);
-            roundBtn1 = new roundBtn();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -178,6 +177,20 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(409, 424);
             panel1.TabIndex = 5;
+            // 
+            // roundBtn1
+            // 
+            roundBtn1.BackgroundImage = Properties.Resources.historyBtn;
+            roundBtn1.BackgroundImageLayout = ImageLayout.Center;
+            roundBtn1.FlatAppearance.BorderSize = 0;
+            roundBtn1.FlatStyle = FlatStyle.Flat;
+            roundBtn1.ForeColor = SystemColors.ControlText;
+            roundBtn1.Location = new Point(9, 5);
+            roundBtn1.Name = "roundBtn1";
+            roundBtn1.Size = new Size(25, 25);
+            roundBtn1.TabIndex = 25;
+            appInfoToolTip.SetToolTip(roundBtn1, "View past calculations");
+            roundBtn1.UseVisualStyleBackColor = true;
             // 
             // helpBtn
             // 
@@ -461,28 +474,12 @@
             loginMinimize.FlatAppearance.BorderSize = 0;
             loginMinimize.FlatStyle = FlatStyle.Flat;
             loginMinimize.ForeColor = Color.White;
-            loginMinimize.Location = new Point(580, 9);
+            loginMinimize.Location = new Point(611, 9);
             loginMinimize.Name = "loginMinimize";
             loginMinimize.Size = new Size(25, 25);
             loginMinimize.TabIndex = 28;
             loginMinimize.UseVisualStyleBackColor = false;
             loginMinimize.Click += loginMinimize_Click;
-            // 
-            // loginRestore
-            // 
-            loginRestore.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            loginRestore.BackColor = Color.Transparent;
-            loginRestore.BackgroundImage = Properties.Resources.loginMaximize1;
-            loginRestore.BackgroundImageLayout = ImageLayout.Center;
-            loginRestore.FlatAppearance.BorderSize = 0;
-            loginRestore.FlatStyle = FlatStyle.Flat;
-            loginRestore.ForeColor = Color.White;
-            loginRestore.Location = new Point(611, 9);
-            loginRestore.Name = "loginRestore";
-            loginRestore.Size = new Size(25, 25);
-            loginRestore.TabIndex = 29;
-            loginRestore.UseVisualStyleBackColor = false;
-            loginRestore.Click += loginRestore_Click;
             // 
             // loginClose
             // 
@@ -510,9 +507,9 @@
             label12.ImageAlign = ContentAlignment.MiddleLeft;
             label12.Location = new Point(12, 9);
             label12.Name = "label12";
-            label12.Size = new Size(183, 15);
+            label12.Size = new Size(180, 15);
             label12.TabIndex = 31;
-            label12.Text = "        RK - Electricity Bill Calculator";
+            label12.Text = "       RK - Electricity Bill Calculator";
             // 
             // logoutBtn
             // 
@@ -533,20 +530,6 @@
             appInfoToolTip.ToolTipIcon = ToolTipIcon.Info;
             appInfoToolTip.ToolTipTitle = "Help";
             // 
-            // roundBtn1
-            // 
-            roundBtn1.BackgroundImage = Properties.Resources.historyBtn;
-            roundBtn1.BackgroundImageLayout = ImageLayout.Center;
-            roundBtn1.FlatAppearance.BorderSize = 0;
-            roundBtn1.FlatStyle = FlatStyle.Flat;
-            roundBtn1.ForeColor = SystemColors.ControlText;
-            roundBtn1.Location = new Point(9, 5);
-            roundBtn1.Name = "roundBtn1";
-            roundBtn1.Size = new Size(25, 25);
-            roundBtn1.TabIndex = 25;
-            appInfoToolTip.SetToolTip(roundBtn1, "View past calculations");
-            roundBtn1.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -558,7 +541,6 @@
             Controls.Add(logoutBtn);
             Controls.Add(label12);
             Controls.Add(loginClose);
-            Controls.Add(loginRestore);
             Controls.Add(loginMinimize);
             Controls.Add(aboutButton);
             Controls.Add(panel1);
@@ -610,7 +592,6 @@
         private Button calculateButton;
         private Label label11;
         private Button loginMinimize;
-        private Button loginRestore;
         private Button loginClose;
         private Label label12;
         private Button logoutBtn;

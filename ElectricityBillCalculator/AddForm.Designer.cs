@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             addName = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -171,9 +172,10 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(addName);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
+            Text = "Insert Appliances";
             ResumeLayout(false);
             PerformLayout();
         }
