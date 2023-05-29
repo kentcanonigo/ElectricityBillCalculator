@@ -321,5 +321,11 @@ namespace ElectricityBillCalculator
             Help help = new Help(applianceList, calculateButton, appNameTextbox, wattageTextbox, hrsPerDayTextbox, daysUsedTextbox);
             help.Show();
         }
+
+        private void historyBtn_Click(object sender, EventArgs e)
+        {
+            history history = new history();
+            history.Show();
+        }
     }
 }
