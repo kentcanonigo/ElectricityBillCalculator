@@ -9,19 +9,21 @@ namespace ElectricityBillCalculator
 {
     internal class Calculation
     {
-        public Calculation(int counter, float monthlyCost, float yearlyCost)
+        public Calculation(int counter, float monthlyCost, float yearlyCost, string dateCalculated)
         {
             this.counter = counter;
             this.monthlyCost = monthlyCost;
             this.yearlyCost = yearlyCost;
+            this.dateCalculated = dateCalculated;
         }
 
         public override string ToString()
         {
-            return counter.ToString();
+            return dateCalculated;
         }
 
         int counter;
+        public string dateCalculated;
         public float monthlyCost;
         public float yearlyCost;
     }

@@ -26,6 +26,7 @@ namespace ElectricityBillCalculator
         // Variables to store the column values
         List<float> monthlyCost = new List<float>();
         List<float> yearlyCost = new List<float>();
+        List<string> dateCalculated = new List<string>();
 
         private bool UpdateHistory()
         {
@@ -33,17 +34,19 @@ namespace ElectricityBillCalculator
             {
                 connection.Open();
 
-                using (MySqlCommand command = new MySqlCommand($"SELECT monthly_cost, yearly_cost FROM {username}", connection))
+                using (MySqlCommand command = new MySqlCommand($"SELECT date_calculated, monthly_cost, yearly_cost FROM {username}", connection))
                 {
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            float currMonthlyCost = reader.GetFloat(0);  // Index 0 corresponds to the 2nd column
-                            float currYearlyCost = reader.GetFloat(1);  // Index 1 corresponds to the 3rd column
+                            string currDateCalculated = reader.GetString(0);
+                            float currMonthlyCost = reader.GetFloat(1);  // Index 0 corresponds to the 2nd column
+                            float currYearlyCost = reader.GetFloat(2);  // Index 1 corresponds to the 3rd column
 
                             monthlyCost.Add(currMonthlyCost);
                             yearlyCost.Add(currYearlyCost);
+                            dateCalculated.Add(currDateCalculated);
                         }
                     }
                 }
@@ -54,8 +57,9 @@ namespace ElectricityBillCalculator
             {
                 float currentMonthlyCost = monthlyCost[i];
                 float currentYearlyCost = yearlyCost[i];
+                string currentDateCalculated = dateCalculated[i];
 
-                historyListbox.Items.Add(new Calculation(i, currentMonthlyCost, currentYearlyCost));
+                historyListbox.Items.Add(new Calculation(i, currentMonthlyCost, currentYearlyCost, currentDateCalculated));
             }
             return true;
         }

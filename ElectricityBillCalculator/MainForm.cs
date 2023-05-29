@@ -268,14 +268,17 @@ namespace ElectricityBillCalculator
             monthlyBillTextbox.Text = "₱" + monthlyCost.ToString();
             yearlyBillTextbox.Text = "₱" + yearlyCost.ToString();
 
+            string dateCalculated = DateTime.Now.ToShortDateString();
+
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
 
-                using (MySqlCommand command = new MySqlCommand($"INSERT INTO {username} (monthly_cost, yearly_cost) VALUES (@value1, @value2)", connection))
+                using (MySqlCommand command = new MySqlCommand($"INSERT INTO {username} (monthly_cost, yearly_cost, date_calculated) VALUES (@value1, @value2, @value3)", connection))
                 {
                     command.Parameters.AddWithValue("@value1", monthlyCost);
                     command.Parameters.AddWithValue("@value2", yearlyCost);
+                    command.Parameters.AddWithValue("@value3", dateCalculated);
                     command.ExecuteNonQuery();
                     MessageBox.Show("Values inserted successfully.");
                 }
@@ -290,7 +293,7 @@ namespace ElectricityBillCalculator
                 connection.Open();
 
                 // Table does not exist, create it
-                using (MySqlCommand command = new MySqlCommand($"CREATE TABLE IF NOT EXISTS `testbc`.`{username}` (`counter` INT(20) NOT NULL AUTO_INCREMENT , `monthly_cost` FLOAT(10) NOT NULL , `yearly_cost` FLOAT(10) NOT NULL , PRIMARY KEY (`counter`))", connection))
+                using (MySqlCommand command = new MySqlCommand($"CREATE TABLE IF NOT EXISTS `testbc`.`{username}` (`counter` INT(20) NOT NULL AUTO_INCREMENT , `date_calculated` VARCHAR(50) NOT NULL, `monthly_cost` FLOAT(10) NOT NULL , `yearly_cost` FLOAT(10) NOT NULL , PRIMARY KEY (`counter`))", connection))
                 {
                     command.ExecuteNonQuery();
                     //MessageBox.Show("Table created successfully.");
