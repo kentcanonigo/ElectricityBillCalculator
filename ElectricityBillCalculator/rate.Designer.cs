@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rate));
             label1 = new Label();
             label2 = new Label();
             rateBtn1 = new roundBtn();
@@ -159,8 +160,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             DoubleBuffered = true;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "rate";
-            Text = "rate";
+            Text = "Rate our application";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -324,20 +324,6 @@ namespace ElectricityBillCalculator
             Application.Exit();
         }
 
-        private void loginRestore_Click(object sender, EventArgs e)
-        {
-            /*if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-                loginRestore.Image = Properties.Resources.loginRestore1;
-            }
-            else if (WindowState == FormWindowState.Maximized)
-            {
-                WindowState = FormWindowState.Normal;
-                loginRestore.Image = Properties.Resources.loginMaximize;
-            }*/
-        }
-
         private void loginMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

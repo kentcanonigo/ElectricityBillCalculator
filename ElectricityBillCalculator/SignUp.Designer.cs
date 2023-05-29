@@ -345,9 +345,9 @@
             label6.ImageAlign = ContentAlignment.MiddleLeft;
             label6.Location = new Point(15, 15);
             label6.Name = "label6";
-            label6.Size = new Size(174, 15);
+            label6.Size = new Size(180, 15);
             label6.TabIndex = 41;
-            label6.Text = "     RK - Electricity Bill Calculator";
+            label6.Text = "       RK - Electricity Bill Calculator";
             // 
             // pwCheckerTooltip
             // 
