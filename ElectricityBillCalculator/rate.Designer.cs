@@ -37,7 +37,6 @@
             rateBtn3 = new roundBtn();
             textBox1 = new TextBox();
             okButton = new Button();
-            starBtn1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -142,19 +141,6 @@
             okButton.UseVisualStyleBackColor = true;
             okButton.Click += okButton_Click;
             // 
-            // starBtn1
-            // 
-            starBtn1.BackColor = Color.Transparent;
-            starBtn1.FlatAppearance.BorderSize = 0;
-            starBtn1.FlatStyle = FlatStyle.Flat;
-            starBtn1.ForeColor = Color.Transparent;
-            starBtn1.Location = new Point(267, 33);
-            starBtn1.Name = "starBtn1";
-            starBtn1.Size = new Size(30, 30);
-            starBtn1.TabIndex = 9;
-            starBtn1.UseVisualStyleBackColor = false;
-            starBtn1.Paint += starBtn1_Paint;
-            // 
             // rate
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -163,7 +149,6 @@
             BackgroundImage = Properties.Resources.wpSignUpBg;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(336, 207);
-            Controls.Add(starBtn1);
             Controls.Add(okButton);
             Controls.Add(textBox1);
             Controls.Add(rateBtn3);
@@ -191,6 +176,5 @@
         private roundBtn rateBtn3;
         private TextBox textBox1;
         private Button okButton;
-        private Button starBtn1;
     }
 }
