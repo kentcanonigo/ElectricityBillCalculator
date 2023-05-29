@@ -20,14 +20,43 @@ namespace ElectricityBillCalculator
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            MainForm mf = new MainForm();
-            mf.Show();
+            rate rate = new rate();
+            rate.Show();
             this.Close();
         }
 
-        private void contactLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void contactRex_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           // Process.Start("");
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "cmd",
+                    Arguments = $"/c start https://www.messenger.com/t/100006781365745",
+                    CreateNoWindow = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
+        private void contactKent_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "cmd",
+                    Arguments = $"/c start https://www.messenger.com/t/100001353648920",
+                    CreateNoWindow = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
     }
 }
