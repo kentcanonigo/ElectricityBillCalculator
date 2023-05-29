@@ -95,11 +95,11 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Geomanist", 11.999999F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(127, 105);
+            label2.Location = new Point(124, 105);
             label2.Name = "label2";
-            label2.Size = new Size(154, 20);
+            label2.Size = new Size(164, 20);
             label2.TabIndex = 52;
-            label2.Text = "Lying Robs Identities";
+            label2.Text = "\"Lying Robs Identities\"";
             // 
             // label1
             // 
