@@ -69,17 +69,30 @@ namespace ElectricityBillCalculator
         {
             if (historyListbox.Items.Count <= 0)
             {
-                ResetButtons();
+                ResetFields();
             }
+        }
+
+        private void ResetFields()
+        {
+            monthlyTbx.Text = String.Empty;
+            yearlyTbx.Text = String.Empty;
         }
 
         private void historyListbox_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (historyListbox.Items.Count <= 0)
+            Calculation currentCalc = (Calculation)historyListbox.SelectedItem;
+            if (currentCalc == null) //Return if there is no current appliance
             {
-                ResetButtons();
+                return;
             }
+            UpdateInfo(currentCalc);
         }
 
+        private void UpdateInfo(Calculation calculation)
+        {
+            monthlyTbx.Text = calculation.monthlyCost.ToString();
+            yearlyTbx.Text = calculation.yearlyCost.ToString();
+        }
     }
 }

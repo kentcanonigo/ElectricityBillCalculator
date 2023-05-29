@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ElectricityBillCalculator
 {
@@ -15,8 +16,13 @@ namespace ElectricityBillCalculator
             this.yearlyCost = yearlyCost;
         }
 
+        public override string ToString()
+        {
+            return counter.ToString();
+        }
+
         int counter;
-        float monthlyCost;
-        float yearlyCost;
+        public float monthlyCost;
+        public float yearlyCost;
     }
 }

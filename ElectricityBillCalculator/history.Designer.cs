@@ -89,6 +89,7 @@
             // 
             // monthlyTbx
             // 
+            monthlyTbx.Enabled = false;
             monthlyTbx.Location = new Point(59, 397);
             monthlyTbx.Name = "monthlyTbx";
             monthlyTbx.ReadOnly = true;
@@ -97,6 +98,7 @@
             // 
             // yearlyTbx
             // 
+            yearlyTbx.Enabled = false;
             yearlyTbx.Location = new Point(234, 397);
             yearlyTbx.Name = "yearlyTbx";
             yearlyTbx.ReadOnly = true;
