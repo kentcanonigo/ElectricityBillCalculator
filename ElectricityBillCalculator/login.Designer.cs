@@ -238,7 +238,7 @@
             twtBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             twtBtn.AutoSize = true;
             twtBtn.BackColor = SystemColors.Control;
-            twtBtn.BackgroundImage = Properties.Resources.twtFin;
+            twtBtn.BackgroundImage = Properties.Resources.loginKent;
             twtBtn.BackgroundImageLayout = ImageLayout.Center;
             twtBtn.Cursor = Cursors.Hand;
             twtBtn.FlatAppearance.BorderSize = 0;
@@ -254,7 +254,7 @@
             fbBtn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             fbBtn.AutoSize = true;
             fbBtn.BackColor = SystemColors.Control;
-            fbBtn.BackgroundImage = (Image)resources.GetObject("fbBtn.BackgroundImage");
+            fbBtn.BackgroundImage = Properties.Resources.loginRex;
             fbBtn.BackgroundImageLayout = ImageLayout.Center;
             fbBtn.Cursor = Cursors.Hand;
             fbBtn.FlatAppearance.BorderSize = 0;
@@ -271,7 +271,7 @@
             googBtn.AutoSize = true;
             googBtn.BackColor = SystemColors.Control;
             googBtn.BackgroundImage = (Image)resources.GetObject("googBtn.BackgroundImage");
-            googBtn.BackgroundImageLayout = ImageLayout.Center;
+            googBtn.BackgroundImageLayout = ImageLayout.Stretch;
             googBtn.Cursor = Cursors.Hand;
             googBtn.FlatAppearance.BorderSize = 0;
             googBtn.FlatStyle = FlatStyle.Flat;

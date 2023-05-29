@@ -303,6 +303,16 @@ namespace ElectricityBillCalculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loginKent {
+            get {
+                object obj = ResourceManager.GetObject("loginKent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loginMaximize {
             get {
                 object obj = ResourceManager.GetObject("loginMaximize", resourceCulture);
@@ -346,6 +356,16 @@ namespace ElectricityBillCalculator.Properties {
         internal static System.Drawing.Bitmap loginRestore1 {
             get {
                 object obj = ResourceManager.GetObject("loginRestore1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loginRex {
+            get {
+                object obj = ResourceManager.GetObject("loginRex", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
