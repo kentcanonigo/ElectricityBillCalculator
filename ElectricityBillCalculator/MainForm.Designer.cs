@@ -180,7 +180,7 @@
             // 
             // historyBtn
             // 
-            historyBtn.BackgroundImage = Properties.Resources.historyBtn;
+            //historyBtn.BackgroundImage = Properties.Resources.historyBtn;
             historyBtn.BackgroundImageLayout = ImageLayout.Center;
             historyBtn.FlatAppearance.BorderSize = 0;
             historyBtn.FlatStyle = FlatStyle.Flat;

@@ -237,7 +237,7 @@
             loginKent.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             loginKent.AutoSize = true;
             loginKent.BackColor = SystemColors.Control;
-            loginKent.BackgroundImage = Properties.Resources.loginKent;
+            loginKent.BackgroundImage = Properties.Resources.loginKent1;
             loginKent.BackgroundImageLayout = ImageLayout.Center;
             loginKent.Cursor = Cursors.Hand;
             loginKent.FlatAppearance.BorderSize = 0;
@@ -254,7 +254,7 @@
             loginRex.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             loginRex.AutoSize = true;
             loginRex.BackColor = SystemColors.Control;
-            loginRex.BackgroundImage = Properties.Resources.loginRex;
+            loginRex.BackgroundImage = Properties.Resources.loginRex1;
             loginRex.BackgroundImageLayout = ImageLayout.Center;
             loginRex.Cursor = Cursors.Hand;
             loginRex.FlatAppearance.BorderSize = 0;
@@ -271,7 +271,7 @@
             loginRK.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             loginRK.AutoSize = true;
             loginRK.BackColor = SystemColors.Control;
-            loginRK.BackgroundImage = Properties.Resources.loginLogo;
+            loginRK.BackgroundImage = Properties.Resources.loginLogo1;
             loginRK.BackgroundImageLayout = ImageLayout.Center;
             loginRK.Cursor = Cursors.Hand;
             loginRK.FlatAppearance.BorderSize = 0;
