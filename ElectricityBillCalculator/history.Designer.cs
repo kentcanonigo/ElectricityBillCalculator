@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(history));
             okButton = new Button();
             historyLabel = new Label();
             label1 = new Label();
@@ -43,7 +44,7 @@
             // 
             okButton.Cursor = Cursors.Hand;
             okButton.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            okButton.Location = new Point(141, 444);
+            okButton.Location = new Point(83, 422);
             okButton.Name = "okButton";
             okButton.Size = new Size(113, 31);
             okButton.TabIndex = 9;
@@ -55,11 +56,11 @@
             // 
             historyLabel.AutoSize = true;
             historyLabel.BackColor = Color.Transparent;
-            historyLabel.Font = new Font("ArterioNonCommercial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            historyLabel.Font = new Font("ArterioNonCommercial", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             historyLabel.ForeColor = Color.White;
-            historyLabel.Location = new Point(40, 24);
+            historyLabel.Location = new Point(12, 23);
             historyLabel.Name = "historyLabel";
-            historyLabel.Size = new Size(330, 24);
+            historyLabel.Size = new Size(260, 19);
             historyLabel.TabIndex = 11;
             historyLabel.Text = "Your Past Calculations";
             // 
@@ -67,11 +68,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("ArterioNonCommercial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Moon", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(70, 378);
+            label1.Location = new Point(55, 376);
             label1.Name = "label1";
-            label1.Size = new Size(80, 16);
+            label1.Size = new Size(63, 12);
             label1.TabIndex = 12;
             label1.Text = "Monthly";
             // 
@@ -79,39 +80,39 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("ArterioNonCommercial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Moon", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(250, 378);
+            label2.Location = new Point(180, 376);
             label2.Name = "label2";
-            label2.Size = new Size(66, 16);
+            label2.Size = new Size(48, 12);
             label2.TabIndex = 13;
             label2.Text = "Yearly";
             // 
             // monthlyTbx
             // 
             monthlyTbx.Enabled = false;
-            monthlyTbx.Location = new Point(59, 397);
+            monthlyTbx.Location = new Point(27, 393);
             monthlyTbx.Name = "monthlyTbx";
             monthlyTbx.ReadOnly = true;
-            monthlyTbx.Size = new Size(100, 23);
+            monthlyTbx.Size = new Size(113, 23);
             monthlyTbx.TabIndex = 14;
             // 
             // yearlyTbx
             // 
             yearlyTbx.Enabled = false;
-            yearlyTbx.Location = new Point(234, 397);
+            yearlyTbx.Location = new Point(148, 393);
             yearlyTbx.Name = "yearlyTbx";
             yearlyTbx.ReadOnly = true;
-            yearlyTbx.Size = new Size(100, 23);
+            yearlyTbx.Size = new Size(113, 23);
             yearlyTbx.TabIndex = 15;
             // 
             // historyListbox
             // 
             historyListbox.FormattingEnabled = true;
             historyListbox.ItemHeight = 15;
-            historyListbox.Location = new Point(0, 3);
+            historyListbox.Location = new Point(0, 0);
             historyListbox.Name = "historyListbox";
-            historyListbox.Size = new Size(338, 289);
+            historyListbox.Size = new Size(260, 304);
             historyListbox.TabIndex = 0;
             historyListbox.SelectedIndexChanged += historyListbox_SelectedIndexChanged;
             historyListbox.SelectedValueChanged += historyListbox_SelectedValueChanged;
@@ -120,9 +121,9 @@
             // 
             historyPanel.BackColor = SystemColors.ControlLight;
             historyPanel.Controls.Add(historyListbox);
-            historyPanel.Location = new Point(31, 68);
+            historyPanel.Location = new Point(12, 58);
             historyPanel.Name = "historyPanel";
-            historyPanel.Size = new Size(341, 292);
+            historyPanel.Size = new Size(260, 301);
             historyPanel.TabIndex = 10;
             // 
             // history
@@ -131,7 +132,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             BackgroundImage = Properties.Resources.wpSignUpBg;
-            ClientSize = new Size(404, 499);
+            ClientSize = new Size(286, 467);
             Controls.Add(yearlyTbx);
             Controls.Add(monthlyTbx);
             Controls.Add(label2);
@@ -139,8 +140,9 @@
             Controls.Add(historyLabel);
             Controls.Add(historyPanel);
             Controls.Add(okButton);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "history";
-            Text = "history";
+            Text = "History";
             historyPanel.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

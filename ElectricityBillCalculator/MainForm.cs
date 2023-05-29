@@ -280,7 +280,6 @@ namespace ElectricityBillCalculator
                     command.Parameters.AddWithValue("@value2", yearlyCost);
                     command.Parameters.AddWithValue("@value3", dateCalculated);
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Values inserted successfully.");
                 }
             }
         }
