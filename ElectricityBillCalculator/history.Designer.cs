@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             okButton = new Button();
-            historyPanel = new Panel();
             historyLabel = new Label();
-            listBox1 = new ListBox();
             label1 = new Label();
             label2 = new Label();
             monthlyTbx = new TextBox();
             yearlyTbx = new TextBox();
+            historyListbox = new ListBox();
+            historyPanel = new Panel();
             historyPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,15 +49,7 @@
             okButton.TabIndex = 9;
             okButton.Text = "Close";
             okButton.UseVisualStyleBackColor = true;
-            // 
-            // historyPanel
-            // 
-            historyPanel.BackColor = SystemColors.ControlLight;
-            historyPanel.Controls.Add(listBox1);
-            historyPanel.Location = new Point(31, 68);
-            historyPanel.Name = "historyPanel";
-            historyPanel.Size = new Size(341, 292);
-            historyPanel.TabIndex = 10;
+            okButton.Click += okButton_Click;
             // 
             // historyLabel
             // 
@@ -65,20 +57,11 @@
             historyLabel.BackColor = Color.Transparent;
             historyLabel.Font = new Font("ArterioNonCommercial", 18F, FontStyle.Bold, GraphicsUnit.Point);
             historyLabel.ForeColor = Color.White;
-            historyLabel.Location = new Point(40, 33);
+            historyLabel.Location = new Point(40, 24);
             historyLabel.Name = "historyLabel";
             historyLabel.Size = new Size(330, 24);
             historyLabel.TabIndex = 11;
             historyLabel.Text = "Your Past Calculations";
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(0, 0);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(338, 289);
-            listBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -86,7 +69,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("ArterioNonCommercial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(51, 378);
+            label1.Location = new Point(70, 378);
             label1.Name = "label1";
             label1.Size = new Size(80, 16);
             label1.TabIndex = 12;
@@ -98,7 +81,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("ArterioNonCommercial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(268, 378);
+            label2.Location = new Point(250, 378);
             label2.Name = "label2";
             label2.Size = new Size(66, 16);
             label2.TabIndex = 13;
@@ -106,17 +89,39 @@
             // 
             // monthlyTbx
             // 
-            monthlyTbx.Location = new Point(40, 397);
+            monthlyTbx.Location = new Point(59, 397);
             monthlyTbx.Name = "monthlyTbx";
+            monthlyTbx.ReadOnly = true;
             monthlyTbx.Size = new Size(100, 23);
             monthlyTbx.TabIndex = 14;
             // 
             // yearlyTbx
             // 
-            yearlyTbx.Location = new Point(252, 397);
+            yearlyTbx.Location = new Point(234, 397);
             yearlyTbx.Name = "yearlyTbx";
+            yearlyTbx.ReadOnly = true;
             yearlyTbx.Size = new Size(100, 23);
             yearlyTbx.TabIndex = 15;
+            // 
+            // historyListbox
+            // 
+            historyListbox.FormattingEnabled = true;
+            historyListbox.ItemHeight = 15;
+            historyListbox.Location = new Point(0, 3);
+            historyListbox.Name = "historyListbox";
+            historyListbox.Size = new Size(338, 289);
+            historyListbox.TabIndex = 0;
+            historyListbox.SelectedIndexChanged += historyListbox_SelectedIndexChanged;
+            historyListbox.SelectedValueChanged += historyListbox_SelectedValueChanged;
+            // 
+            // historyPanel
+            // 
+            historyPanel.BackColor = SystemColors.ControlLight;
+            historyPanel.Controls.Add(historyListbox);
+            historyPanel.Location = new Point(31, 68);
+            historyPanel.Name = "historyPanel";
+            historyPanel.Size = new Size(341, 292);
+            historyPanel.TabIndex = 10;
             // 
             // history
             // 
@@ -142,12 +147,12 @@
         #endregion
 
         private Button okButton;
-        private Panel historyPanel;
         private Label historyLabel;
-        private ListBox listBox1;
         private Label label1;
         private Label label2;
         private TextBox monthlyTbx;
         private TextBox yearlyTbx;
+        private Panel historyPanel;
+        public ListBox historyListbox;
     }
 }

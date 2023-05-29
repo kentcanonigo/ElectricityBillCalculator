@@ -56,7 +56,7 @@ namespace ElectricityBillCalculator
                 {
                     MessageBox.Show("Login Successful!");
                     this.Hide();
-                    MainForm mainForm = new MainForm();
+                    MainForm mainForm = new MainForm(username);
                     mainForm.ShowDialog();
                 }
                 else

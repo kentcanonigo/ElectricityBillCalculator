@@ -34,6 +34,7 @@
             contactRex = new LinkLabel();
             contactKent = new LinkLabel();
             label3 = new Label();
+            closeBtn = new Button();
             SuspendLayout();
             // 
             // label1
@@ -62,7 +63,7 @@
             // 
             okButton.Cursor = Cursors.Hand;
             okButton.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            okButton.Location = new Point(126, 156);
+            okButton.Location = new Point(57, 156);
             okButton.Name = "okButton";
             okButton.Size = new Size(75, 23);
             okButton.TabIndex = 3;
@@ -107,11 +108,24 @@
             label3.Text = "Contact us at:";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // closeBtn
+            // 
+            closeBtn.Cursor = Cursors.Hand;
+            closeBtn.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
+            closeBtn.Location = new Point(205, 156);
+            closeBtn.Name = "closeBtn";
+            closeBtn.Size = new Size(75, 23);
+            closeBtn.TabIndex = 7;
+            closeBtn.Text = "Close";
+            closeBtn.UseVisualStyleBackColor = true;
+            closeBtn.Click += closeBtn_Click;
+            // 
             // About
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(336, 189);
+            Controls.Add(closeBtn);
             Controls.Add(label3);
             Controls.Add(contactKent);
             Controls.Add(contactRex);
@@ -133,5 +147,6 @@
         private LinkLabel contactRex;
         private LinkLabel contactKent;
         private Label label3;
+        private Button closeBtn;
     }
 }
