@@ -22,7 +22,6 @@ namespace ElectricityBillCalculator
         {
             rate rate = new rate();
             rate.Show();
-            this.Close();
         }
 
         private void contactRex_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -57,6 +56,11 @@ namespace ElectricityBillCalculator
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

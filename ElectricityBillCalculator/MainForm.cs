@@ -1,4 +1,5 @@
-﻿using MySqlX.XDevAPI.Common;
+﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -19,10 +20,14 @@ namespace ElectricityBillCalculator
             int nHeightEllipse // width of ellipse
         );
 
-        public MainForm()
+        string username;
+
+        public MainForm(string username)
         {
             InitializeComponent(); //Init();
-
+            //MessageBox.Show(username);
+            this.username = username;
+            CheckHistory();
 
             // Set the form's FormBorderStyle property to None, which removes the window border.
             this.FormBorderStyle = FormBorderStyle.None;
@@ -32,11 +37,7 @@ namespace ElectricityBillCalculator
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
         }
 
-        private void Init() //Testing purposes (Two test appliances on startup)
-        {
-            //applianceList.Items.Add(new Appliance("Test Appliance", 50, 24)); //Create a test appliance to start
-            //applianceList.Items.Add(new Appliance("Test Appliance 2", 25, 16)); //Create a test appliance to start
-        }
+        string connectionString = "server=localhost;user=root;password=;database=testBC";
 
         public void ShowHelp()
         {
@@ -266,6 +267,39 @@ namespace ElectricityBillCalculator
 
             monthlyBillTextbox.Text = "₱" + monthlyCost.ToString();
             yearlyBillTextbox.Text = "₱" + yearlyCost.ToString();
+
+            string dateCalculated = DateTime.Now.ToShortDateString();
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (MySqlCommand command = new MySqlCommand($"INSERT INTO {username} (monthly_cost, yearly_cost, date_calculated) VALUES (@value1, @value2, @value3)", connection))
+                {
+                    command.Parameters.AddWithValue("@value1", monthlyCost);
+                    command.Parameters.AddWithValue("@value2", yearlyCost);
+                    command.Parameters.AddWithValue("@value3", dateCalculated);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Values inserted successfully.");
+                }
+            }
+        }
+
+        private bool CheckHistory()
+        {
+            // Provide the table name and column names
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Table does not exist, create it
+                using (MySqlCommand command = new MySqlCommand($"CREATE TABLE IF NOT EXISTS `testbc`.`{username}` (`counter` INT(20) NOT NULL AUTO_INCREMENT , `date_calculated` VARCHAR(50) NOT NULL, `monthly_cost` FLOAT(10) NOT NULL , `yearly_cost` FLOAT(10) NOT NULL , PRIMARY KEY (`counter`))", connection))
+                {
+                    command.ExecuteNonQuery();
+                    //MessageBox.Show("Table created successfully.");
+                    return false;
+                }
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -299,13 +333,18 @@ namespace ElectricityBillCalculator
         {
             About abt = new About();
             abt.Show();
-            this.Close();
         }
 
         private void helpBtn_Click(object sender, EventArgs e)
         {
             Help help = new Help(applianceList, calculateButton, appNameTextbox, wattageTextbox, hrsPerDayTextbox, daysUsedTextbox);
             help.Show();
+        }
+
+        private void historyBtn_Click(object sender, EventArgs e)
+        {
+            history history = new history(username);
+            history.Show();
         }
     }
 }
