@@ -165,11 +165,11 @@
             label2.AutoSize = true;
             label2.Cursor = Cursors.IBeam;
             label2.Font = new Font("Avoda", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(286, 217);
+            label2.Location = new Point(239, 217);
             label2.Name = "label2";
-            label2.Size = new Size(270, 34);
+            label2.Size = new Size(357, 34);
             label2.TabIndex = 12;
-            label2.Text = "Login using social networks";
+            label2.Text = "and discover the power of our app";
             // 
             // label3
             // 

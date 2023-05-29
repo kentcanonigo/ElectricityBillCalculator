@@ -142,7 +142,7 @@
             regPassShowBtn.Location = new Point(259, 0);
             regPassShowBtn.Margin = new Padding(3, 2, 3, 2);
             regPassShowBtn.Name = "regPassShowBtn";
-            regPassShowBtn.Size = new Size(59, 51);
+            regPassShowBtn.Size = new Size(59, 50);
             regPassShowBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             regPassShowBtn.TabIndex = 7;
             regPassShowBtn.TabStop = false;

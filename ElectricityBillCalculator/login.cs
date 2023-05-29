@@ -201,6 +201,8 @@ namespace ElectricityBillCalculator
         private void forgotPassBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            forgotPass fp = new forgotPass();
+            fp.Show();
         }
     }
 }
