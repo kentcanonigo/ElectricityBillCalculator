@@ -66,6 +66,7 @@
             label12 = new Label();
             logoutBtn = new Button();
             appInfoToolTip = new ToolTip(components);
+            roundBtn1 = new roundBtn();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -148,6 +149,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(roundBtn1);
             panel1.Controls.Add(helpBtn);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(daysUsedTextbox);
@@ -531,6 +533,20 @@
             appInfoToolTip.ToolTipIcon = ToolTipIcon.Info;
             appInfoToolTip.ToolTipTitle = "Help";
             // 
+            // roundBtn1
+            // 
+            roundBtn1.BackgroundImage = Properties.Resources.historyBtn;
+            roundBtn1.BackgroundImageLayout = ImageLayout.Center;
+            roundBtn1.FlatAppearance.BorderSize = 0;
+            roundBtn1.FlatStyle = FlatStyle.Flat;
+            roundBtn1.ForeColor = SystemColors.ControlText;
+            roundBtn1.Location = new Point(9, 5);
+            roundBtn1.Name = "roundBtn1";
+            roundBtn1.Size = new Size(25, 25);
+            roundBtn1.TabIndex = 25;
+            appInfoToolTip.SetToolTip(roundBtn1, "View past calculations");
+            roundBtn1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -602,5 +618,6 @@
         private TextBox daysUsedTextbox;
         private roundBtn helpBtn;
         private ToolTip appInfoToolTip;
+        private roundBtn roundBtn1;
     }
 }
