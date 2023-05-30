@@ -36,6 +36,7 @@
             contactKent = new LinkLabel();
             label3 = new Label();
             closeBtn = new Button();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -53,7 +54,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(115, 80);
+            label2.Location = new Point(115, 105);
             label2.Name = "label2";
             label2.Size = new Size(104, 16);
             label2.TabIndex = 1;
@@ -64,7 +65,7 @@
             // 
             okButton.Cursor = Cursors.Hand;
             okButton.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            okButton.Location = new Point(57, 156);
+            okButton.Location = new Point(57, 181);
             okButton.Name = "okButton";
             okButton.Size = new Size(75, 23);
             okButton.TabIndex = 3;
@@ -77,7 +78,7 @@
             contactRex.AutoSize = true;
             contactRex.Cursor = Cursors.Hand;
             contactRex.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            contactRex.Location = new Point(112, 113);
+            contactRex.Location = new Point(112, 138);
             contactRex.Name = "contactRex";
             contactRex.Size = new Size(107, 16);
             contactRex.TabIndex = 4;
@@ -90,7 +91,7 @@
             contactKent.AutoSize = true;
             contactKent.Cursor = Cursors.Hand;
             contactKent.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            contactKent.Location = new Point(99, 134);
+            contactKent.Location = new Point(99, 159);
             contactKent.Name = "contactKent";
             contactKent.Size = new Size(135, 16);
             contactKent.TabIndex = 5;
@@ -102,7 +103,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(123, 96);
+            label3.Location = new Point(123, 121);
             label3.Name = "label3";
             label3.Size = new Size(85, 16);
             label3.TabIndex = 6;
@@ -113,7 +114,7 @@
             // 
             closeBtn.Cursor = Cursors.Hand;
             closeBtn.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
-            closeBtn.Location = new Point(205, 156);
+            closeBtn.Location = new Point(205, 181);
             closeBtn.Name = "closeBtn";
             closeBtn.Size = new Size(75, 23);
             closeBtn.TabIndex = 7;
@@ -121,11 +122,22 @@
             closeBtn.UseVisualStyleBackColor = true;
             closeBtn.Click += closeBtn_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Geomanist", 9.749998F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(49, 66);
+            label4.Name = "label4";
+            label4.Size = new Size(233, 16);
+            label4.TabIndex = 8;
+            label4.Text = "Huge thanks to Mrs. Cheryl Ann Villamor";
+            // 
             // About
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(336, 189);
+            ClientSize = new Size(336, 221);
+            Controls.Add(label4);
             Controls.Add(closeBtn);
             Controls.Add(label3);
             Controls.Add(contactKent);
@@ -150,5 +162,6 @@
         private LinkLabel contactKent;
         private Label label3;
         private Button closeBtn;
+        private Label label4;
     }
 }
